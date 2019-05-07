@@ -2,6 +2,10 @@ package gov.gz.hydrology.utils;
 
 import java.math.BigDecimal;
 
+import org.springframework.beans.factory.wiring.BeanWiringInfo;
+
+import gov.gz.hydrology.constant.CommonConst;
+
 public class StepOneUtil {
 
 	/**
@@ -33,7 +37,7 @@ public class StepOneUtil {
 	 * @return
 	 */
 	public static BigDecimal getWUM() {
-		return new BigDecimal("0.1");
+		return new BigDecimal("0.2");
 	}
 	
 	/**
@@ -41,7 +45,7 @@ public class StepOneUtil {
 	 * @return
 	 */
 	public static BigDecimal getWLM() {
-		return new BigDecimal("0.1");
+		return new BigDecimal("0.2");
 	}
 	
 	/**
@@ -49,7 +53,7 @@ public class StepOneUtil {
 	 * @return
 	 */
 	public static BigDecimal getWDM() {
-		return new BigDecimal("0.1");
+		return new BigDecimal("0.2");
 	}
 	
 	/**
@@ -57,7 +61,7 @@ public class StepOneUtil {
 	 * @return
 	 */
 	public static BigDecimal getW0() {
-		// 求和
+		// W0 = WU0 + WL0 + WD0
 		return getWU0().add(getWL0().add(getWD0()));
 	}
 	
@@ -66,7 +70,7 @@ public class StepOneUtil {
 	 * @return
 	 */
 	public static BigDecimal getWm() {
-		// 求和
+		// Wm = WUM + WLM + WDM
 		return getWUM().add(getWLM().add(getWDM()));
 	}
 	
@@ -78,5 +82,58 @@ public class StepOneUtil {
 	public static BigDecimal getWmm(BigDecimal B) {
 		// Wmm = Wm*(1+B)
 		return getWm().multiply(B.add(new BigDecimal("1")));
+	}
+	
+	/**
+	 * A
+	 */
+	public static BigDecimal getA(BigDecimal B) {
+		// A = Wmm*[1-(1-W0/Wm)^(1/B+1)]
+		BigDecimal one = new BigDecimal(1);
+		BigDecimal power = one.divide(B, CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE).add(one);
+		BigDecimal base = one.subtract(getW0().divide(getWm(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+		return getWmm(B).multiply(one.subtract(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))));
+	}
+	
+	/**
+	 * P 时刻雨量
+	 * @return
+	 */
+	public static BigDecimal getP() {
+		return new BigDecimal("0.1");
+	}
+	
+	/**
+	 * K 蒸散发折算系数
+	 * @return
+	 */
+	public static BigDecimal getK() {
+		return new BigDecimal("0.1");
+	}
+	
+	/**
+	 * E 蒸发量
+	 * @return
+	 */
+	public static BigDecimal getE() {
+		return new BigDecimal("0.1");
+	}
+	
+	/**
+	 * Ek 蒸发量
+	 * @return
+	 */
+	public static BigDecimal getEk() {
+		// Ek = K * E
+		return getK().multiply(getE());
+	}
+	
+	/**
+	 * PE 净雨
+	 * @return
+	 */
+	public static BigDecimal getPE() {
+		// PE = P - Ek
+		return getK().multiply(getE());
 	}
 }

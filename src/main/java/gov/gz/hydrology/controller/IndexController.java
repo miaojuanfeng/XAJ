@@ -16,7 +16,7 @@ public class IndexController {
 	@ResponseBody
 	public String index() {
 		
-		System.out.println(StepOneUtil.getWmm(new BigDecimal("0.1")));
+		System.out.println(StepOneUtil.getA(new BigDecimal(1)));
 		
 		return "Ok";
 	}
