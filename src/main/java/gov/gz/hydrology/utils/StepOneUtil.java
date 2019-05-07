@@ -134,6 +134,6 @@ public class StepOneUtil {
 	 */
 	public static BigDecimal getPE() {
 		// PE = P - Ek
-		return getK().multiply(getE());
+		return getP().subtract(getEk());
 	}
 }
