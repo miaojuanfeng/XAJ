@@ -92,4 +92,29 @@ public class StepOneUtil {
 		BigDecimal base = one.subtract(getW0().divide(getWm(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
 		return getWmm(B).multiply(one.subtract(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))));
 	}
+	
+	/**
+	 * R 产流量（径流深）
+	 */
+	public static BigDecimal getR(BigDecimal B) {
+		BigDecimal R = CommonConst.BIGDECIMAL_ZERO;
+		BigDecimal PE = StepCommonUtil.getPE();
+		// PE > 0
+		if( PE.compareTo(CommonConst.BIGDECIMAL_ZERO) == 1 ) {
+			BigDecimal temp_PE_A = PE.add(getA(B));
+			BigDecimal temp_Wmm = getWmm(B);
+			// PE+A<Wmm
+			if( temp_PE_A.compareTo(temp_Wmm) == -1 ) {
+				BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(temp_PE_A.divide(temp_Wmm, CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+				BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(B);
+				R = PE.add(getW0()).subtract(getWm()).add(getWm().multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))));
+			// PE+A>=Wmm
+			}else {
+				// R=PE-(Wm-W0)
+				R = PE.subtract(getWm().subtract(getW0()));
+			}
+		}
+		// PE < 0 ? R = 0
+		return R;
+	}
 }

@@ -3,6 +3,16 @@ package gov.gz.hydrology.constant;
 import java.math.BigDecimal;
 
 public class CommonConst {
+	
+	/*
+	 * 0值
+	 */
+	public static final BigDecimal BIGDECIMAL_ZERO = new BigDecimal(0);
+	
+	/*
+	 * 1值
+	 */
+	public static final BigDecimal BIGDECIMAL_ONE = new BigDecimal(1);
 
 	/*
 	 * 小数保留位数
