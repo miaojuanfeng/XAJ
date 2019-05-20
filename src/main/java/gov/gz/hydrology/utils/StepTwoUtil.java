@@ -2,6 +2,8 @@ package gov.gz.hydrology.utils;
 
 import java.math.BigDecimal;
 
+import gov.gz.hydrology.constant.CommonConst;
+
 public class StepTwoUtil {
 	
 	public static BigDecimal WU;
@@ -41,7 +43,15 @@ public class StepTwoUtil {
 	* @return
 	*/
 	public static BigDecimal getWDup() {
-	return new BigDecimal("0.1");
+		return new BigDecimal("0.1");
+	}
+	
+	///////////////////这个是哪里来的
+	/*
+	 * C 深层蒸散发系数
+	 */
+	public static BigDecimal getC() {
+		return new BigDecimal("0.1");
 	}
 	
 	/**
@@ -76,7 +86,7 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getPEz(BigDecimal B) {
 		// PEz = WLx - WLM
-		return getWLx(B)B.subtract(StepOneUtil.getWLM());
+		return getWLx(B).subtract(StepOneUtil.getWLM());
 	}
 	
 	/**
@@ -86,5 +96,61 @@ public class StepTwoUtil {
 	public static BigDecimal getWDx(BigDecimal B) {
 		// WDx = WDup + PEz
 		return getWDup().add(getPEz(B));
+	}
+	
+	///////////////////下分支代码//////////////////////////
+	
+	/**
+	 * EKx 上层蒸发量
+	 * @return
+	 */
+	public static BigDecimal getEKx() {
+		// EKx = PE
+		return StepCommonUtil.getPE();
+	}
+	
+	/**
+	 * WUx 上层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWUx() {
+		// WUx = WUup + EKx
+		return getWUup().add(getEKx());
+	}
+	
+	/**
+	 * EKy 上层蒸发后，需要下层补充的蒸发量
+	 * @return
+	 */
+	public static BigDecimal getEKy() {
+		// EKy = WUx
+		return getWUx();
+	}
+	
+	/**
+	 * WLx 下层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWLx() {
+		// WLx = WLup + WLup/WLM*EKy
+		return getWLup().add(getWLup().divide(StepOneUtil.getWLM(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE).multiply(getEKy()));
+	}
+	
+	/**
+	 * EKz 下层蒸发后，需要补充的蒸发量
+	 * @return
+	 */
+	public static BigDecimal getEKz() {
+		// EKz = WLx
+		return getWLx();
+	}
+	
+	/**
+	 * WDx 深层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWDx() {
+		// WDx = WDup + C * EKz
+		return getWDup().add(getC().multiply(getEKz()));
 	}
 }
