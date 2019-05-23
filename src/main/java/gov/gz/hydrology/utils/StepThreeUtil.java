@@ -31,6 +31,15 @@ public class StepThreeUtil {
 	public static BigDecimal getSup() {
 		return new BigDecimal("0.1");
 	}
+	
+	///////////////////这个是哪里来的
+	/**
+	* R 时刻产流量
+	* @return
+	*/
+	public static BigDecimal getR() {
+		return new BigDecimal("0.1");
+	}
 
 	/**
 	 * FR
@@ -104,5 +113,36 @@ public class StepThreeUtil {
 		BigDecimal power = CommonConst.BIGDECIMAL_ONE.divide(CommonConst.BIGDECIMAL_ONE.add(EX), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE);
 		return getSMMF().multiply(CommonConst.BIGDECIMAL_ONE.subtract(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))));
 	}
+	
+	/**
+	 * FR 产流面积比
+	 * @return
+	 */
+	public static BigDecimal getFR() {
+		// FR=R/PE
+		return getR().divide(StepCommonUtil.getPE(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE);
+	}
+	
+	/**
+	 * Rs 地表径流
+	 * @return
+	 */
+	public static BigDecimal getRs2() {
+		// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
+		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
+		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup().add(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))))));
+	}
+	
+	/**
+	 * Rss 壤中流
+	 * @return
+	 */
+//	public static BigDecimal getRss() {
+//		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
+//		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+//		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
+//		return 
+//	}
 	
 }
