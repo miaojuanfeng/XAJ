@@ -138,11 +138,51 @@ public class StepThreeUtil {
 	 * Rss 壤中流
 	 * @return
 	 */
-//	public static BigDecimal getRss() {
-//		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
-//		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
-//		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
-//		return 
-//	}
+	public static BigDecimal getRss() {
+		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
+		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
+		return SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KSS).multiply(getFR());
+	}
+	
+	/**
+	 * Rg 地下径流
+	 * @return
+	 */
+	public static BigDecimal getRg() {
+		// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
+		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
+		return SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KG).multiply(getFR());
+	}
+	
+	/**
+	 * S 自由水蓄水量
+	 * @return
+	 */
+	public static BigDecimal getS2() {
+		// S=(1-KSS-KG){SM-SM[1-(PE+AU)/SMMF]^(1+EX)}
+		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
+		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
+		return CommonConst.BIGDECIMAL_ONE.subtract(KSS).subtract(KG).multiply(SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))));
+	}
+	
+	/**
+	 * Rs 地表径流
+	 * @return
+	 */
+	public static BigDecimal getRs3() {
+		// Rs=(PE-SM+Sup)*FR
+		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
+	}
+	
+	/**
+	 * Rss 壤中流
+	 * @return
+	 */
+	public static BigDecimal getRss() {
+		// Rs=(PE-SM+Sup)*FR
+		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
+	}
 	
 }
