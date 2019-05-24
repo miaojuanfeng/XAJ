@@ -7,6 +7,19 @@ import gov.gz.hydrology.constant.CommonConst;
 public class StepThreeUtil {
 	
 	/**
+	 * Rs 地表径流
+	 */
+	public static BigDecimal Rs;
+	/**
+	 * Rss 壤中流
+	 */
+	public static BigDecimal Rss;
+	/**
+	 * Rg 地下径流
+	 */
+	public static BigDecimal Rg;
+	
+	/**
 	 * KSS 壤中流出流系数
 	 */
 	public static BigDecimal KSS = new BigDecimal("0.1");
@@ -60,27 +73,27 @@ public class StepThreeUtil {
 	 * Rs 地表径流
 	 * @return
 	 */
-	public static BigDecimal getRs() {
+	public static void getRs() {
 		// Rs=0
-		return CommonConst.BIGDECIMAL_ZERO;
+		Rs = CommonConst.BIGDECIMAL_ZERO;
 	}
 	
 	/**
 	 * Rss 壤中流
 	 * @return
 	 */
-	public static BigDecimal getRss(BigDecimal B) {
+	public static void getRss(BigDecimal B) {
 		// Rss=Sup*KSS*FR
-		return getSup().multiply(KSS).multiply(getFR(B));
+		Rss = getSup().multiply(KSS).multiply(getFR(B));
 	}
 	
 	/**
 	 * Rg 地下径流
 	 * @return
 	 */
-	public static BigDecimal getRg(BigDecimal B) {
+	public static void getRg(BigDecimal B) {
 		// Rg=Sup*KG*FR
-		return getSup().multiply(KG).multiply(getFR(B));
+		Rg = getSup().multiply(KG).multiply(getFR(B));
 	}
 	
 	/**
@@ -127,33 +140,33 @@ public class StepThreeUtil {
 	 * Rs 地表径流
 	 * @return
 	 */
-	public static BigDecimal getRs2() {
+	public static void getRs2() {
 		// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
 		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
 		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
-		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup().add(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))))));
+		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup().add(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()))))));
 	}
 	
 	/**
 	 * Rss 壤中流
 	 * @return
 	 */
-	public static BigDecimal getRss() {
+	public static void getRss() {
 		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
 		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
 		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
-		return SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KSS).multiply(getFR());
+		Rss = SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KSS).multiply(getFR());
 	}
 	
 	/**
 	 * Rg 地下径流
 	 * @return
 	 */
-	public static BigDecimal getRg() {
+	public static void getRg() {
 		// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
 		BigDecimal base = CommonConst.BIGDECIMAL_ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE));
 		BigDecimal power = CommonConst.BIGDECIMAL_ONE.add(EX);
-		return SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KG).multiply(getFR());
+		Rg = SM.subtract(SM.multiply(new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue())))).multiply(KG).multiply(getFR());
 	}
 	
 	/**
@@ -171,18 +184,36 @@ public class StepThreeUtil {
 	 * Rs 地表径流
 	 * @return
 	 */
-	public static BigDecimal getRs3() {
+	public static void getRs3() {
 		// Rs=(PE-SM+Sup)*FR
-		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
+		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
 	}
 	
 	/**
 	 * Rss 壤中流
 	 * @return
 	 */
-	public static BigDecimal getRss() {
-		// Rs=(PE-SM+Sup)*FR
-		return getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
+	public static void getRss3() {
+		// Rss=SM*KSS*FR
+		Rss = SM.multiply(KSS).multiply(getFR());
+	}
+	
+	/**
+	 * Rg 地下径流
+	 * @return
+	 */
+	public static void getRg3() {
+		// Rg=SM*KG*FR
+		Rg = SM.multiply(KG).multiply(getFR());
+	}
+	
+	/**
+	 * S 自由水蓄水量
+	 * @return
+	 */
+	public static BigDecimal getS3() {
+		// S=(1-KSS-KG)*SM
+		return SM.multiply(CommonConst.BIGDECIMAL_ONE.subtract(KSS).subtract(KG));
 	}
 	
 }
