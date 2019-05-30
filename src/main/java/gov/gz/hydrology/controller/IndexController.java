@@ -13,11 +13,10 @@ import gov.gz.hydrology.utils.StepOneUtil;
 public class IndexController {
 
 	@RequestMapping("index")
-	@ResponseBody
 	public String index() {
 		
 		System.out.println(StepOneUtil.getA(new BigDecimal(1)));
 		
-		return "Ok";
+		return "index";
 	}
 }
