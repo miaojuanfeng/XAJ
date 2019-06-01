@@ -2,64 +2,56 @@ package gov.gz.hydrology.utils;
 
 import java.math.BigDecimal;
 
-import gov.gz.hydrology.constant.CommonConst;
+import gov.gz.hydrology.constant.NumberConfig;
+import gov.gz.hydrology.constant.NumberConst;
 
 public class StepTwoUtil {
 	
+	/**
+	 * 上层蓄水量最终结果
+	 */
 	public static BigDecimal WU;
+	
+	/**
+	 * 下层蓄水量最终结果
+	 */
 	public static BigDecimal WL;
+	
+	/**
+	 * 深层蓄水量最终结果
+	 */
 	public static BigDecimal WD;
+	
+	/**
+	 * WUup 上次计算上层蓄水量
+	 */
+	public static BigDecimal WUup = NumberConfig.WU0;
+	
+	/**
+	* WLup 上次计算下层蓄水量
+	*/
+	public static BigDecimal WLup = NumberConfig.WL0;
+	
+	/**
+	* WDup 上次计算深层蓄水量
+	*/
+	public static BigDecimal getWDup = NumberConfig.WD0;
 	
 	/**
 	 * PEx 产流之后剩下的净雨
 	 * @return
 	 */
-	public static BigDecimal getPEx(BigDecimal B) {
-		// PEx = PE - R
-		return StepCommonUtil.getPE().subtract(StepOneUtil.getR(B));
-	}
-	
-	///////////////////这个是哪里来的
-	/**
-	 * WUup 上次计算上层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWUup() {
-		return new BigDecimal("0.1");
-	}
-	
-	///////////////////这个是哪里来的
-	/**
-	* WLup 上次计算下层蓄水量
-	* @return
-	*/
-	public static BigDecimal getWLup() {
-		return new BigDecimal("0.1");
-	}
-	
-	///////////////////这个是哪里来的
-	/**
-	* WDup 上次计算深层蓄水量
-	* @return
-	*/
-	public static BigDecimal getWDup() {
-		return new BigDecimal("0.1");
-	}
-	
-	///////////////////这个是哪里来的
-	/*
-	 * C 深层蒸散发系数
-	 */
-	public static BigDecimal getC() {
-		return new BigDecimal("0.1");
+	public static BigDecimal getPEx() {
+		// PEx = PE-R
+		return StepCommonUtil.getPE().subtract(StepOneUtil.getR());
 	}
 	
 	/**
 	 * WUx 上层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWUx(BigDecimal B) {
-		return getWUup().add(getPEx(B));
+	public static BigDecimal getWUx() {
+		return WUup.add(getPEx());
 	}
 	
 	/**
@@ -133,7 +125,7 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getWLx() {
 		// WLx = WLup + WLup/WLM*EKy
-		return getWLup().add(getWLup().divide(StepOneUtil.getWLM(), CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE).multiply(getEKy()));
+		return getWLup().add(getWLup().divide(StepOneUtil.getWLM(), NumberConst.DIGIT, NumberConst.MODE).multiply(getEKy()));
 	}
 	
 	/**

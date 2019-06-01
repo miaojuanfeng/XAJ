@@ -2,7 +2,7 @@ package gov.gz.hydrology.utils;
 
 import java.math.BigDecimal;
 
-import gov.gz.hydrology.constant.CommonConst;
+import gov.gz.hydrology.constant.NumberConst;
 
 public class StepFiveUtil {
 	
@@ -47,7 +47,7 @@ public class StepFiveUtil {
 		// C0=(0.5*DT-KE*XE)/(0.5*DT+KE-KE*XE)
 		BigDecimal base = DT.multiply(new BigDecimal("0.5")).subtract(KE.multiply(XE));
 		BigDecimal divisor = DT.multiply(new BigDecimal("0.5")).add(KE).subtract(KE.multiply(XE));
-		return base.divide(divisor, CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE);
+		return base.divide(divisor, NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE);
 	}
 	
 	/**
@@ -58,7 +58,7 @@ public class StepFiveUtil {
 		// C1=(0.5*DT+KE*XE)/(0.5*DT+KE-KE*XE)
 		BigDecimal base = DT.multiply(new BigDecimal("0.5")).add(KE.multiply(XE));
 		BigDecimal divisor = DT.multiply(new BigDecimal("0.5")).add(KE).subtract(KE.multiply(XE));
-		return base.divide(divisor, CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE);
+		return base.divide(divisor, NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE);
 	}
 	
 	/**
@@ -69,7 +69,7 @@ public class StepFiveUtil {
 		// C2=(-0.5*DT+KE-KE*XE)/(0.5*DT+KE-KE*XE)
 		BigDecimal base = DT.multiply(new BigDecimal("-0.5")).add(KE).subtract(KE.multiply(XE));
 		BigDecimal divisor = DT.multiply(new BigDecimal("0.5")).add(KE).subtract(KE.multiply(XE));
-		return base.divide(divisor, CommonConst.DECIMAL_DIGIT, CommonConst.DECIMAL_MODE);
+		return base.divide(divisor, NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE);
 	}
 	
 	/**
