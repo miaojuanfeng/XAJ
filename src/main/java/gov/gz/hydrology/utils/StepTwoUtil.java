@@ -35,7 +35,47 @@ public class StepTwoUtil {
 	/**
 	* WDup 上次计算深层蓄水量
 	*/
-	public static BigDecimal getWDup = NumberConfig.WD0;
+	public static BigDecimal WDup = NumberConfig.WD0;
+	
+	/**
+	 * WUx 上层蓄水量
+	 * @return
+	 */
+	public static void getResult() {
+		BigDecimal PE = StepCommonUtil.getPE();
+		// PE > 0
+		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
+			// WUx = WUup + PEx
+			BigDecimal WUx = WUup.add(getPEx());
+			// WUx > WUM
+			if( NumberUtil.gt(WUx, NumberConfig.WUM) ) {
+				// WU = WUM
+				WU = NumberConfig.WUM;
+			}
+		// PE <= 0
+		}else {
+			// WUx = WUup + EKx
+			BigDecimal WUx = WUup.add(getEKx());
+		}
+	}
+	
+	/**
+	 * WLx 下层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWLx() {
+		// WLx = WLup + PEy
+		return WLup.add(getPEy());
+	}
+	
+	/**
+	 * WDx 深层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWDx() {
+		// WDx = WDup + PEz
+		return WDup.add(getPEz());
+	}
 	
 	/**
 	 * PEx 产流之后剩下的净雨
@@ -47,50 +87,42 @@ public class StepTwoUtil {
 	}
 	
 	/**
-	 * WUx 上层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWUx() {
-		return WUup.add(getPEx());
-	}
-	
-	/**
 	 * PEy 上层剩余的净雨
 	 * @return
 	 */
-	public static BigDecimal getPEy(BigDecimal B) {
+	public static BigDecimal getPEy() {
 		// PEy = WUx - WUM
-		return getWUx(B).subtract(StepOneUtil.getWUM());
-	}
-	
-	/**
-	 * WLx 下层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWLx(BigDecimal B) {
-		// WLx = WLup + PEy
-		return getWLup().add(getPEy(B));
+		return getWUx().subtract(NumberConfig.WUM);
 	}
 	
 	/**
 	 * PEz 下层剩余的净雨
 	 * @return
 	 */
-	public static BigDecimal getPEz(BigDecimal B) {
+	public static BigDecimal getPEz() {
 		// PEz = WLx - WLM
-		return getWLx(B).subtract(StepOneUtil.getWLM());
+		return getWLx().subtract(NumberConfig.WLM);
+	}
+	
+	///////////////////下分支代码//////////////////////////
+	
+	/**
+	 * WLx 下层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWLx() {
+		// WLx = WLup + WLup/WLM*EKy
+		return WLup.add(WLup.divide(NumberConfig.WLM, NumberConst.DIGIT, NumberConst.MODE).multiply(getEKy()));
 	}
 	
 	/**
 	 * WDx 深层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWDx(BigDecimal B) {
-		// WDx = WDup + PEz
-		return getWDup().add(getPEz(B));
+	public static BigDecimal getWDx() {
+		// WDx = WDup + C * EKz
+		return WDup.add(NumberConfig.C.multiply(getEKz()));
 	}
-	
-	///////////////////下分支代码//////////////////////////
 	
 	/**
 	 * EKx 上层蒸发量
@@ -99,15 +131,6 @@ public class StepTwoUtil {
 	public static BigDecimal getEKx() {
 		// EKx = PE
 		return StepCommonUtil.getPE();
-	}
-	
-	/**
-	 * WUx 上层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWUx() {
-		// WUx = WUup + EKx
-		return getWUup().add(getEKx());
 	}
 	
 	/**
@@ -120,29 +143,11 @@ public class StepTwoUtil {
 	}
 	
 	/**
-	 * WLx 下层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWLx() {
-		// WLx = WLup + WLup/WLM*EKy
-		return getWLup().add(getWLup().divide(StepOneUtil.getWLM(), NumberConst.DIGIT, NumberConst.MODE).multiply(getEKy()));
-	}
-	
-	/**
 	 * EKz 下层蒸发后，需要补充的蒸发量
 	 * @return
 	 */
 	public static BigDecimal getEKz() {
 		// EKz = WLx
 		return getWLx();
-	}
-	
-	/**
-	 * WDx 深层蓄水量
-	 * @return
-	 */
-	public static BigDecimal getWDx() {
-		// WDx = WDup + C * EKz
-		return getWDup().add(getC().multiply(getEKz()));
 	}
 }
