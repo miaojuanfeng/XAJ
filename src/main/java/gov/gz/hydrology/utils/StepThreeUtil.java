@@ -19,23 +19,6 @@ public class StepThreeUtil {
 	 * Rg 地下径流
 	 */
 	public static BigDecimal Rg;
-	
-	/**
-	 * KSS 壤中流出流系数
-	 */
-	public static BigDecimal KSS = new BigDecimal("0.1");
-	/**
-	 * KG 地下径流出流系数
-	 */
-	public static BigDecimal KG = new BigDecimal("0.1");
-	/**
-	 * EX 自由水蓄水容量曲线指数
-	 */
-	public static BigDecimal EX = new BigDecimal("0.1");
-	/**
-	 * SM 自由水平均蓄水容量
-	 */
-	public static BigDecimal SM = new BigDecimal("0.1");
 
 	///////////////////这个是哪里来的
 	/**

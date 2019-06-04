@@ -38,12 +38,12 @@ public class StepTwoUtil {
 	public static BigDecimal WDup = NumberConfig.WD0;
 	
 	/**
-	 * WUx 上层蓄水量
+	 * 最终结果
 	 * @return
 	 */
 	public static void getResult() {
 		BigDecimal PE = StepCommonUtil.getPE();
-		// PE > 0
+		// PE > 0  上分支
 		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
 			// WUx = WUup + PEx
 			BigDecimal WUx = WUup.add(getPEx());
@@ -51,19 +51,79 @@ public class StepTwoUtil {
 			if( NumberUtil.gt(WUx, NumberConfig.WUM) ) {
 				// WU = WUM
 				WU = NumberConfig.WUM;
+				BigDecimal WLx = getWLx1();
+				// WLx > WLM
+				if( NumberUtil.gt(WLx, NumberConfig.WLM) ) {
+					WL = NumberConfig.WLM;
+					BigDecimal WDx = getWDx1();
+					// WDx > WDM
+					if( NumberUtil.gt(WDx, NumberConfig.WDM) ) {
+						WD = NumberConfig.WDM;
+					// WDx <= WDM
+					}else {
+						WD = WDx;
+					}
+				// WLx <= WLM
+				} else {
+					WL = WLx;
+					WD = WDup;
+				}
+			// WUx <= WUM
+			} else {
+				WU = WUx;
+				WL = WLup;
+				WD = WDup;
 			}
-		// PE <= 0
+		// PE <= 0 下分支
 		}else {
 			// WUx = WUup + EKx
 			BigDecimal WUx = WUup.add(getEKx());
+			// WUx > 0
+			if( NumberUtil.gt(WUx, NumberConst.ZERO) ) {
+				WU = WUx;
+				WL = WLup;
+				WD = WDup;
+			// WUx <= 0
+			}else {
+				BigDecimal WLx = getWLx2();
+				// WLx > 0
+				if( NumberUtil.gt(WLx, NumberConst.ZERO) ) {
+					WU = NumberConst.ZERO;
+					WL = WLx;
+					WD = WDup;
+				// WLx <= 0
+				}else {
+					BigDecimal WDx = getWDx2();
+					// WDx > 0
+					if( NumberUtil.gt(WDx, NumberConst.ZERO) ) {
+						WU = NumberConst.ZERO;
+						WL = NumberConst.ZERO;
+						WD = WDx;
+					// WDx <= 0
+					}else {
+						WU = NumberConst.ZERO;
+						WL = NumberConst.ZERO;
+						WD = NumberConst.ZERO;
+					}
+				}
+			}
 		}
+	}
+	
+	/**
+	 * WUx 上层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWUx1() {
+		// WUx = WUup + PEx
+		return WUup.add(getPEx());
 	}
 	
 	/**
 	 * WLx 下层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWLx() {
+	public static BigDecimal getWLx1() {
 		// WLx = WLup + PEy
 		return WLup.add(getPEy());
 	}
@@ -72,7 +132,7 @@ public class StepTwoUtil {
 	 * WDx 深层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWDx() {
+	public static BigDecimal getWDx1() {
 		// WDx = WDup + PEz
 		return WDup.add(getPEz());
 	}
@@ -92,7 +152,7 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getPEy() {
 		// PEy = WUx - WUM
-		return getWUx().subtract(NumberConfig.WUM);
+		return getWUx1().subtract(NumberConfig.WUM);
 	}
 	
 	/**
@@ -101,16 +161,25 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getPEz() {
 		// PEz = WLx - WLM
-		return getWLx().subtract(NumberConfig.WLM);
+		return getWLx1().subtract(NumberConfig.WLM);
 	}
 	
 	///////////////////下分支代码//////////////////////////
 	
 	/**
+	 * WUx 上层蓄水量
+	 * @return
+	 */
+	public static BigDecimal getWUx2() {
+		// WUx = WUup + EKx
+		return WUup.add(getEKx());
+	}
+	
+	/**
 	 * WLx 下层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWLx() {
+	public static BigDecimal getWLx2() {
 		// WLx = WLup + WLup/WLM*EKy
 		return WLup.add(WLup.divide(NumberConfig.WLM, NumberConst.DIGIT, NumberConst.MODE).multiply(getEKy()));
 	}
@@ -119,7 +188,7 @@ public class StepTwoUtil {
 	 * WDx 深层蓄水量
 	 * @return
 	 */
-	public static BigDecimal getWDx() {
+	public static BigDecimal getWDx2() {
 		// WDx = WDup + C * EKz
 		return WDup.add(NumberConfig.C.multiply(getEKz()));
 	}
@@ -139,7 +208,7 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getEKy() {
 		// EKy = WUx
-		return getWUx();
+		return getWUx2();
 	}
 	
 	/**
@@ -148,6 +217,6 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getEKz() {
 		// EKz = WLx
-		return getWLx();
+		return getWLx2();
 	}
 }

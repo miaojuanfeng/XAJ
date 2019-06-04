@@ -9,27 +9,27 @@ public class NumberConfig {
 	/**
 	 * WU0  上层土壤蓄水容量初始含水量
 	 */
-	public static BigDecimal WU0 = new BigDecimal("40");
+	public static BigDecimal WU0 = new BigDecimal(40);
 	
 	/**
 	 * WL0  下层土壤蓄水容量初始含水量
 	 */
-	public static BigDecimal WL0 = new BigDecimal("20");
+	public static BigDecimal WL0 = new BigDecimal(20);
 	
 	/**
 	 * WD0  深层土壤蓄水容量初始含水量
 	 */
-	public static BigDecimal WD0 = new BigDecimal("10");
+	public static BigDecimal WD0 = new BigDecimal(10);
 	
 	/**
 	 * QRSS  壤中流初值
 	 */
-	public static BigDecimal QRSS = new BigDecimal("5");
+	public static BigDecimal QRSS = new BigDecimal(5);
 	
 	/**
 	 * QRG  地下径流初值
 	 */
-	public static BigDecimal QRG = new BigDecimal("3");
+	public static BigDecimal QRG = new BigDecimal(3);
 	
 	/**
 	 * E  每小时蒸发量
@@ -67,17 +67,17 @@ public class NumberConfig {
 	/**
 	 * WUM  上层土壤蓄水容量
 	 */
-	public static BigDecimal WUM = new BigDecimal("15");
+	public static BigDecimal WUM = new BigDecimal(15);
 	
 	/**
 	 * WLM  下层土壤蓄水容量
 	 */
-	public static BigDecimal WLM = new BigDecimal("70");
+	public static BigDecimal WLM = new BigDecimal(70);
 	
 	/**
 	 * WDM  深层土壤蓄水容量
 	 */
-	public static BigDecimal WDM = new BigDecimal("16");
+	public static BigDecimal WDM = new BigDecimal(16);
 	
 	/**
 	 * B  蓄水容量曲线抛物线指数
@@ -97,7 +97,7 @@ public class NumberConfig {
 	/**
 	 * SM  自由水平均蓄水容量
 	 */
-	public static BigDecimal SM = new BigDecimal("71");
+	public static BigDecimal SM = new BigDecimal(71);
 	
 	/**
 	 * EX  自由水蓄水容量曲线指数
