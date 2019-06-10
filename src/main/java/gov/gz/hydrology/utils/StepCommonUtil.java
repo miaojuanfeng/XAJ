@@ -2,21 +2,15 @@ package gov.gz.hydrology.utils;
 
 import java.math.BigDecimal;
 
+import gov.gz.hydrology.constant.NumberConfig;
+
 public class StepCommonUtil {
 	
 	/**
-	 * P 时刻雨量
+	 * P 时刻雨量，从数据库中读取
 	 * @return
 	 */
 	public static BigDecimal getP() {
-		return new BigDecimal("0.1");
-	}
-	
-	/**
-	 * K 蒸散发折算系数
-	 * @return
-	 */
-	public static BigDecimal getK() {
 		return new BigDecimal("0.1");
 	}
 	
@@ -34,7 +28,7 @@ public class StepCommonUtil {
 	 */
 	public static BigDecimal getEk() {
 		// Ek = K * E
-		return getK().multiply(getE());
+		return NumberConfig.K.multiply(getE());
 	}
 	
 	/**

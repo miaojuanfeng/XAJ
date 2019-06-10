@@ -72,7 +72,7 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getF() {
 		// F=Ft*(1-IMP)
-		return getFt().multiply(NumberConst.BIGDECIMAL_ONE.subtract(IMP));
+		return getFt().multiply(NumberConst.ONE.subtract(IMP));
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getQs() {
 		// Qs=(Rs*F+Rd*Ft*IMP)/(3.6*DT)
-		return (StepThreeUtil.Rs.multiply(getF()).add(getRd().multiply(getFt()).multiply(IMP))).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE);
+		return (StepThreeUtil.Rs.multiply(getF()).add(getRd().multiply(getFt()).multiply(IMP))).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE);
 	}
 	
 	/**
@@ -90,7 +90,7 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getQss() {
 		// Qss=Cs*Qssup+(1-Cs)*Rss*F/(3.6*Dt)
-		return CS.multiply(getQssup()).add(NumberConst.BIGDECIMAL_ONE.subtract(CS).multiply(StepThreeUtil.Rss).multiply(getF()).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE));
+		return CS.multiply(getQssup()).add(NumberConst.ONE.subtract(CS).multiply(StepThreeUtil.Rss).multiply(getF()).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
 	}
 	
 	/**
@@ -99,7 +99,7 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getQg() {
 		// Qg=Cg*Qgup+(1-Cg)*Rg*F/(3.6*Dt)
-		return CG.multiply(getQgup()).add(NumberConst.BIGDECIMAL_ONE.subtract(CG).multiply(StepThreeUtil.Rg).multiply(getF()).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DECIMAL_DIGIT, NumberConst.DECIMAL_MODE));
+		return CG.multiply(getQgup()).add(NumberConst.ONE.subtract(CG).multiply(StepThreeUtil.Rg).multiply(getF()).divide(getDT().multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
 	}
 	
 	/////////////////////////////////////// 这里的算法有问题

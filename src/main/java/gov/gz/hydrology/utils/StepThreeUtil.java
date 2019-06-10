@@ -68,7 +68,7 @@ public class StepThreeUtil {
 	 */
 	public static void getRss(BigDecimal B) {
 		// Rss=Sup*KSS*FR
-		Rss = getSup().multiply(KSS).multiply(getFR(B));
+		Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR(B));
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class StepThreeUtil {
 	 */
 	public static void getRg(BigDecimal B) {
 		// Rg=Sup*KG*FR
-		Rg = getSup().multiply(KG).multiply(getFR(B));
+		Rg = getSup().multiply(NumberConfig.KG).multiply(getFR(B));
 	}
 	
 	/**
@@ -86,7 +86,7 @@ public class StepThreeUtil {
 	 */
 	public static BigDecimal getS() {
 		// S=(1-KSS-KG)*Sup
-		return getSup().multiply(NumberConst.ONE.subtract(KSS).subtract(KG));
+		return getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
@@ -97,7 +97,7 @@ public class StepThreeUtil {
 	 */
 	public static BigDecimal getSMMF() {
 		// SMMF=SM*(1+EX)
-		return SM.multiply(NumberConst.ONE.add(EX));
+		return NumberConfig.SM.multiply(NumberConst.ONE.add(NumberConfig.EX));
 	}
 	
 	/**
@@ -106,8 +106,8 @@ public class StepThreeUtil {
 	 */
 	public static BigDecimal getAU() {
 		// AU=SMMF(1-(1-Sup/SM)^[1/(1+EX)])
-		BigDecimal base = NumberConst.ONE.subtract(getSup().divide(SM, NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.divide(NumberConst.ONE.add(EX), NumberConst.DIGIT, NumberConst.MODE);
+		BigDecimal base = NumberConst.ONE.subtract(getSup().divide(NumberConfig.SM, NumberConst.DIGIT, NumberConst.MODE));
+		BigDecimal power = NumberConst.ONE.divide(NumberConst.ONE.add(NumberConfig.EX), NumberConst.DIGIT, NumberConst.MODE);
 		return getSMMF().multiply(NumberConst.ONE.subtract(NumberUtil.pow(base, power)));
 	}
 	
@@ -127,8 +127,8 @@ public class StepThreeUtil {
 	public static void getRs2() {
 		// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(EX);
-		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup().add(SM.multiply(NumberUtil.pow(base, power)))));
+		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
+		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup().add(NumberConfig.SM.multiply(NumberUtil.pow(base, power)))));
 	}
 	
 	/**
@@ -138,8 +138,8 @@ public class StepThreeUtil {
 	public static void getRss() {
 		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(EX);
-		Rss = SM.subtract(SM.multiply(NumberUtil.pow(base, power))).multiply(KSS).multiply(getFR());
+		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
+		Rss = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KSS).multiply(getFR());
 	}
 	
 	/**
@@ -149,8 +149,8 @@ public class StepThreeUtil {
 	public static void getRg() {
 		// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(EX);
-		Rg = SM.subtract(SM.multiply(NumberUtil.pow(base, power))).multiply(KG).multiply(getFR());
+		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
+		Rg = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KG).multiply(getFR());
 	}
 	
 	/**
@@ -160,8 +160,8 @@ public class StepThreeUtil {
 	public static BigDecimal getS2() {
 		// S=(1-KSS-KG){SM-SM[1-(PE+AU)/SMMF]^(1+EX)}
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(EX);
-		return NumberConst.ONE.subtract(KSS).subtract(KG).multiply(SM.subtract(SM.multiply(NumberUtil.pow(base, power))));
+		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
+		return NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG).multiply(NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))));
 	}
 	
 	/**
@@ -170,7 +170,7 @@ public class StepThreeUtil {
 	 */
 	public static void getRs3() {
 		// Rs=(PE-SM+Sup)*FR
-		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(SM).add(getSup()));
+		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup()));
 	}
 	
 	/**
@@ -179,7 +179,7 @@ public class StepThreeUtil {
 	 */
 	public static void getRss3() {
 		// Rss=SM*KSS*FR
-		Rss = SM.multiply(KSS).multiply(getFR());
+		Rss = NumberConfig.SM.multiply(NumberConfig.KSS).multiply(getFR());
 	}
 	
 	/**
@@ -188,7 +188,7 @@ public class StepThreeUtil {
 	 */
 	public static void getRg3() {
 		// Rg=SM*KG*FR
-		Rg = SM.multiply(KG).multiply(getFR());
+		Rg = NumberConfig.SM.multiply(NumberConfig.KG).multiply(getFR());
 	}
 	
 	/**
@@ -197,7 +197,7 @@ public class StepThreeUtil {
 	 */
 	public static BigDecimal getS3() {
 		// S=(1-KSS-KG)*SM
-		return SM.multiply(NumberConst.ONE.subtract(KSS).subtract(KG));
+		return NumberConfig.SM.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 	}
 	
 }

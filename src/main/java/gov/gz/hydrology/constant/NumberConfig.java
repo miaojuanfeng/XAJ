@@ -118,4 +118,20 @@ public class NumberConfig {
 	 * IM  不透水面积比例
 	 */
 	public static BigDecimal IM = new BigDecimal("0.041");
+	
+	/**
+	 * XE  流量比重因子
+	 */
+	public static BigDecimal XE = new BigDecimal("0.273");
+			
+	/**
+	 * KE  蓄量常数
+	 */
+	public static BigDecimal KE = new BigDecimal(18);
+	
+	/**
+	 * DT  滞时
+	 */
+	public static BigDecimal DT = new BigDecimal(1);
+	
 }

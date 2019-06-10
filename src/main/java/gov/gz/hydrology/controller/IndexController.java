@@ -1,10 +1,7 @@
 package gov.gz.hydrology.controller;
 
-import java.math.BigDecimal;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import gov.gz.hydrology.utils.StepOneUtil;
 
@@ -15,7 +12,7 @@ public class IndexController {
 	@RequestMapping("index")
 	public String index() {
 		
-		System.out.println(StepOneUtil.getA(new BigDecimal(1)));
+		System.out.println(StepOneUtil.getA());
 		
 		return "index";
 	}
