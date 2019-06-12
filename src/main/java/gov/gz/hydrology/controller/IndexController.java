@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import gov.gz.hydrology.constant.NumberConfig;
 import gov.gz.hydrology.utils.StepCommonUtil;
 import gov.gz.hydrology.utils.StepOneUtil;
+import gov.gz.hydrology.utils.StepThreeUtil;
+import gov.gz.hydrology.utils.StepTwoUtil;
 
 @Controller
 @RequestMapping("/")
@@ -23,6 +25,8 @@ public class IndexController {
 		map.put("para", getPara());
 		map.put("stepCommon", getStepCommon());
 		map.put("stepOne", getStepOne());
+		map.put("stepTwo", getStepTwo());
+		map.put("stepThree", getStepThree());
 		
 		return "index";
 	}
@@ -65,8 +69,42 @@ public class IndexController {
 		data.put("Wmm", StepOneUtil.getWmm());
 		data.put("A", StepOneUtil.getA());
 		data.put("Rd", StepOneUtil.getRd());
-		
 		data.put("R", StepOneUtil.getR());
+		return data;
+	}
+	
+	private Map<String, Object> getStepTwo(){
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("PEx", StepTwoUtil.getPEx());
+		data.put("WUx1", StepTwoUtil.getWUx1());
+		data.put("PEy", StepTwoUtil.getPEy());
+		data.put("WLx1", StepTwoUtil.getWLx1());
+		data.put("PEz", StepTwoUtil.getPEz());
+		data.put("WDx1", StepTwoUtil.getWDx1());
+		
+		data.put("EKx", StepTwoUtil.getEKx());
+		data.put("WUx2", StepTwoUtil.getWUx2());
+		data.put("EKy", StepTwoUtil.getEKy());
+		data.put("WLx2", StepTwoUtil.getWLx2());
+		data.put("EKz", StepTwoUtil.getEKz());
+		data.put("WDx2", StepTwoUtil.getWDx2());
+		
+		StepTwoUtil.getResult();
+		data.put("WU", StepTwoUtil.WU);
+		data.put("WL", StepTwoUtil.WL);
+		data.put("WD", StepTwoUtil.WD);
+		return data;
+	}
+	
+	private Map<String, Object> getStepThree(){
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("FR", StepThreeUtil.getFR());
+		data.put("SMMF", StepThreeUtil.getSMMF());
+		data.put("AU", StepThreeUtil.getAU());
+		data.put("Rs", StepThreeUtil.Rs);
+		data.put("Rss", StepThreeUtil.Rss);
+		data.put("Rg", StepThreeUtil.Rg);
+		data.put("S", StepThreeUtil.S);
 		return data;
 	}
 }

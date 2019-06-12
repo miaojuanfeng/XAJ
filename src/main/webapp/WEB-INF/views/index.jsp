@@ -115,6 +115,95 @@
 			<input type="text" value="${stepOne.R}" readonly="readonly"/>
 		</p>
 		<hr/>
+		<p>
+			<span>PEx = </span>
+			<input type="text" value="${stepTwo.PEx}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WUx1 = </span>
+			<input type="text" value="${stepTwo.WUx1}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>PEy = </span>
+			<input type="text" value="${stepTwo.PEy}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WLx1 = </span>
+			<input type="text" value="${stepTwo.WLx1}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>PEz = </span>
+			<input type="text" value="${stepTwo.PEz}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WDx1 = </span>
+			<input type="text" value="${stepTwo.WDx1}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>EKx = </span>
+			<input type="text" value="${stepTwo.EKx}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WUx2 = </span>
+			<input type="text" value="${stepTwo.WUx2}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>EKy = </span>
+			<input type="text" value="${stepTwo.EKy}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WLx2 = </span>
+			<input type="text" value="${stepTwo.WLx2}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>EKz = </span>
+			<input type="text" value="${stepTwo.EKz}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WDx2 = </span>
+			<input type="text" value="${stepTwo.WDx2}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WU = </span>
+			<input type="text" value="${stepTwo.WU}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WL = </span>
+			<input type="text" value="${stepTwo.WL}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>WD = </span>
+			<input type="text" value="${stepTwo.WD}" readonly="readonly"/>
+		</p>
+		<hr/>
+		<p>
+			<span>FR = </span>
+			<input type="text" value="${stepThree.FR}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>SMMF = </span>
+			<input type="text" value="${stepThree.SMMF}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>AU = </span>
+			<input type="text" value="${stepThree.AU}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Rs = </span>
+			<input type="text" value="${stepThree.Rs}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Rss = </span>
+			<input type="text" value="${stepThree.Rss}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Rg = </span>
+			<input type="text" value="${stepThree.Rg}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>S = </span>
+			<input type="text" value="${stepThree.S}" readonly="readonly"/>
+		</p>
 	</div>
 </body>
 </html>

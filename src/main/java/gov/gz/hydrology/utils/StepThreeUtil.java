@@ -19,6 +19,10 @@ public class StepThreeUtil {
 	 * Rg 地下径流
 	 */
 	public static BigDecimal Rg;
+	/**
+	 * S 自由水蓄水量
+	 */
+	public static BigDecimal S;
 
 	///////////////////这个是哪里来的
 	/**
@@ -42,22 +46,29 @@ public class StepThreeUtil {
 	 * FR
 	 * @return
 	 */
-	public static BigDecimal getFR(BigDecimal B) {
-		// Wi=WU+WL+WD
-		BigDecimal Wi = StepTwoUtil.WU.add(StepTwoUtil.WL).add(StepTwoUtil.WD);
-		// Wm=WUM+WLM+WDM
-		BigDecimal Wm = NumberConfig.WUM.add(NumberConfig.WLM).add(NumberConfig.WDM);		
-		// FR=1-(1-Wi/Wm)^[B/(1+B)]
-		BigDecimal base = NumberConst.ONE.subtract(Wi.divide(Wm, NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = B.divide(B.add(NumberConst.ONE), NumberConst.DIGIT, NumberConst.MODE);
-		return NumberConst.ONE.subtract(NumberUtil.pow(base, power));
+	public static BigDecimal getFR() {
+		BigDecimal PE = StepCommonUtil.getPE();
+		// PE > 0
+		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
+			// FR=R/PE
+			return getR().divide(StepCommonUtil.getPE(), NumberConst.DIGIT, NumberConst.MODE);
+		}else {
+			// Wi=WU+WL+WD
+			BigDecimal Wi = StepTwoUtil.WU.add(StepTwoUtil.WL).add(StepTwoUtil.WD);
+			// Wm=WUM+WLM+WDM
+			BigDecimal Wm = NumberConfig.WUM.add(NumberConfig.WLM).add(NumberConfig.WDM);		
+			// FR=1-(1-Wi/Wm)^[B/(1+B)]
+			BigDecimal base = NumberConst.ONE.subtract(Wi.divide(Wm, NumberConst.DIGIT, NumberConst.MODE));
+			BigDecimal power = NumberConfig.B.divide(NumberConfig.B.add(NumberConst.ONE), NumberConst.DIGIT, NumberConst.MODE);
+			return NumberConst.ONE.subtract(NumberUtil.pow(base, power));
+		}
 	}
 	
 	/**
 	 * Rs 地表径流
 	 * @return
 	 */
-	public static void getRs() {
+	public static void getRs1() {
 		// Rs=0
 		Rs = NumberConst.ZERO;
 	}
@@ -66,27 +77,27 @@ public class StepThreeUtil {
 	 * Rss 壤中流
 	 * @return
 	 */
-	public static void getRss(BigDecimal B) {
+	public static void getRss1() {
 		// Rss=Sup*KSS*FR
-		Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR(B));
+		Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR());
 	}
 	
 	/**
 	 * Rg 地下径流
 	 * @return
 	 */
-	public static void getRg(BigDecimal B) {
+	public static void getRg1() {
 		// Rg=Sup*KG*FR
-		Rg = getSup().multiply(NumberConfig.KG).multiply(getFR(B));
+		Rg = getSup().multiply(NumberConfig.KG).multiply(getFR());
 	}
 	
 	/**
 	 * S 自由水蓄水量
 	 * @return
 	 */
-	public static BigDecimal getS() {
+	public static void getS1() {
 		// S=(1-KSS-KG)*Sup
-		return getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
+		S = getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
@@ -112,15 +123,6 @@ public class StepThreeUtil {
 	}
 	
 	/**
-	 * FR 产流面积比
-	 * @return
-	 */
-	public static BigDecimal getFR() {
-		// FR=R/PE
-		return getR().divide(StepCommonUtil.getPE(), NumberConst.DIGIT, NumberConst.MODE);
-	}
-	
-	/**
 	 * Rs 地表径流
 	 * @return
 	 */
@@ -135,7 +137,7 @@ public class StepThreeUtil {
 	 * Rss 壤中流
 	 * @return
 	 */
-	public static void getRss() {
+	public static void getRss2() {
 		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
 		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
@@ -146,7 +148,7 @@ public class StepThreeUtil {
 	 * Rg 地下径流
 	 * @return
 	 */
-	public static void getRg() {
+	public static void getRg2() {
 		// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
 		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
@@ -157,11 +159,11 @@ public class StepThreeUtil {
 	 * S 自由水蓄水量
 	 * @return
 	 */
-	public static BigDecimal getS2() {
+	public static void getS2() {
 		// S=(1-KSS-KG){SM-SM[1-(PE+AU)/SMMF]^(1+EX)}
 		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
 		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
-		return NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG).multiply(NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))));
+		S = NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG).multiply(NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))));
 	}
 	
 	/**
@@ -195,9 +197,9 @@ public class StepThreeUtil {
 	 * S 自由水蓄水量
 	 * @return
 	 */
-	public static BigDecimal getS3() {
+	public static void getS3() {
 		// S=(1-KSS-KG)*SM
-		return NumberConfig.SM.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
+		S = NumberConfig.SM.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 	}
 	
 }
