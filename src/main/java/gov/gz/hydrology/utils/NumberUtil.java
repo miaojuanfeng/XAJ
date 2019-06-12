@@ -11,7 +11,7 @@ public class NumberUtil {
 	 * @return
 	 */
 	public static BigDecimal pow(BigDecimal base, BigDecimal power) {
-		return new BigDecimal(Math.pow(base.doubleValue(), power.doubleValue()));
+		return new BigDecimal(String.valueOf(Math.pow(base.doubleValue(), power.doubleValue())));
 	}
 	
 	/**

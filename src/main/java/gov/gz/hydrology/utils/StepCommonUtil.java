@@ -10,7 +10,7 @@ public class StepCommonUtil {
 	 * P 时刻雨量，从数据库中读取
 	 * @return
 	 */
-	public static BigDecimal getP() {
+	private static BigDecimal getP() {
 		return new BigDecimal("0.1");
 	}
 	
@@ -18,7 +18,7 @@ public class StepCommonUtil {
 	 * E 蒸发量
 	 * @return
 	 */
-	public static BigDecimal getE() {
+	private static BigDecimal getE() {
 		return new BigDecimal("0.1");
 	}
 	

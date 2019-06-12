@@ -68,4 +68,8 @@ public class StepOneUtil {
 		// PE <= 0 ? R = 0
 		return R;
 	}
+	
+	public static BigDecimal getRd() {
+		return StepCommonUtil.getPE();
+	}
 }
