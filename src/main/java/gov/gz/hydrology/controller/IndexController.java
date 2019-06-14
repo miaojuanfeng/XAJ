@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import gov.gz.hydrology.constant.NumberConfig;
 import gov.gz.hydrology.utils.StepCommonUtil;
+import gov.gz.hydrology.utils.StepFiveUtil;
+import gov.gz.hydrology.utils.StepFourUtil;
 import gov.gz.hydrology.utils.StepOneUtil;
 import gov.gz.hydrology.utils.StepThreeUtil;
 import gov.gz.hydrology.utils.StepTwoUtil;
@@ -20,13 +22,13 @@ public class IndexController {
 	@RequestMapping("index")
 	public String index(ModelMap map) {
 		
-		System.out.println(StepOneUtil.getA());
-		
 		map.put("para", getPara());
 		map.put("stepCommon", getStepCommon());
 		map.put("stepOne", getStepOne());
 		map.put("stepTwo", getStepTwo());
 		map.put("stepThree", getStepThree());
+		map.put("stepFour", getStepFour());
+		map.put("stepFive", getStepFive());
 		
 		return "index";
 	}
@@ -68,8 +70,10 @@ public class IndexController {
 		data.put("Wm", StepOneUtil.getWm());
 		data.put("Wmm", StepOneUtil.getWmm());
 		data.put("A", StepOneUtil.getA());
-		data.put("Rd", StepOneUtil.getRd());
-		data.put("R", StepOneUtil.getR());
+		
+		StepOneUtil.getResult();
+		data.put("Rd", StepOneUtil.Rd);
+		data.put("R", StepOneUtil.R);
 		return data;
 	}
 	
@@ -102,9 +106,32 @@ public class IndexController {
 		data.put("SMMF", StepThreeUtil.getSMMF());
 		data.put("AU", StepThreeUtil.getAU());
 		data.put("Rs", StepThreeUtil.Rs);
+		
+		StepThreeUtil.getResult();
 		data.put("Rss", StepThreeUtil.Rss);
 		data.put("Rg", StepThreeUtil.Rg);
 		data.put("S", StepThreeUtil.S);
+		return data;
+	}
+	
+	private Map<String, Object> getStepFour(){
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("F", StepFourUtil.getF());
+		data.put("Qs", StepFourUtil.getQs());
+		data.put("Qss", StepFourUtil.getQss());
+		data.put("Qg", StepFourUtil.getQg());
+		
+		StepFourUtil.getResult();
+		data.put("Qe", "还没算");
+		return data;
+	}
+	
+	private Map<String, Object> getStepFive(){
+		Map<String, Object> data = new HashMap<String, Object>();
+		data.put("C0", StepFiveUtil.getC0());
+		data.put("C1", StepFiveUtil.getC1());
+		data.put("C2", StepFiveUtil.getC2());
+		data.put("Qt", StepFiveUtil.getQt());
 		return data;
 	}
 }

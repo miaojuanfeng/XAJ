@@ -134,4 +134,20 @@ public class NumberConfig {
 	 */
 	public static BigDecimal DT = new BigDecimal(1);
 	
+	/**
+	 * CS 壤中流消退系数
+	 */
+	public static BigDecimal CS = new BigDecimal("0.943");
+	
+	/**
+	 * CG 地下径流消退系数
+	 */
+	public static BigDecimal CG = new BigDecimal("0.965");
+	
+	/**
+	 * Ft 流域面积
+	 */
+	public static BigDecimal Ft = new BigDecimal(2372);
+	
+	
 }

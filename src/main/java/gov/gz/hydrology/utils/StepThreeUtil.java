@@ -33,13 +33,59 @@ public class StepThreeUtil {
 		return new BigDecimal("0.1");
 	}
 	
-	///////////////////这个是哪里来的
 	/**
-	* R 时刻产流量
-	* @return
-	*/
-	public static BigDecimal getR() {
-		return new BigDecimal("0.1");
+	 * 最终结果
+	 * @return
+	 */
+	public static void getResult() {
+		BigDecimal PE = StepCommonUtil.getPE();
+		// PE>0
+		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
+			BigDecimal SMMF = getSMMF();
+			BigDecimal AU = getAU();
+			BigDecimal temp_PE_AU = PE.add(AU);
+			// PE+AU<SMMF
+			if( NumberUtil.lt(temp_PE_AU, SMMF) ) {
+				BigDecimal base = null;
+				BigDecimal power = null;
+				// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
+				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
+				power = NumberConst.ONE.add(NumberConfig.EX);
+				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup().add(NumberConfig.SM.multiply(NumberUtil.pow(base, power)))));
+				// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
+				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
+				power = NumberConst.ONE.add(NumberConfig.EX);
+				Rss = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KSS).multiply(getFR());
+				// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
+				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
+				power = NumberConst.ONE.add(NumberConfig.EX);
+				Rg = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KG).multiply(getFR());
+				// S=(1-KSS-KG){SM-SM[1-(PE+AU)/SMMF]^(1+EX)}
+				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
+				power = NumberConst.ONE.add(NumberConfig.EX);
+				S = NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG).multiply(NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))));
+			// PE+AU>=SMMF
+			}else {
+				// Rs=(PE-SM+Sup)*FR
+				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup()));
+				// Rss=SM*KSS*FR
+				Rss = NumberConfig.SM.multiply(NumberConfig.KSS).multiply(getFR());
+				// Rg=SM*KG*FR
+				Rg = NumberConfig.SM.multiply(NumberConfig.KG).multiply(getFR());
+				// S=(1-KSS-KG)*SM
+				S = NumberConfig.SM.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
+			}
+		// PE<=0
+		}else {
+			// Rs=0
+			Rs = NumberConst.ZERO;
+			// Rss=Sup*KSS*FR
+			Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR());
+			// Rg=Sup*KG*FR
+			Rg = getSup().multiply(NumberConfig.KG).multiply(getFR());
+			// S=(1-KSS-KG)*Sup
+			S = getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
+		}
 	}
 
 	/**
@@ -51,7 +97,7 @@ public class StepThreeUtil {
 		// PE > 0
 		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
 			// FR=R/PE
-			return getR().divide(StepCommonUtil.getPE(), NumberConst.DIGIT, NumberConst.MODE);
+			return StepOneUtil.R.divide(StepCommonUtil.getPE(), NumberConst.DIGIT, NumberConst.MODE);
 		}else {
 			// Wi=WU+WL+WD
 			BigDecimal Wi = StepTwoUtil.WU.add(StepTwoUtil.WL).add(StepTwoUtil.WD);
@@ -63,44 +109,6 @@ public class StepThreeUtil {
 			return NumberConst.ONE.subtract(NumberUtil.pow(base, power));
 		}
 	}
-	
-	/**
-	 * Rs 地表径流
-	 * @return
-	 */
-	public static void getRs1() {
-		// Rs=0
-		Rs = NumberConst.ZERO;
-	}
-	
-	/**
-	 * Rss 壤中流
-	 * @return
-	 */
-	public static void getRss1() {
-		// Rss=Sup*KSS*FR
-		Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR());
-	}
-	
-	/**
-	 * Rg 地下径流
-	 * @return
-	 */
-	public static void getRg1() {
-		// Rg=Sup*KG*FR
-		Rg = getSup().multiply(NumberConfig.KG).multiply(getFR());
-	}
-	
-	/**
-	 * S 自由水蓄水量
-	 * @return
-	 */
-	public static void getS1() {
-		// S=(1-KSS-KG)*Sup
-		S = getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
-	}
-	
-	///////////////////////////////////////////////////////////////////////////
 	
 	/**
 	 * SMMF 产流面积上的自由水蓄水量
@@ -120,86 +128,6 @@ public class StepThreeUtil {
 		BigDecimal base = NumberConst.ONE.subtract(getSup().divide(NumberConfig.SM, NumberConst.DIGIT, NumberConst.MODE));
 		BigDecimal power = NumberConst.ONE.divide(NumberConst.ONE.add(NumberConfig.EX), NumberConst.DIGIT, NumberConst.MODE);
 		return getSMMF().multiply(NumberConst.ONE.subtract(NumberUtil.pow(base, power)));
-	}
-	
-	/**
-	 * Rs 地表径流
-	 * @return
-	 */
-	public static void getRs2() {
-		// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
-		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
-		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup().add(NumberConfig.SM.multiply(NumberUtil.pow(base, power)))));
-	}
-	
-	/**
-	 * Rss 壤中流
-	 * @return
-	 */
-	public static void getRss2() {
-		// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
-		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
-		Rss = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KSS).multiply(getFR());
-	}
-	
-	/**
-	 * Rg 地下径流
-	 * @return
-	 */
-	public static void getRg2() {
-		// RG={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KG*FR
-		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
-		Rg = NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))).multiply(NumberConfig.KG).multiply(getFR());
-	}
-	
-	/**
-	 * S 自由水蓄水量
-	 * @return
-	 */
-	public static void getS2() {
-		// S=(1-KSS-KG){SM-SM[1-(PE+AU)/SMMF]^(1+EX)}
-		BigDecimal base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
-		BigDecimal power = NumberConst.ONE.add(NumberConfig.EX);
-		S = NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG).multiply(NumberConfig.SM.subtract(NumberConfig.SM.multiply(NumberUtil.pow(base, power))));
-	}
-	
-	/**
-	 * Rs 地表径流
-	 * @return
-	 */
-	public static void getRs3() {
-		// Rs=(PE-SM+Sup)*FR
-		Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup()));
-	}
-	
-	/**
-	 * Rss 壤中流
-	 * @return
-	 */
-	public static void getRss3() {
-		// Rss=SM*KSS*FR
-		Rss = NumberConfig.SM.multiply(NumberConfig.KSS).multiply(getFR());
-	}
-	
-	/**
-	 * Rg 地下径流
-	 * @return
-	 */
-	public static void getRg3() {
-		// Rg=SM*KG*FR
-		Rg = NumberConfig.SM.multiply(NumberConfig.KG).multiply(getFR());
-	}
-	
-	/**
-	 * S 自由水蓄水量
-	 * @return
-	 */
-	public static void getS3() {
-		// S=(1-KSS-KG)*SM
-		S = NumberConfig.SM.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 	}
 	
 }

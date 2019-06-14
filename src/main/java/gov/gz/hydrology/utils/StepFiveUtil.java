@@ -7,24 +7,6 @@ import gov.gz.hydrology.constant.NumberConst;
 
 public class StepFiveUtil {
 	
-	///////////////////这个是哪里来的
-	/**
-	* Qe 当前时刻输入流量
-	* @return
-	*/
-	public static BigDecimal getQe() {
-		return new BigDecimal("0.1");
-	}
-	
-	///////////////////这个是哪里来的
-	/**
-	* Qeup 上一时刻输入流量
-	* @return
-	*/
-	public static BigDecimal getQeup() {
-		return new BigDecimal("0.1");
-	}
-	
 	/**
 	 * C0   参数
 	 * @return
@@ -64,6 +46,6 @@ public class StepFiveUtil {
 	 */
 	public static BigDecimal getQt() {
 		// Qt=C0*Qe+C1*Qeup+C2*Qeup
-		return getC0().multiply(getQe()).add(getC1().multiply(getQeup())).add(getC2().multiply(getQeup()));
+		return getC0().multiply(StepFourUtil.Qe).add(getC1().multiply(StepFourUtil.Qeup)).add(getC2().multiply(StepFourUtil.Qeup));
 	}
 }

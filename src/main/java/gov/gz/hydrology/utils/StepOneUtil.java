@@ -8,6 +8,20 @@ import gov.gz.hydrology.constant.NumberConst;
 public class StepOneUtil {
 	
 	/**
+	 * R 时刻产流量
+	 */
+	public static BigDecimal R;
+	
+	/**
+	 * Rd 直接径流
+	 */
+	public static BigDecimal Rd;
+	
+	/**
+	 * 
+	 */
+	
+	/**
 	 * W0  流域初始平均蓄水量
 	 * @return
 	 */
@@ -46,12 +60,12 @@ public class StepOneUtil {
 	
 	/**
 	 * R 产流量（径流深）
+	 * Rd 直接径流
 	 */
-	public static BigDecimal getR() {
-		BigDecimal R = NumberConst.ZERO;
+	public static void getResult() {
 		BigDecimal PE = StepCommonUtil.getPE();
 		// PE > 0
-		if( PE.compareTo(NumberConst.ZERO) == 1 ) {
+		if( NumberUtil.gt(PE, NumberConst.ZERO) ) {
 			BigDecimal temp_PE_A = PE.add(getA());
 			BigDecimal temp_Wmm = getWmm();
 			// PE+A<Wmm
@@ -64,12 +78,11 @@ public class StepOneUtil {
 				// R=PE-(Wm-W0)
 				R = PE.subtract(getWm().subtract(getW0()));
 			}
-		}
 		// PE <= 0 ? R = 0
-		return R;
-	}
-	
-	public static BigDecimal getRd() {
-		return StepCommonUtil.getPE();
+		}else {
+			R = NumberConst.ZERO;
+		}
+		// Rd = PE
+		Rd = PE;
 	}
 }

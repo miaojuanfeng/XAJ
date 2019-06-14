@@ -143,7 +143,7 @@ public class StepTwoUtil {
 	 */
 	public static BigDecimal getPEx() {
 		// PEx = PE-R
-		return StepCommonUtil.getPE().subtract(StepOneUtil.getR());
+		return StepCommonUtil.getPE().subtract(StepOneUtil.R);
 	}
 	
 	/**

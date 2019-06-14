@@ -204,6 +204,44 @@
 			<span>S = </span>
 			<input type="text" value="${stepThree.S}" readonly="readonly"/>
 		</p>
+		<hr/>
+		<p>
+			<span>F = </span>
+			<input type="text" value="${stepFour.F}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qs = </span>
+			<input type="text" value="${stepFour.Qs}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qss = </span>
+			<input type="text" value="${stepFour.Qss}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qg = </span>
+			<input type="text" value="${stepFour.Qg}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qe = </span>
+			<input type="text" value="${stepFour.Qe}" readonly="readonly"/>
+		</p>
+		<hr/>
+		<p>
+			<span>C0 = </span>
+			<input type="text" value="${stepFive.C0}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>C1 = </span>
+			<input type="text" value="${stepFive.C1}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>C2 = </span>
+			<input type="text" value="${stepFive.C2}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qt = </span>
+			<input type="text" value="${stepFive.Qt}" readonly="readonly"/>
+		</p>
 	</div>
 </body>
 </html>
