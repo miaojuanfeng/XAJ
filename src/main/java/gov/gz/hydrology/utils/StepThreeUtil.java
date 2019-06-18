@@ -23,14 +23,17 @@ public class StepThreeUtil {
 	 * S 自由水蓄水量
 	 */
 	public static BigDecimal S;
-
-	///////////////////这个是哪里来的
 	/**
-	* Sup 上次计算后自由水蓄水量
-	* @return
-	*/
-	public static BigDecimal getSup() {
-		return new BigDecimal("0.1");
+	 * Sup 上次计算后自由水蓄水量
+	 */
+	public static BigDecimal Sup;
+	
+	static {
+		Rs = NumberConst.ZERO;
+		Rss = NumberConst.ZERO;
+		Rg = NumberConst.ZERO;
+		S = NumberConst.ZERO;
+		Sup = NumberConst.ZERO;
 	}
 	
 	/**
@@ -51,7 +54,7 @@ public class StepThreeUtil {
 				// Rs=(PE-SM+Sup+SM*(1-(PE+AU)/SMMF)^(1+EX))*FR
 				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
 				power = NumberConst.ONE.add(NumberConfig.EX);
-				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup().add(NumberConfig.SM.multiply(NumberUtil.pow(base, power)))));
+				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(Sup.add(NumberConfig.SM.multiply(NumberUtil.pow(base, power)))));
 				// Rss={SM-SM*[1-(PE+AU)/SMMF]^(1+EX)}*KSS*FR
 				base = NumberConst.ONE.subtract(StepCommonUtil.getPE().add(getAU()).divide(getSMMF(), NumberConst.DIGIT, NumberConst.MODE));
 				power = NumberConst.ONE.add(NumberConfig.EX);
@@ -67,7 +70,7 @@ public class StepThreeUtil {
 			// PE+AU>=SMMF
 			}else {
 				// Rs=(PE-SM+Sup)*FR
-				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(getSup()));
+				Rs = getFR().multiply(StepCommonUtil.getPE().subtract(NumberConfig.SM).add(Sup));
 				// Rss=SM*KSS*FR
 				Rss = NumberConfig.SM.multiply(NumberConfig.KSS).multiply(getFR());
 				// Rg=SM*KG*FR
@@ -80,11 +83,11 @@ public class StepThreeUtil {
 			// Rs=0
 			Rs = NumberConst.ZERO;
 			// Rss=Sup*KSS*FR
-			Rss = getSup().multiply(NumberConfig.KSS).multiply(getFR());
+			Rss = Sup.multiply(NumberConfig.KSS).multiply(getFR());
 			// Rg=Sup*KG*FR
-			Rg = getSup().multiply(NumberConfig.KG).multiply(getFR());
+			Rg = Sup.multiply(NumberConfig.KG).multiply(getFR());
 			// S=(1-KSS-KG)*Sup
-			S = getSup().multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
+			S = Sup.multiply(NumberConst.ONE.subtract(NumberConfig.KSS).subtract(NumberConfig.KG));
 		}
 	}
 
@@ -125,7 +128,7 @@ public class StepThreeUtil {
 	 */
 	public static BigDecimal getAU() {
 		// AU=SMMF(1-(1-Sup/SM)^[1/(1+EX)])
-		BigDecimal base = NumberConst.ONE.subtract(getSup().divide(NumberConfig.SM, NumberConst.DIGIT, NumberConst.MODE));
+		BigDecimal base = NumberConst.ONE.subtract(Sup.divide(NumberConfig.SM, NumberConst.DIGIT, NumberConst.MODE));
 		BigDecimal power = NumberConst.ONE.divide(NumberConst.ONE.add(NumberConfig.EX), NumberConst.DIGIT, NumberConst.MODE);
 		return getSMMF().multiply(NumberConst.ONE.subtract(NumberUtil.pow(base, power)));
 	}

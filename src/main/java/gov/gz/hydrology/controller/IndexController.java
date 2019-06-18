@@ -111,6 +111,7 @@ public class IndexController {
 		data.put("Rss", StepThreeUtil.Rss);
 		data.put("Rg", StepThreeUtil.Rg);
 		data.put("S", StepThreeUtil.S);
+		data.put("Sup", StepThreeUtil.Sup);
 		return data;
 	}
 	
@@ -122,7 +123,10 @@ public class IndexController {
 		data.put("Qg", StepFourUtil.getQg());
 		
 		StepFourUtil.getResult();
-		data.put("Qe", "还没算");
+		data.put("Qe", StepFourUtil.Qe);
+		data.put("Qeup", StepFourUtil.Qeup);
+		data.put("Qssup", StepFourUtil.Qssup);
+		data.put("Qgup", StepFourUtil.Qgup);
 		return data;
 	}
 	

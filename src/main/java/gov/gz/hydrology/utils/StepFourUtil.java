@@ -14,22 +14,15 @@ public class StepFourUtil {
 	
 	public static BigDecimal Qeup;
 	
-	///////////////////这个是哪里来的
-	/**
-	* Qssup 上一时段的壤中流
-	* @return
-	*/
-	public static BigDecimal getQssup() {
-		return new BigDecimal("0.1");
-	}
+	public static BigDecimal Qssup;
 	
-	///////////////////这个是哪里来的
-	/**
-	* Qgup 上一时段的地下径流
-	* @return
-	*/
-	public static BigDecimal getQgup() {
-		return new BigDecimal("0.1");
+	public static BigDecimal Qgup;
+	
+	static {
+		Qe = NumberConst.ZERO;
+		Qeup = NumberConst.ZERO;
+		Qssup = NumberConst.ZERO;
+		Qgup = NumberConst.ZERO;
 	}
 	
 	/**
@@ -56,7 +49,8 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getQss() {
 		// Qss=Cs*Qssup+(1-Cs)*Rss*F/(3.6*Dt)
-		return NumberConfig.CS.multiply(getQssup()).add(NumberConst.ONE.subtract(NumberConfig.CS).multiply(StepThreeUtil.Rss).multiply(getF()).divide(NumberConfig.DT.multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
+		Qssup = NumberConfig.CS.multiply(Qssup).add(NumberConst.ONE.subtract(NumberConfig.CS).multiply(StepThreeUtil.Rss).multiply(getF()).divide(NumberConfig.DT.multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
+		return Qssup;
 	}
 	
 	/**
@@ -65,14 +59,14 @@ public class StepFourUtil {
 	 */
 	public static BigDecimal getQg() {
 		// Qg=Cg*Qgup+(1-Cg)*Rg*F/(3.6*Dt)
-		return NumberConfig.CG.multiply(getQgup()).add(NumberConst.ONE.subtract(NumberConfig.CG).multiply(StepThreeUtil.Rg).multiply(getF()).divide(NumberConfig.DT.multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
+		Qgup = NumberConfig.CG.multiply(Qgup).add(NumberConst.ONE.subtract(NumberConfig.CG).multiply(StepThreeUtil.Rg).multiply(getF()).divide(NumberConfig.DT.multiply(new BigDecimal("3.6")), NumberConst.DIGIT, NumberConst.MODE));
+		return Qgup;
 	}
 	
-	/////////////////////////////////////// 这里的算法有问题
-	
 	public static void getResult() {
-		// 这里的算法有问题
-		Qe = NumberConst.ZERO;
+		// Qe = Qs + Qss + Qg
+		Qe = getQs().add(getQss()).add(getQg());
+		Qeup = Qe;
 	}
 	
 }

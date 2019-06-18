@@ -204,6 +204,10 @@
 			<span>S = </span>
 			<input type="text" value="${stepThree.S}" readonly="readonly"/>
 		</p>
+		<p>
+			<span>Sup = </span>
+			<input type="text" value="${stepThree.Sup}" readonly="readonly"/>
+		</p>
 		<hr/>
 		<p>
 			<span>F = </span>
@@ -224,6 +228,18 @@
 		<p>
 			<span>Qe = </span>
 			<input type="text" value="${stepFour.Qe}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qeup = </span>
+			<input type="text" value="${stepFour.Qeup}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qssup = </span>
+			<input type="text" value="${stepFour.Qssup}" readonly="readonly"/>
+		</p>
+		<p>
+			<span>Qgup = </span>
+			<input type="text" value="${stepFour.Qgup}" readonly="readonly"/>
 		</p>
 		<hr/>
 		<p>
