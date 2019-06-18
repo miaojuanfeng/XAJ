@@ -17,9 +17,10 @@ public class StepOneUtil {
 	 */
 	public static BigDecimal Rd;
 	
-	/**
-	 * 
-	 */
+	static {
+		R = NumberConst.ZERO;
+		Rd = NumberConst.ZERO;
+	}
 	
 	/**
 	 * W0  流域初始平均蓄水量

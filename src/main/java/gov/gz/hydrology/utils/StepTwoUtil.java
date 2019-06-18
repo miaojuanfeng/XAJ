@@ -25,17 +25,26 @@ public class StepTwoUtil {
 	/**
 	 * WUup 上次计算上层蓄水量
 	 */
-	public static BigDecimal WUup = NumberConfig.WU0;
+	public static BigDecimal WUup;
 	
 	/**
 	* WLup 上次计算下层蓄水量
 	*/
-	public static BigDecimal WLup = NumberConfig.WL0;
+	public static BigDecimal WLup;
 	
 	/**
 	* WDup 上次计算深层蓄水量
 	*/
-	public static BigDecimal WDup = NumberConfig.WD0;
+	public static BigDecimal WDup;
+	
+	static {
+		WU = NumberConst.ZERO;
+		WL = NumberConst.ZERO;
+		WD = NumberConst.ZERO;
+		WUup = NumberConst.ZERO;
+		WLup = NumberConst.ZERO;
+		WDup = NumberConst.ZERO;
+	}
 	
 	/**
 	 * 最终结果
