@@ -8,11 +8,11 @@ public class UserController {
 
 	@RequestMapping("login")
 	public String login() {
-		return "user/loginView";
+		return "user/LoginView";
 	}
 	
 	@RequestMapping("register")
 	public String register() {
-		return "user/registerView";
+		return "user/RegisterView";
 	}
 }

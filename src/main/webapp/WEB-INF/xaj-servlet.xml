@@ -24,11 +24,7 @@
         <property name="suffix" value=".jsp" />
     </bean>
 
-    <mvc:resources mapping="/assets/css/**" location="/WEB-INF/assets/css/" />
-    <mvc:resources mapping="/assets/fonts/**" location="/WEB-INF/assets/fonts/" />
-    <mvc:resources mapping="/assets/images/**" location="/WEB-INF/assets/images/" />
-    <mvc:resources mapping="/assets/img/**" location="/WEB-INF/assets/img/" />
-    <mvc:resources mapping="/assets/js/**" location="/WEB-INF/assets/js/" />
+    <mvc:resources mapping="/assets/**" location="/WEB-INF/assets/" />
 
     <!-- 引入外部数据源配置信息 -->
     <context:property-placeholder location="classpath:jdbc.properties" />
