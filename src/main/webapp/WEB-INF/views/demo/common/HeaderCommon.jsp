@@ -5,6 +5,7 @@
 
 <link rel="stylesheet" href="<c:url value="/assets/layui/css/layui.css"></c:url>">
 <link rel="stylesheet" href="<c:url value="/assets/static/css/style.css"></c:url>">
+<link rel="stylesheet" href="<c:url value="/assets/static/css/xaj.css"></c:url>">
 <link rel="icon" href="<c:url value="/assets/static/image/code.png"></c:url>">
 
 <script type="text/javascript" src="<c:url value="/assets/layui/layui.js"></c:url>"></script>

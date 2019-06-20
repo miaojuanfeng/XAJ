@@ -75,34 +75,68 @@
         </div>
     </div>
 
-    <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+	<div class="layui-col-xs12 layui-col-sm4 layui-col-md2">
         <div class="layui-collapse">
             <div class="layui-colla-item">
-                <h2 class="layui-colla-title">进度条</h2>
-                <div class="layui-colla-content layui-show">
-
-                    <div class="layui-progress">
-                        <div class="layui-progress-bar" lay-percent="10%"></div>
-                    </div>
-                    <br/>
-                    <div class="layui-progress" lay-showPercent="yes">
-                        <div class="layui-progress-bar layui-bg-red" lay-percent="30%"></div>
-                    </div>
-                    <br/>
-                    <div class="layui-progress layui-progress-big">
-                        <div class="layui-progress-bar" lay-percent="20%"></div>
-                    </div>
-                    <br/>
-                    <div class="layui-progress layui-progress-big">
-                        <div class="layui-progress-bar layui-bg-orange" lay-percent="50%"></div>
-                    </div>
-                    <br/>
-                    <div class="layui-progress layui-progress-big" lay-showPercent="true">
-                        <div class="layui-progress-bar layui-bg-blue" lay-percent="80%"></div>
-                    </div>
-
-                </div>
+				<div class="xaj-weather-wrapper">
+                    <!-- xaj -->
+					<div id="weather-view-he"></div>
+					<script>
+					WIDGET = {ID: '7HlcyoAt6G'};
+					</script>
+					<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+				</div>
             </div>
+        </div>
+    </div>
+    
+    <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+        <div class="layui-collapse">
+            
+                <h2 class="layui-colla-title">进度条</h2>
+                <div class="layui-colla-content layui-show xaj-progress-wrapper">
+                    <div class="layui-form-item">
+				        <label class="layui-form-label">单行输入框</label>
+				        <div class="layui-input-block">
+				            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+		                        <div class="layui-progress-bar layui-bg-red" lay-percent="280"></div>
+		                    </div>
+				        </div>
+				    </div>
+				    <div class="layui-form-item">
+				        <label class="layui-form-label">输入框</label>
+				        <div class="layui-input-block">
+				            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+		                        <div class="layui-progress-bar layui-bg-red" lay-percent="180"></div>
+		                    </div>
+				        </div>
+				    </div>
+					<div class="layui-form-item">
+				        <label class="layui-form-label">输入</label>
+				        <div class="layui-input-block">
+				            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+		                        <div class="layui-progress-bar layui-bg-orange" lay-percent="580"></div>
+		                    </div>
+				        </div>
+				    </div>
+                    <div class="layui-form-item">
+				        <label class="layui-form-label">输入框大是</label>
+				        <div class="layui-input-block">
+				            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+		                        <div class="layui-progress-bar layui-bg-blue" lay-percent="380"></div>
+		                    </div>
+				        </div>
+				    </div>
+				    <div class="layui-form-item">
+				        <label class="layui-form-label">输入框大是</label>
+				        <div class="layui-input-block">
+				            <div class="layui-progress layui-progress-big" lay-showPercent="yes">
+		                        <div class="layui-progress-bar layui-bg-green" lay-percent="380"></div>
+		                    </div>
+				        </div>
+				    </div>
+                </div>
+            
         </div>
     </div>
     <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
@@ -328,80 +362,7 @@
             </div>
         </div>
     </div>
-    <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-        <div class="layui-collapse">
-            <div class="layui-colla-item">
-                <h2 class="layui-colla-title">表单</h2>
-                <div class="layui-colla-content layui-show">
-
-                    <form class="layui-form max-auto" action="">
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">输入框</label>
-                            <div class="layui-input-block">
-                                <input type="text" name="title" required lay-verify="required" placeholder="请输入标题"
-                                       autocomplete="off" class="layui-input">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">密码框</label>
-                            <div class="layui-input-inline">
-                                <input type="password" name="password" required lay-verify="required"
-                                       placeholder="请输入密码" autocomplete="off" class="layui-input">
-                            </div>
-                            <div class="layui-form-mid layui-word-aux">辅助文字</div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">选择框</label>
-                            <div class="layui-input-block">
-                                <select name="city" lay-verify="required">
-                                    <option value=""></option>
-                                    <option value="0">北京</option>
-                                    <option value="1">上海</option>
-                                    <option value="2">广州</option>
-                                    <option value="3">深圳</option>
-                                    <option value="4">杭州</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">复选框</label>
-                            <div class="layui-input-block">
-                                <input type="checkbox" name="like[write]" title="写作">
-                                <input type="checkbox" name="like[read]" title="阅读" checked>
-                                <input type="checkbox" name="like[dai]" title="发呆">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">开关</label>
-                            <div class="layui-input-block">
-                                <input type="checkbox" name="switch" lay-skin="switch">
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <label class="layui-form-label">单选框</label>
-                            <div class="layui-input-block">
-                                <input type="radio" name="sex" value="男" title="男">
-                                <input type="radio" name="sex" value="女" title="女" checked>
-                            </div>
-                        </div>
-                        <div class="layui-form-item layui-form-text">
-                            <label class="layui-form-label">文本域</label>
-                            <div class="layui-input-block">
-                                <textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
-                            </div>
-                        </div>
-                        <div class="layui-form-item">
-                            <div class="layui-input-block">
-                                <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
-                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 
 <script type="text/javascript" src="<c:url value="/assets/echarts/echarts.min.js"></c:url>"></script>

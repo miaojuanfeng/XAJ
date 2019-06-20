@@ -1,0 +1,15 @@
+.xaj-weather-wrapper{
+	height:330px;
+}
+.xaj-weather-wrapper #weather-view-he{
+	border:none !important;
+	width:100% !important;
+	height:100% !important;
+}
+.xaj-progress-wrapper{
+	padding-top:11px;
+	padding-bottom:11px;
+}
+.xaj-progress-wrapper .layui-progress{
+	top:9px;
+}
