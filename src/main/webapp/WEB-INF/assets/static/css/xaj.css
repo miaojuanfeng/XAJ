@@ -1,5 +1,5 @@
 .xaj-weather-wrapper{
-	height:330px;
+	height:230px;
 }
 .xaj-weather-wrapper #weather-view-he{
 	border:none !important;
@@ -10,6 +10,17 @@
 	padding-top:11px;
 	padding-bottom:11px;
 }
+.xaj-progress-wrapper .layui-form-item {
+	margin-top:13px;
+	padding-right:20px;
+}
+.xaj-progress-wrapper .layui-form-label{
+	padding-top:2px;
+	padding-bottom:2px;
+}
 .xaj-progress-wrapper .layui-progress{
 	top:9px;
+}
+.xaj-progress-wrapper .layui-input-block{
+	min-height:24px;
 }
