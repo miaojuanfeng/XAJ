@@ -16,7 +16,7 @@ import gov.gz.hydrology.utils.StepThreeUtil;
 import gov.gz.hydrology.utils.StepTwoUtil;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("cms/test")
 public class IndexController {
 
 	@RequestMapping("index")
@@ -30,7 +30,7 @@ public class IndexController {
 		map.put("stepFour", getStepFour());
 		map.put("stepFive", getStepFive());
 		
-		return "index";
+		return "iframe/TestView";
 	}
 	
 	private Map<String, Object> getPara(){
