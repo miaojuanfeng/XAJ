@@ -15,21 +15,21 @@
 		<div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WU0 = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WU0}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WL0 = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WL0}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WD0 = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WD0}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -38,14 +38,14 @@
 		<div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">QRSS = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.QRSS}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">QRG = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.QRG}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -57,21 +57,21 @@
 	    <div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WUM = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WUM}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WLM = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WLM}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">WDM = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.WDM}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -80,21 +80,21 @@
 	    <div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">B = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.B}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">K = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.K}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">C = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.C}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -103,21 +103,21 @@
 		<div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">SM = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.SM}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">EX = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.EX}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">KSS = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KSS}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -126,21 +126,21 @@
 		<div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">KG = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KG}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">IM = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.IM}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">XE = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.XE}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -149,14 +149,14 @@
 	    <div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">KE = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KE}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">DT = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
@@ -172,14 +172,14 @@
 		<div class="layui-form-item">
 			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">PE = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.PE}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">Ek = </label>
-	            <div class="layui-input-inline">
+	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.Ek}" readonly>
 	            </div>
 	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
@@ -192,183 +192,334 @@
 	    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 		    <legend>Step One</legend>
 		</fieldset>
-		<p>
-			<span>W0 = </span>
-			<input type="text" value="${stepOne.W0}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Wm = </span>
-			<input type="text" value="${stepOne.Wm}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Wmm = </span>
-			<input type="text" value="${stepOne.Wmm}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>A = </span>
-			<input type="text" value="${stepOne.A}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Rd = </span>
-			<input type="text" value="${stepOne.Rd}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>R = </span>
-			<input type="text" value="${stepOne.R}" readonly="readonly"/>
-		</p>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">W0 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.W0}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">Wm = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.Wm}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">Wmm = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.Wmm}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">A = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.A}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">Rd = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.Rd}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">R = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepOne.R}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 		    <legend>Step Two</legend>
 		</fieldset>
-		<p>
-			<span>PEx = </span>
-			<input type="text" value="${stepTwo.PEx}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WUx1 = </span>
-			<input type="text" value="${stepTwo.WUx1}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>PEy = </span>
-			<input type="text" value="${stepTwo.PEy}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WLx1 = </span>
-			<input type="text" value="${stepTwo.WLx1}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>PEz = </span>
-			<input type="text" value="${stepTwo.PEz}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WDx1 = </span>
-			<input type="text" value="${stepTwo.WDx1}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>EKx = </span>
-			<input type="text" value="${stepTwo.EKx}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WUx2 = </span>
-			<input type="text" value="${stepTwo.WUx2}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>EKy = </span>
-			<input type="text" value="${stepTwo.EKy}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WLx2 = </span>
-			<input type="text" value="${stepTwo.WLx2}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>EKz = </span>
-			<input type="text" value="${stepTwo.EKz}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WDx2 = </span>
-			<input type="text" value="${stepTwo.WDx2}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WU = </span>
-			<input type="text" value="${stepTwo.WU}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WL = </span>
-			<input type="text" value="${stepTwo.WL}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>WD = </span>
-			<input type="text" value="${stepTwo.WD}" readonly="readonly"/>
-		</p>
-		
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">PEx = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.PEx}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WUx1 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WUx1}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">PEy = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.PEy}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WLx1 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WLx1}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">PEz = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.PEz}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">WDx1 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WDx1}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">EKx = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.EKx}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WUx2 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WUx2}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">EKy = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.EKy}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WLx2 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WLx2}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">EKz = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.EKz}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">WDx2 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WDx2}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WU = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WU}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">WL = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WL}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">WD = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepTwo.WD}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 		    <legend>Step Three</legend>
 		</fieldset>
-		<p>
-			<span>FR = </span>
-			<input type="text" value="${stepThree.FR}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>SMMF = </span>
-			<input type="text" value="${stepThree.SMMF}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>AU = </span>
-			<input type="text" value="${stepThree.AU}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Rs = </span>
-			<input type="text" value="${stepThree.Rs}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Rss = </span>
-			<input type="text" value="${stepThree.Rss}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Rg = </span>
-			<input type="text" value="${stepThree.Rg}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>S = </span>
-			<input type="text" value="${stepThree.S}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Sup = </span>
-			<input type="text" value="${stepThree.Sup}" readonly="readonly"/>
-		</p>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">FR = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.FR}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">SMMF = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.SMMF}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">AU = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.AU}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">Rs = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rs}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">Rss = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rss}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	        	<label class="layui-form-label">Rg = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rg}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">S = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rs}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+	            <label class="layui-form-label">Sup = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rss}" readonly>
+	            </div>
+	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+
+	        </div>
+	    </div>
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 		    <legend>Step Four</legend>
 		</fieldset>
-		<p>
-			<span>F = </span>
-			<input type="text" value="${stepFour.F}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qs = </span>
-			<input type="text" value="${stepFour.Qs}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qss = </span>
-			<input type="text" value="${stepFour.Qss}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qg = </span>
-			<input type="text" value="${stepFour.Qg}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qe = </span>
-			<input type="text" value="${stepFour.Qe}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qeup = </span>
-			<input type="text" value="${stepFour.Qeup}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qssup = </span>
-			<input type="text" value="${stepFour.Qssup}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qgup = </span>
-			<input type="text" value="${stepFour.Qgup}" readonly="readonly"/>
-		</p>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">F = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.F}" readonly>
+		            <div class="layui-form-mid layui-word-aux">F=Ft*(1-IMP)</div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qs = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qs}" readonly>
+		            <div class="layui-form-mid layui-word-aux">Qs=(Rs*F+Rd*Ft*IMP)/(3.6*DT)</div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+				<label class="layui-form-label">Qss = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qss}" readonly>
+		            <div class="layui-form-mid layui-word-aux">Qss=Cs*Qssup+(1-Cs)*Rss*F/(3.6*Dt)</div>
+	            </div>
+	        </div>
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qg = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qg}" readonly>
+		            <div class="layui-form-mid layui-word-aux">Qg=Cg*Qgup+(1-Cg)*Rg*F/(3.6*Dt)</div>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="layui-form-item">
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qe = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qe}" readonly>
+		            <div class="layui-form-mid layui-word-aux">Qe=Qs+Qss+Qg</div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+				<label class="layui-form-label">Qeup = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qeup}" readonly>
+		            <div class="layui-form-mid layui-word-aux"></div>
+	            </div>
+	        </div>
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qssup = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qssup}" readonly>
+		            <div class="layui-form-mid layui-word-aux"></div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qgup = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFour.Qgup}" readonly>
+		            <div class="layui-form-mid layui-word-aux"></div>
+	            </div>
+	        </div>
+	    </div>
 		<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 		    <legend>Step Five</legend>
 		</fieldset>
-		<p>
-			<span>C0 = </span>
-			<input type="text" value="${stepFive.C0}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>C1 = </span>
-			<input type="text" value="${stepFive.C1}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>C2 = </span>
-			<input type="text" value="${stepFive.C2}" readonly="readonly"/>
-		</p>
-		<p>
-			<span>Qt = </span>
-			<input type="text" value="${stepFive.Qt}" readonly="readonly"/>
-		</p>
+		<div class="layui-form-item">
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">C0 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFive.C0}" readonly>
+		            <div class="layui-form-mid layui-word-aux">C0=(0.5*DT-KE*XE)/(0.5*DT+KE-KE*XE)</div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">C1 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFive.C1}" readonly>
+		            <div class="layui-form-mid layui-word-aux">C1=(0.5*DT+KE*XE)/(0.5*DT+KE-KE*XE)</div>
+	            </div>
+	        </div>
+	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+				<label class="layui-form-label">C2 = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFive.C2}" readonly>
+	            	<div class="layui-form-mid layui-word-aux">C2=(-0.5*DT+KE-KE*XE)/(0.5*DT+KE-KE*XE)</div>
+	            </div>
+	        </div>
+			<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+	            <label class="layui-form-label">Qt = </label>
+	            <div class="layui-input-block">
+	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepFive.Qt}" readonly>
+		            <div class="layui-form-mid layui-word-aux">Qt=C0*Qe+C1*Qeup+C2*Qeup</div>
+	            </div>
+	        </div>
+	    </div>
 	</div>
 </body>
 </html>
