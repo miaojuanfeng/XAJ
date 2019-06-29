@@ -68,7 +68,7 @@
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon">&#xe628;</i>测试管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" href-url="<c:url value="/cms/test/index"></c:url>"><i class="layui-icon">&#xe621;</i>数据分步计算</a></dd>
+                        <dd><a href="javascript:;" href-url="<c:url value="/cms/step/index"></c:url>"><i class="layui-icon">&#xe621;</i>数据分步计算</a></dd>
                     </dl>
                 </li>
                	<li class="layui-nav-item">

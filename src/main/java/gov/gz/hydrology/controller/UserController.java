@@ -28,7 +28,7 @@ public class UserController {
 	
 	@RequestMapping("welcome")
 	public String welcome() {
-		return "demo/WelcomeView";
+		return "iframe/WelcomeView";
 	}
 	
 	@RequestMapping("button")

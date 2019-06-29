@@ -364,22 +364,27 @@
 	            <label class="layui-form-label">FR = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.FR}" readonly>
+		            <div class="layui-form-mid layui-word-aux">
+		            	<p>PE > 0</p>
+		            	<p class="space">FR=R/PE</p>
+		            	<p>PE <= 0</p>
+		            	<p class="space">FR=1-(1-Wi/Wm)^[B/(1+B)]</p>
+		            </div>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">SMMF = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.SMMF}" readonly>
+		            <div class="layui-form-mid layui-word-aux">SMMF=SM*(1+EX)</div>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	        	<label class="layui-form-label">AU = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.AU}" readonly>
+		            <div class="layui-form-mid layui-word-aux">AU=SMMF(1-(1-Sup/SM)^[1/(1+EX)])</div>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
 	        </div>
 	    </div>
 		<div class="layui-form-item">
@@ -388,21 +393,21 @@
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rs}" readonly>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	            <div class="layui-form-mid layui-word-aux"></div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">Rss = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rss}" readonly>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	            <div class="layui-form-mid layui-word-aux"></div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	        	<label class="layui-form-label">Rg = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rg}" readonly>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	            <div class="layui-form-mid layui-word-aux"></div>
 	        </div>
 	    </div>
 	    <div class="layui-form-item">
@@ -411,14 +416,14 @@
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rs}" readonly>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
+	            <div class="layui-form-mid layui-word-aux"></div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 	            <label class="layui-form-label">Sup = </label>
 	            <div class="layui-input-block">
 	                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepThree.Rss}" readonly>
 	            </div>
-	            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
+	            <div class="layui-form-mid layui-word-aux"></div>
 	        </div>
 	        <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 
