@@ -9,6 +9,6 @@ public class StationController {
 
 	@RequestMapping("index")
 	public String index() {
-		return "iframe/StationView";
+		return "StationView";
 	}
 }
