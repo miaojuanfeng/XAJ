@@ -30,7 +30,7 @@ public class StepController {
 		map.put("stepFour", getStepFour());
 		map.put("stepFive", getStepFive());
 		
-		return "iframe/StepView";
+		return "StepView";
 	}
 	
 	private Map<String, Object> getPara(){

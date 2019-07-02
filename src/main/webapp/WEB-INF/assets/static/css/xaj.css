@@ -28,3 +28,14 @@
 .space{
 	padding-left:20px;
 }
+
+.layui-tab{
+    height: auto !important;
+}
+
+
+@media screen and (max-width: 1023px){
+	.layui-field-title {
+	    display: block !important;
+	}
+}

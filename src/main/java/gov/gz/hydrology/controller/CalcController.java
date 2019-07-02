@@ -5,11 +5,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("cms/station")
-public class StationController {
+@RequestMapping("cms/calc")
+public class CalcController {
 
-	@RequestMapping("{id}")
-	public String index(@PathVariable("id") Integer id) {
-		return "StationView";
+	@RequestMapping("index")
+	public String index() {
+		return "CalcView";
 	}
 }
