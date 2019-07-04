@@ -17,8 +17,8 @@
     <!-- side -->
     <%@ include file="common/SideCommon.jsp" %>
     <!-- body -->
-    <div class="layui-body my-body" style="overflow-y:auto">
-        <div class="layui-tab layui-tab-card my-tab" lay-filter="card" lay-allowClose="true">
+    <div class="layui-body my-body my-body-left">
+        <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
             <!-- ul class="layui-tab-title">
                 <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
             </ul -->

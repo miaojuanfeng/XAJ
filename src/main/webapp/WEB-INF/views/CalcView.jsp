@@ -15,10 +15,10 @@
     <!-- header -->
     <%@ include file="common/HeaderCommon.jsp" %>
     <!-- side -->
-    <%@ include file="common/SideCommon.jsp" %>
+   
     <!-- body -->
     <div class="layui-body my-body">
-        <div class="layui-tab layui-tab-card my-tab" lay-filter="card" lay-allowClose="true">
+        <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
             <!-- ul class="layui-tab-title">
                 <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
             </ul -->
@@ -329,7 +329,6 @@
     </table>
 </div>
 
-<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
 <script type="text/javascript">
 	layui.config({
 	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
@@ -338,22 +337,62 @@
 	    , vip_tab: 'vip_tab'
 	    , vip_table: 'vip_table'
 	});
+	
+    layui.use(['element', 'form', 'table', 'layer', 'vip_tab', 'laydate'], function () {
+        var form = layui.form
+                , table = layui.table
+                , layer = layui.layer
+                , vipTab = layui.vip_tab
+                , element = layui.element
+                , $ = layui.jquery
+                , laydate = layui.laydate;
+        
+      	//日期
+        laydate.render({
+            elem: '#startTime',
+            type: 'datetime'
+        });
+      //日期
+        laydate.render({
+            elem: '#endTime',
+            type: 'datetime'
+        });
 
-	layui.use(['layer','vip_nav'], function () {
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main-line'));
 
-    // 操作对象
-    var layer       = layui.layer
-        ,vipNav     = layui.vip_nav
-        ,$          = layui.jquery;
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption({
+            title: {
+                text: '示例'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        });
 
-    // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-    vipNav.top_left('./json/nav_top_left.json','side-top-left',false);
-    // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-    vipNav.main('./json/nav_main.json','side-main',true);
+        // 打开选项卡
+        $('.my-nav-btn').on('click', function(){
+            if($(this).attr('data-href')){
+                //vipTab.add('','标题','路径');
+                vipTab.add($(this),'<i class="layui-icon">'+$(this).find("button").html()+'</i>'+$(this).find('p:last-child').html(),$(this).attr('data-href'));
+            }
+        });
 
-    // you code ...
+        // you code ...
 
-});
+
+    });
 </script>
 </body>
 </html>

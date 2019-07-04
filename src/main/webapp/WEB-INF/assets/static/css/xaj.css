@@ -1,5 +1,5 @@
 .xaj-weather-wrapper{
-	height:230px;
+	height:400px;
 }
 .xaj-weather-wrapper #weather-view-he{
 	border:none !important;
@@ -7,6 +7,10 @@
 	height:100% !important;
 }
 .xaj-progress-wrapper{
+	height:390px;
+	padding-top:10px;
+}
+/*.xaj-progress-wrapper{
 	padding-top:11px;
 	padding-bottom:11px;
 }
@@ -23,7 +27,7 @@
 }
 .xaj-progress-wrapper .layui-input-block{
 	min-height:24px;
-}
+}*/
 
 .space{
 	padding-left:20px;
@@ -32,7 +36,33 @@
 .layui-tab{
     height: auto !important;
 }
-
+.layui-layout-admin .layui-side{
+	width:300px;
+}
+.layui-side-scroll{
+	width:320px;
+}
+.layui-nav-tree{
+	width:300px;
+}
+.my-header .my-header-link{
+	width:300px;
+	float:left;
+}
+.my-body{
+	overflow-y:auto;
+}
+.name, .name span{
+	margin-left:15px;
+}
+#time-week{
+	font-size: 14px;
+    letter-spacing: 5px;
+    margin-left:30px;
+}
+#notify{
+	margin-left:10px;
+}
 
 @media screen and (max-width: 1023px){
 	.layui-field-title {

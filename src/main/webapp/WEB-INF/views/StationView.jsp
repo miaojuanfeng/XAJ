@@ -17,8 +17,8 @@
     <!-- side -->
     <%@ include file="common/SideCommon.jsp" %>
     <!-- body -->
-    <div class="layui-body my-body">
-        <div class="layui-tab layui-tab-card my-tab" lay-filter="card" lay-allowClose="true">
+    <div class="layui-body my-body my-body-left">
+        <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
             <!-- ul class="layui-tab-title">
                 <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
             </ul -->
@@ -109,47 +109,88 @@
 					    </div>
 					    
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md8">
-					        <div class="layui-collapse xaj-progress-wrapper">
-					            <div class="layui-form-item">
-							        <label class="layui-form-label">单行输入框</label>
-							        <div class="layui-input-block">
-							            <div class="layui-progress layui-progress" lay-showPercent="yes">
-					                        <div class="layui-progress-bar layui-bg-red" lay-percent="280"></div>
-					                    </div>
-							        </div>
-							    </div>
-							    <div class="layui-form-item">
-							        <label class="layui-form-label">输入框</label>
-							        <div class="layui-input-block">
-							            <div class="layui-progress layui-progress" lay-showPercent="yes">
-					                        <div class="layui-progress-bar layui-bg-red" lay-percent="180"></div>
-					                    </div>
-							        </div>
-							    </div>
-								<div class="layui-form-item">
-							        <label class="layui-form-label">输入</label>
-							        <div class="layui-input-block">
-							            <div class="layui-progress layui-progress" lay-showPercent="yes">
-					                        <div class="layui-progress-bar layui-bg-orange" lay-percent="580"></div>
-					                    </div>
-							        </div>
-							    </div>
-					                  <div class="layui-form-item">
-							        <label class="layui-form-label">输入框大是</label>
-							        <div class="layui-input-block">
-							            <div class="layui-progress layui-progress" lay-showPercent="yes">
-					                        <div class="layui-progress-bar layui-bg-blue" lay-percent="380"></div>
-					                    </div>
-							        </div>
-							    </div>
-							    <div class="layui-form-item">
-							        <label class="layui-form-label">输入框大是</label>
-							        <div class="layui-input-block">
-							            <div class="layui-progress layui-progress" lay-showPercent="yes">
-					                        <div class="layui-progress-bar layui-bg-green" lay-percent="380"></div>
-					                    </div>
-							        </div>
-							    </div>
+					        <div class="layui-collapse">
+					        	<div class="layui-colla-item">
+									<div class="xaj-progress-wrapper">
+							           <div id="main1" style="width: 100%;height:100%;"></div>
+									   <script type="text/javascript">
+								        // 基于准备好的dom，初始化echarts实例
+								        var myChart1 = echarts.init(document.getElementById('main1'), 'macarons');
+							            option = {
+							            	    title : {
+							            	        text: '蒸发量和降水量',
+							            	        subtext: '宁都站',
+							            	        x: 'center',
+								        	        align: 'right'
+							            	    },
+							            	    tooltip : {
+							            	        trigger: 'axis'
+							            	    },
+							            	    legend: {
+							            	        data:['蒸发量','降水量'],
+							            	        x: 'left'
+							            	    },
+							            	    toolbox: {
+							            	        show : true,
+							            	        feature : {
+							            	            dataView : {show: true, readOnly: false},
+							            	            magicType : {show: true, type: ['line', 'bar']},
+							            	            restore : {show: true},
+							            	            saveAsImage : {show: true}
+							            	        }
+							            	    },
+							            	    calculable : true,
+							            	    xAxis : [
+							            	        {
+							            	            type : 'category',
+							            	            data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+							            	        }
+							            	    ],
+							            	    yAxis : [
+							            	        {
+							            	            type : 'value'
+							            	        }
+							            	    ],
+							            	    series : [
+							            	        {
+							            	            name:'蒸发量',
+							            	            type:'bar',
+							            	            data:[2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+							            	            markPoint : {
+							            	                data : [
+							            	                    {type : 'max', name: '最大值'},
+							            	                    {type : 'min', name: '最小值'}
+							            	                ]
+							            	            },
+							            	            markLine : {
+							            	                data : [
+							            	                    {type : 'average', name: '平均值'}
+							            	                ]
+							            	            }
+							            	        },
+							            	        {
+							            	            name:'降水量',
+							            	            type:'bar',
+							            	            data:[2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+							            	            markPoint : {
+							            	                data : [
+							            	                    {name : '年最高', value : 182.2, xAxis: 7, yAxis: 183},
+							            	                    {name : '年最低', value : 2.3, xAxis: 11, yAxis: 3}
+							            	                ]
+							            	            },
+							            	            markLine : {
+							            	                data : [
+							            	                    {type : 'average', name : '平均值'}
+							            	                ]
+							            	            }
+							            	        }
+							            	    ]
+							            	};
+							         		// 使用刚指定的配置项和数据显示图表。
+								        	myChart1.setOption(option);
+							            </script>
+									</div>
+								</div>
 					        </div>
 					    </div>
 					    

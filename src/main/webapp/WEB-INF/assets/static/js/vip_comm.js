@@ -22,32 +22,38 @@ layui.use(['layer', 'element', 'util'], function () {
         layer.alert('如果您非得使用ie浏览vip-admin 后台模板，那么请使用ie8+');
     }
 
-    // 导航栏收缩
     function navHide(t, st) {
-        var time = t ? t : 50;
-        st ? localStorage.log = 1 : localStorage.log = 0;
-        side.animate({'left': -200}, time);
-        body.animate({'left': 0}, time);
-        footer.animate({'left': 0}, time);
+    	
     }
-
-    // 导航栏展开
     function navShow(t, st) {
-        var time = t ? t : 50;
-        st ? localStorage.log = 0 : localStorage.log = 1;
-        side.animate({'left': 0}, time);
-        body.animate({'left': 200}, time);
-        footer.animate({'left': 200}, time);
+    	
     }
-
-    // 监听导航栏收缩
-    $('.btn-nav').on('click', function () {
-        if (localStorage.log == 0) {
-            navShow(50);
-        } else {
-            navHide(50);
-        }
-    });
+//    // 导航栏收缩
+//    function navHide(t, st) {
+//        var time = t ? t : 50;
+//        st ? localStorage.log = 1 : localStorage.log = 0;
+//        side.animate({'left': -300}, time);
+//        body.animate({'left': 0}, time);
+//        footer.animate({'left': 0}, time);
+//    }
+//
+//    // 导航栏展开
+//    function navShow(t, st) {
+//        var time = t ? t : 50;
+//        st ? localStorage.log = 0 : localStorage.log = 1;
+//        side.animate({'left': 0}, time);
+//        body.animate({'left': 300}, time);
+//        footer.animate({'left': 300}, time);
+//    }
+//
+//    // 监听导航栏收缩
+//    $('.btn-nav').on('click', function () {
+//        if (localStorage.log == 0) {
+//            navShow(50);
+//        } else {
+//            navHide(50);
+//        }
+//    });
 
     // 根据导航栏text获取lay-id
     function getTitleId(card, title) {
