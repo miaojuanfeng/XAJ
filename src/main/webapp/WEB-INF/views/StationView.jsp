@@ -26,89 +26,28 @@
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
                     <div class="layui-row layui-col-space10 my-index-main" style="padding:10px;">
-					    <!-- div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/btn.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-btn-danger layui-icon">&#xe756;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">按钮</p>
-					            </div>
-					        </div>
-					    </div>
-					    <div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/form.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-btn-warm layui-icon">&#xe735;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">表单</p>
-					            </div>
-					        </div>
-					    </div>
-					    <div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/table.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-icon">&#xe715;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">表格</p>
-					            </div>
-					        </div>
-					    </div>
-					    <div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/tab-card.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-btn-normal layui-icon">&#xe705;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">选项卡</p>
-					            </div>
-					        </div>
-					    </div>
-					    <div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/progress-bar.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-bg-cyan layui-icon">&#xe6b2;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">进度条</p>
-					            </div>
-					        </div>
-					    </div>
-					    <div class="layui-col-xs4 layui-col-sm2 layui-col-md2">
-					        <div class="my-nav-btn layui-clear" data-href="./demo/folding-panel.html">
-					            <div class="layui-col-md5">
-					                <button class="layui-btn layui-btn-big layui-bg-black layui-icon">&#xe698;</button>
-					            </div>
-					            <div class="layui-col-md7 tc">
-					                <p class="my-nav-text">40</p>
-					                <p class="my-nav-text layui-elip">折叠面板</p>
-					            </div>
-					        </div>
-					    </div -->
-					
-						<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+						<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
 									<div class="xaj-weather-wrapper">
-					                    <!-- xaj -->
+					                    <!-- cc -->
 										<div id="weather-view-he"></div>
 										<script>
-										WIDGET = {ID: 'GRzNog6RoC'};
+										WIDGET = {ID: '2dalH5UEpk'};
 										</script>
 										<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script>
+										<!-- cc -->
+										<!-- div id="weather-view-he"></div>
+										<script>
+										WIDGET = {ID: '4hqXO2CJpK'};
+										</script>
+										<script type="text/javascript" src="https://apip.weatherdt.com/view/static/js/r.js?v=1111"></script -->
 									</div>
 					            </div>
 					        </div>
 					    </div>
 					    
-					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md8">
+					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					        	<div class="layui-colla-item">
 									<div class="xaj-progress-wrapper">
@@ -193,98 +132,10 @@
 								</div>
 					        </div>
 					    </div>
-					    
-					    <!-- div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="height:330px;">
-									<div id="main" style="width: 100%;height:100%;"></div>
-									<script type="text/javascript">
-								        // 基于准备好的dom，初始化echarts实例
-								        var myChart = echarts.init(document.getElementById('main'), 'macarons');
-								
-								        option = {
-							        	    backgroundColor: '#fff',
-					
-							        	    title: {
-							        	        text: '用户统计',
-							        	        left: 'center',
-							        	        top: 15,
-							        	        textStyle: {
-							        	            color: '#333'
-							        	        }
-							        	    },
-					
-							        	    tooltip : {
-							        	        trigger: 'item',
-							        	        formatter: "{a} <br/>{b} : {c} ({d}%)"
-							        	    },
-					
-							        	    visualMap: {
-							        	        show: false,
-							        	        min: 80,
-							        	        max: 600,
-							        	        inRange: {
-							        	            colorLightness: [0, 1]
-							        	        }
-							        	    },
-							        	    series : [
-							        	        {
-							        	            name:'访问来源',
-							        	            type:'pie',
-							        	            radius : '55%',
-							        	            center: ['50%', '50%'],
-							        	            data:[
-							        	                {value:335, name:'直接访问'},
-							        	                {value:310, name:'邮件营销'},
-							        	                {value:274, name:'联盟广告'},
-							        	                {value:235, name:'视频广告'},
-							        	                {value:400, name:'搜索引擎'}
-							        	            ].sort(function (a, b) { return a.value - b.value; }),
-							        	            roseType: 'radius',
-							        	            label: {
-							        	                normal: {
-							        	                    textStyle: {
-							        	                        color: 'rgba(0, 150, 136, 1)'
-							        	                    }
-							        	                }
-							        	            },
-							        	            labelLine: {
-							        	                normal: {
-							        	                    lineStyle: {
-							        	                        color: 'rgba(0, 150, 136, 1)'
-							        	                    },
-							        	                    smooth: 0.2,
-							        	                    length: 10,
-							        	                    length2: 20
-							        	                }
-							        	            },
-							        	            itemStyle: {
-							        	                normal: {
-							        	                    color: '#c23531',
-							        	                    shadowBlur: 200,
-							        	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-							        	                }
-							        	            },
-					
-							        	            animationType: 'scale',
-							        	            animationEasing: 'elasticOut',
-							        	            animationDelay: function (idx) {
-							        	                return Math.random() * 200;
-							        	            }
-							        	        }
-							        	    ]
-							        	};
-								
-								        // 使用刚指定的配置项和数据显示图表。
-								        myChart.setOption(option);
-								    </script>
-					            </div>
-					        </div>
-					    </div -->
 					
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="text-align:center;height:447px;">
+					            <div class="layui-colla-item" style="text-align:center;height:430px;">
 					               	<img src="<c:url value="/assets/static/image/rever.jpg"></c:url>" />
 					            </div>
 					        </div>
@@ -292,7 +143,7 @@
 					    
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md8">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="height:437px;padding-top:10px;">
+					            <div class="layui-colla-item" style="height:420px;padding-top:10px;">
 					                <div id="main2" style="width: 100%;height:100%;"></div>
 									<script type="text/javascript">
 								        // 基于准备好的dom，初始化echarts实例

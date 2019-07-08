@@ -1,5 +1,8 @@
+body{
+	background-color:#f5f5f5;
+}
 .xaj-weather-wrapper{
-	height:400px;
+	height:405px;
 }
 .xaj-weather-wrapper #weather-view-he{
 	border:none !important;
@@ -7,7 +10,7 @@
 	height:100% !important;
 }
 .xaj-progress-wrapper{
-	height:390px;
+	height:395px;
 	padding-top:10px;
 }
 /*.xaj-progress-wrapper{
@@ -37,16 +40,16 @@
     height: auto !important;
 }
 .layui-layout-admin .layui-side{
-	width:300px;
+	width:250px;
 }
 .layui-side-scroll{
-	width:320px;
+	width:270px;
 }
 .layui-nav-tree{
-	width:300px;
+	width:250px;
 }
 .my-header .my-header-link{
-	width:300px;
+	width:250px;
 	float:left;
 }
 .my-body{
@@ -62,6 +65,24 @@
 }
 #notify{
 	margin-left:10px;
+}
+.my-body-left {
+    left: 250px;
+}
+.layui-nav{
+	background-color:#f5f5f5;
+}
+.layui-nav-tree .layui-nav-item{
+	background-color:#f5f5f5;
+}
+.layui-nav-tree .layui-nav-item a{
+	color: #747474;
+}
+.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover{
+	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #1a2980, #26d0ce); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #1a2980, #26d0ce); /* 标准的语法（必须放在最后） */
 }
 
 @media screen and (max-width: 1023px){
