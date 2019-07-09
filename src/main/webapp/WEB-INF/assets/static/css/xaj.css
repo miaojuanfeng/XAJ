@@ -69,20 +69,30 @@ body{
 .my-body-left {
     left: 250px;
 }
-.layui-nav{
-	background-color:#f5f5f5;
+.my-side{
+	-moz-box-shadow:2px 2px 5px #ccc; 
+	-webkit-box-shadow:2px 2px 5px #ccc;
+	box-shadow:2px 2px 5px #ccc;
 }
-.layui-nav-tree .layui-nav-item{
-	background-color:#f5f5f5;
+.my-side .layui-nav{
+	background-color:#fff;
+	border-right:1px solid #ccc;
+	padding-top:12px;
 }
 .layui-nav-tree .layui-nav-item a{
 	color: #747474;
+}
+.layui-collapse{
+	background-color: #fff;
+	-moz-box-shadow:2px 2px 5px #bbb; 
+	-webkit-box-shadow:2px 2px 5px #bbb;
+	box-shadow:2px 2px 5px #bbb;
 }
 .layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover{
 	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(right, #1a2980, #26d0ce); /* Firefox 3.6 - 15 */
-    background: linear-gradient(to right, #1a2980, #26d0ce); /* 标准的语法（必须放在最后） */
+    background: linear-gradient(to right, #1a2980, #26d0ce); /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈�鍚庯級 */
 }
 
 @media screen and (max-width: 1023px){

@@ -83,6 +83,6 @@
         </property>
         <!-- 扫描并加载注解过的实体类 -->
         <property name="packagesToScan" value="com.chain.entity"/>
-        <property name="mappingLocations" value="classpath:/gov/gz/hydrology/mapping/*.hbm.xml"></property>
+        <!-- property name="mappingLocations" value="classpath:/gov/gz/hydrology/mapping/*.hbm.xml"></property -->
     </bean>
 </beans>
