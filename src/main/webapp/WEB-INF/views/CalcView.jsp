@@ -22,7 +22,7 @@
             <!-- ul class="layui-tab-title">
                 <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
             </ul -->
-            <div class="layui-tab-content">
+            <div class="layui-tab-content calc-content">
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
                     <div class="layui-row layui-col-space10 my-index-main" style="padding:10px;">
@@ -53,7 +53,7 @@
 									    <legend>表单集合演示</legend>
 									</fieldset>
 									<div class="layui-form-item">
-								        <label class="layui-form-label">单行选择框</label>
+								        <!-- label class="layui-form-label">单行选择框</label>
 								        <div class="layui-input-inline">
 								            <select name="interest" lay-filter="aihao">
 								                <option value=""></option>
@@ -63,7 +63,55 @@
 								                <option value="3">音乐</option>
 								                <option value="4">旅行</option>
 								            </select>
-								        </div>
+								        </div -->
+								        <table class="layui-table" lay-skin="line">
+										    <colgroup>
+										    	<col width="10">
+										        <col width="100">
+										        <col width="100">
+										        <col>
+										    </colgroup>
+										    <thead>
+										    <tr>
+										    	<th></th>
+										        <th>方案名</th>
+										        <th>构建人</th>
+										        <th>构建时间</th>
+										    </tr>
+										    </thead>
+										    <tbody>
+										    <tr>
+										    	<td><input type="radio" name="sex" value="男" checked=""></td>
+										        <td>贤心</td>
+										        <td>汉族</td>
+										        <td>1989-10-14</td>
+										    </tr>
+										    <tr>
+										    	<td><input type="radio" name="sex" value="男" checked=""></td>
+										        <td>张爱玲</td>
+										        <td>汉族</td>
+										        <td>1920-09-30</td>
+										    </tr>
+										    <tr>
+										    	<td><input type="radio" name="sex" value="男" checked=""></td>
+										        <td>Helen Keller</td>
+										        <td>拉丁美裔</td>
+										        <td>1880-06-27</td>
+										    </tr>
+										    <tr>
+										    	<td><input type="radio" name="sex" value="男" checked=""></td>
+										        <td>岳飞</td>
+										        <td>汉族</td>
+										        <td>1103-北宋崇宁二年</td>
+										    </tr>
+										    <tr>
+										    	<td><input type="radio" name="sex" value="男" checked=""></td>
+										        <td>孟子</td>
+										        <td>华夏族（汉族）</td>
+										        <td>公元前-372年</td>
+										    </tr>
+										    </tbody>
+										</table>
 								    </div>
 								    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 									    <legend>表单集合演示</legend>
