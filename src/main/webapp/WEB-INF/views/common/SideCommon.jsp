@@ -5,10 +5,10 @@
         <!-- 左侧主菜单添加选项卡监听 -->
         <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
         	<li class="layui-nav-item">
-                <a href="<c:url value="/cms/station/1"></c:url>"><i class="layui-icon">&#xe621;</i>用户列表1</a>
+                <a href="<c:url value="/cms/station/1"></c:url>" class="<c:if test="${station == 1}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表1</a>
             </li>
             <li class="layui-nav-item">
-                <a href="<c:url value="/cms/station/2"></c:url>"><i class="layui-icon">&#xe621;</i>用户列表2</a>
+                <a href="<c:url value="/cms/station/2"></c:url>" class="<c:if test="${station == 2}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表2</a>
             </li>
         </ul>
     </div>

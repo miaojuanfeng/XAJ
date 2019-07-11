@@ -29,6 +29,10 @@
                     	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item" style="text-align:center;height:430px;">
+					            	<div style="padding:10px 0;">
+					            		<p style="font-size:18px;color:#008acd">汇流示意</p>
+					            		<p style="font-size:12px;margin-top:5px;color:#aaa">宁都站</p>
+					            	</div>
 					               	<img src="<c:url value="/assets/static/image/rever.jpg"></c:url>" />
 					            </div>
 					        </div>
@@ -149,93 +153,73 @@
 					             		// 基于准备好的dom，初始化echarts实例
 							        	var myChart3 = echarts.init(document.getElementById('main3'), 'macarons');
 					             
-					                	option = {
-					                	    title: {
-					                	        text: '堆叠区域图',
-					                	        subtext: '宁都站',
+							        	option = {
+						        		    title: {
+						        		        text: '降雨趋势',
+						        		        subtext: '宁都站',
 							        	        x: 'center',
 							        	        align: 'right'
-					                	    },
-					                	    tooltip : {
-					                	        trigger: 'axis',
-					                	        axisPointer: {
-					                	            type: 'cross',
-					                	            label: {
-					                	                backgroundColor: '#6a7985'
-					                	            }
-					                	        }
-					                	    },
-					                	    /*legend: {
-					                	        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎'],
-					                	        x: 'left'
-					                	    },*/
-					                	    toolbox: {
-					                	        feature: {
-					                	            saveAsImage: {}
-					                	        }
-					                	    },
-					                	    grid: {
-					                	        left: '3%',
-					                	        right: '4%',
-					                	        bottom: '3%',
-					                	        containLabel: true
-					                	    },
-					                	    xAxis : [
-					                	        {
-					                	            type : 'category',
-					                	            boundaryGap : false,
-					                	            data : ['周一','周二','周三','周四','周五','周六','周日']
-					                	        }
-					                	    ],
-					                	    yAxis : [
-					                	        {
-					                	            type : 'value'
-					                	        }
-					                	    ],
-					                	    series : [
-					                	        {
-					                	            name:'宁都站',
-					                	            type:'line',
-					                	            stack: '总量',
-					                	            areaStyle: {},
-					                	            data:[120, 132, 101, 134, 90, 230, 210]
-					                	        },
-					                	        {
-					                	            name:'上饶站',
-					                	            type:'line',
-					                	            stack: '总量',
-					                	            areaStyle: {},
-					                	            data:[220, 182, 191, 234, 290, 330, 310]
-					                	        },
-					                	        {
-					                	            name:'于都站',
-					                	            type:'line',
-					                	            stack: '总量',
-					                	            areaStyle: {},
-					                	            data:[150, 232, 201, 154, 190, 330, 410]
-					                	        },
-					                	        {
-					                	            name:'信丰站',
-					                	            type:'line',
-					                	            stack: '总量',
-					                	            areaStyle: {normal: {}},
-					                	            data:[320, 332, 301, 334, 390, 330, 320]
-					                	        },
-					                	        {
-					                	            name:'南康站',
-					                	            type:'line',
-					                	            stack: '总量',
-					                	            label: {
-					                	                normal: {
-					                	                    show: true,
-					                	                    position: 'top'
-					                	                }
-					                	            },
-					                	            areaStyle: {normal: {}},
-					                	            data:[820, 932, 901, 934, 1290, 1330, 1320]
-					                	        }
-					                	    ]
-					                	};
+						        		    },
+						        		    tooltip : {
+						        		        trigger: 'axis',
+						        		        axisPointer: {
+						        		            type: 'cross',
+						        		            label: {
+						        		                backgroundColor: '#6a7985'
+						        		            }
+						        		        }
+						        		    },
+						        		    /*legend: {
+						        		        data:['降雨量']
+						        		    },*/
+						        		    toolbox: {
+						        		        feature: {
+						        		            saveAsImage: {}
+						        		        }
+						        		    },
+						        		    grid: {
+						        		        left: '3%',
+						        		        right: '4%',
+						        		        bottom: '3%',
+						        		        containLabel: true
+						        		    },
+						        		    xAxis : [
+						        		        {
+						        		            type : 'category',
+						        		            boundaryGap : false,
+						        		            data : ['周一','周二','周三','周四','周五','周六','周日']
+						        		        }
+						        		    ],
+						        		    yAxis : [
+						        		        {
+						        		            type : 'value'
+						        		        }
+						        		    ],
+						        		    series : [
+						        		       
+						        		        {
+						        		            name:'降雨量',
+						        		            type:'line',
+						        		              smooth: true,
+						        		       lineStyle: {
+						        		                normal: {
+						        		                    width: 3,
+						        		                    shadowColor: 'rgba(0,0,0,0.4)',
+						        		                    shadowBlur: 10,
+						        		                    shadowOffsetY: 10
+						        		                }
+						        		            },
+						        		            label: {
+						        		                normal: {
+						        		                    show: true,
+						        		                    position: 'top'
+						        		                }
+						        		            },
+						        		          
+						        		            data:[820, 932, 901, 934, 1290, 1330, 1320]
+						        		        }
+						        		    ]
+						        		};
 					                	
 					                	// 使用刚指定的配置项和数据显示图表。
 								        myChart3.setOption(option);

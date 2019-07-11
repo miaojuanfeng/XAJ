@@ -15,6 +15,7 @@ public class StationController {
 	@RequestMapping("{id}")
 	public String index(ModelMap map, @PathVariable("id") Integer id) {
 		map.put("date", new SimpleDateFormat("HH:mm   EEEE").format(new Date()));
+		map.put("station", id);
 		return "StationView";
 	}
 }
