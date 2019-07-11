@@ -28,7 +28,7 @@
                     <div class="layui-row layui-col-space10 my-index-main" style="padding:10px;">
 	                    <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="height:747px;">
+					            <div class="layui-colla-item" style="height:847px;">
 					            <form class="layui-form" action="">
 					            	<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
 									    <legend>表单集合演示</legend>

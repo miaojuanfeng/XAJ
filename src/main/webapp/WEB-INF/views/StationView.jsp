@@ -271,10 +271,10 @@
 								        	    },*/
 								        	    dataZoom: [
 								        	        {
-								        	            show: true,
-								        	            realtime: true,
-								        	            start: 65,
-								        	            end: 85
+								        	            show: false,
+								        	            realtime: true
+								        	            /*start: 65,
+								        	            end: 85*/
 								        	        },
 								        	        {
 								        	            type: 'inside',
@@ -507,6 +507,11 @@
     vipNav.main('./json/nav_main.json','side-main',true);
 
     // you code ...
+    $(document).ready(function(){
+    	var contentHeight = $(".layui-tab-content").height() - 42;
+    	var viewHeight = contentHeight / 2;
+    	$(".layui-colla-item").css("height", viewHeight);
+    });
 
 });
 </script>

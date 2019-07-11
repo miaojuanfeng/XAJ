@@ -95,6 +95,9 @@ body{
     background: -moz-linear-gradient(right, #1a2980, #26d0ce); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #1a2980, #26d0ce); /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈�鍚庯級 */
 }
+.my-index-main{
+	padding-bottom: 5px !important;
+}
 .calc-content .layui-table{
 	border-left: none;
     border-right: none;
