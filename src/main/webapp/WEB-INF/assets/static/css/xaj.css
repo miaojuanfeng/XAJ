@@ -107,6 +107,32 @@ body{
 	margin-right:0;
 	padding-right:0;
 }
+.calc-content .layui-form-item{
+	padding: 0 15px;
+}
+.calc-content .layui-form-item .xaj-col-button{
+	text-align:center;
+}
+.calc-content .layui-field-title{
+	color: #1E9FFF;
+	margin-top: 20px;	
+}
+/*
+.calc-content .xaj-input-block{
+	padding: 0 15px;
+}
+.calc-content .xaj-input-left{
+	padding-left: 15px;
+}
+.calc-content .xaj-input-center{
+	
+}
+.calc-content .xaj-input-right{
+	padding-right: 15px;
+}*/
+.layui-nav * {
+    font-size: 16px;
+}
 
 @media screen and (max-width: 1023px){
 	.layui-field-title {
