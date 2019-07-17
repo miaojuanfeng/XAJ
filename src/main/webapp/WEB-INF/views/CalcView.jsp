@@ -35,6 +35,7 @@
 									</fieldset>
 						            <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+							            	<label class="layui-form-label">站类别</label>
 							            	<select name="quiz1">
 								                <option value="">请选择站类别</option>
 								                <option value="浙江">浙江省</option>
@@ -43,6 +44,7 @@
 								            </select>
 								        </div>
 								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+								        	<label class="layui-form-label">水文站</label>
 							            	<select name="quiz1">
 								                <option value="">请选择水文站</option>
 								                <option value="浙江">浙江省</option>
@@ -53,6 +55,7 @@
 								    </div>
 								    <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
+							            	<label class="layui-form-label">预报方案</label>
 							            	<select name="quiz1">
 								                <option value="">请选择预报方案</option>
 								                <option value="浙江">浙江省</option>
@@ -63,14 +66,17 @@
 								    </div>
 								    <div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+						               		<label class="layui-form-label">洪水预报时间</label>
 							                <input type="text" name="startTime" id="startTime" lay-verify="date" placeholder="请选择洪水预报时间" autocomplete="off" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+							            	<label class="layui-form-label">前期影响时间</label>
 							            	<input type="text" name="endTime" id="endTime" lay-verify="date" placeholder="请选择前期影响时间" autocomplete="off" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+							            	<label class="layui-form-label">预报天数</label>
 							            	<select name="quiz1">
 								                <option value="">请选择预报天数</option>
 								                <option value="3">3天</option>
@@ -78,6 +84,7 @@
 								            </select>
 								        </div>
 								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+								        	<label class="layui-form-label">实测雨量</label>
 							            	<select name="quiz1">
 								                <option value="">请选择实测雨量</option>
 								                <option value="欧洲台">欧洲台</option>
@@ -90,23 +97,29 @@
 									</fieldset>
 									<div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+						               		<label class="layui-form-label">SM</label>
 							                <input type="text" name="startTime" placeholder="SM" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+							            	<label class="layui-form-label">CI</label>
 							                <input type="text" name="endTime" placeholder="CI" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+							            	<label class="layui-form-label">CS</label>
 							                <input type="text" name="endTime" placeholder="CS" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+						               		<label class="layui-form-label">LAG</label>
 							                <input type="text" name="startTime" placeholder="LAG" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+							            	<label class="layui-form-label">XX</label>
 							                <input type="text" name="endTime" placeholder="XX" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+							            	<label class="layui-form-label">XX</label>
 							                <input type="text" name="endTime" placeholder="XX" class="layui-input">
 							            </div>
 								    </div>
