@@ -1,18 +1,6 @@
 body{
 	background-color:#f5f5f5;
 }
-.xaj-weather-wrapper{
-	height:430px;
-}
-.xaj-weather-wrapper #weather-view-he{
-	border:none !important;
-	width:100% !important;
-	height:100% !important;
-}
-.xaj-progress-wrapper{
-	height:420px;
-	padding-top:10px;
-}
 /*.xaj-progress-wrapper{
 	padding-top:11px;
 	padding-bottom:11px;
@@ -84,9 +72,11 @@ body{
 }
 .layui-collapse{
 	background-color: #fff;
-	-moz-box-shadow:2px 2px 5px #bbb; 
-	-webkit-box-shadow:2px 2px 5px #bbb;
-	box-shadow:2px 2px 5px #bbb;
+	-moz-box-shadow:0px 0px 5px #ccc;
+	-webkit-box-shadow:0px 0px 5px #ccc;
+	box-shadow:0px 0px 5px #ccc;
+	border:1px solid #ccc;
+	display:none;
 }
 .layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected{
 	color: #fff;
@@ -98,10 +88,13 @@ body{
 .my-index-main{
 	padding-bottom: 5px !important;
 }
-.calc-content .layui-table{
+.my-index-main .layui-colla-item{
+	overflow:hidden;
+}
+/*.calc-content .layui-table{
 	border-left: none;
     border-right: none;
-}
+}*/
 .calc-content .layui-form-radio{
 	margin-top:0;
 	margin-right:0;
@@ -109,13 +102,15 @@ body{
 }
 .calc-content .layui-form-item{
 	padding: 0 15px;
+	margin-bottom:0;
 }
 .calc-content .layui-form-item .xaj-col-button{
 	text-align:center;
 }
 .calc-content .layui-field-title{
 	color: #1E9FFF;
-	margin-top: 20px;	
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 .calc-content .layui-field-title legend{
 	text-align: center;

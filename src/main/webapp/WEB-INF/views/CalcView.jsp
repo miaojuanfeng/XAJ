@@ -4,8 +4,6 @@
 <html lang="en">
 <head>
 	<%@ include file="common/LinkCommon.jsp" %>
-	<script type="text/javascript" src="<c:url value="/assets/echarts/echarts.min.js"></c:url>"></script>
-    <script type="text/javascript" src="<c:url value="/assets/echarts/macarons.js"></c:url>"></script>
     <title>链活后台管理系统</title>
 </head>
 <body>
@@ -28,28 +26,26 @@
                     <div class="layui-row layui-col-space10 my-index-main calc-view" style="padding:10px;">
 	                    <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="height:847px;">
+					            <div class="layui-colla-item">
 					            <form class="layui-form" action="">
 					            	<fieldset class="layui-elem-field layui-field-title">
 									    <legend>基本设置</legend>
 									</fieldset>
 						            <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-							            	<label class="layui-form-label">站类别</label>
+							            	<label class="layui-form-label">站类</label>
 							            	<select name="quiz1">
-								                <option value="">请选择站类别</option>
-								                <option value="浙江">浙江省</option>
-								                <option value="你的工号">江西省</option>
-								                <option value="你最喜欢的老师">福建省</option>
+								                <option value="站类1">站类1</option>
+								                <option value="站类2">站类2</option>
+								                <option value="站类3">站类3</option>
 								            </select>
 								        </div>
 								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-								        	<label class="layui-form-label">水文站</label>
+								        	<label class="layui-form-label">站名</label>
 							            	<select name="quiz1">
-								                <option value="">请选择水文站</option>
-								                <option value="浙江">浙江省</option>
-								                <option value="你的工号">江西省</option>
-								                <option value="你最喜欢的老师">福建省</option>
+								                <option value="站名1">站名1</option>
+								                <option value="站名2">站名2</option>
+								                <option value="站名3">站名3</option>
 								            </select>
 								        </div>
 								    </div>
@@ -57,28 +53,26 @@
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 							            	<label class="layui-form-label">预报方案</label>
 							            	<select name="quiz1">
-								                <option value="">请选择预报方案</option>
-								                <option value="浙江">浙江省</option>
-								                <option value="你的工号">江西省</option>
-								                <option value="你最喜欢的老师">福建省</option>
+								                <option value="方案1">方案1</option>
+								                <option value="方案2">方案2</option>
+								                <option value="方案3">方案3</option>
 								            </select>
 								        </div>
 								    </div>
 								    <div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
 						               		<label class="layui-form-label">洪水预报时间</label>
-							                <input type="text" name="startTime" id="startTime" lay-verify="date" placeholder="请选择洪水预报时间" autocomplete="off" class="layui-input">
+							                <input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
 							            	<label class="layui-form-label">前期影响时间</label>
-							            	<input type="text" name="endTime" id="endTime" lay-verify="date" placeholder="请选择前期影响时间" autocomplete="off" class="layui-input">
+							            	<input type="text" name="endTime" id="endTime" lay-verify="date" autocomplete="off" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
 							            	<label class="layui-form-label">预报天数</label>
 							            	<select name="quiz1">
-								                <option value="">请选择预报天数</option>
 								                <option value="3">3天</option>
 								                <option value="5">5天</option>
 								            </select>
@@ -86,7 +80,7 @@
 								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
 								        	<label class="layui-form-label">实测雨量</label>
 							            	<select name="quiz1">
-								                <option value="">请选择实测雨量</option>
+								                <option value="实测雨量">实测雨量</option>
 								                <option value="欧洲台">欧洲台</option>
 								                <option value="日本台">日本台</option>
 								            </select>
@@ -98,29 +92,29 @@
 									<div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 						               		<label class="layui-form-label">SM</label>
-							                <input type="text" name="startTime" placeholder="SM" class="layui-input">
+							                <input type="text" name="startTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 							            	<label class="layui-form-label">CI</label>
-							                <input type="text" name="endTime" placeholder="CI" class="layui-input">
+							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 							            	<label class="layui-form-label">CS</label>
-							                <input type="text" name="endTime" placeholder="CS" class="layui-input">
+							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 						               		<label class="layui-form-label">LAG</label>
-							                <input type="text" name="startTime" placeholder="LAG" class="layui-input">
+							                <input type="text" name="startTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 							            	<label class="layui-form-label">XX</label>
-							                <input type="text" name="endTime" placeholder="XX" class="layui-input">
+							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
 							            	<label class="layui-form-label">XX</label>
-							                <input type="text" name="endTime" placeholder="XX" class="layui-input">
+							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>
 									<!-- div class="layui-form-item">
@@ -176,7 +170,7 @@
 								    <fieldset class="layui-elem-field layui-field-title">
 									    <legend>操作</legend>
 									</fieldset>
-									<div class="layui-form-item">
+									<div class="layui-form-item" style="margin-top:10px;">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
 							                <button class="layui-btn layui-btn-danger layui-btn-radius">重置参数</button>
 							            </div>
@@ -186,6 +180,29 @@
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
 							                <button class="layui-btn layui-btn-warm layui-btn-radius">保存入库</button>
 							            </div>
+								    </div>
+								    <fieldset class="layui-elem-field layui-field-title">
+									    <legend>结果</legend>
+									</fieldset>
+								    <div class="layui-form-item">
+								        <table class="layui-table">
+								        	<colgroup>
+										    	<col width="50">
+										        <col width="50">
+										    </colgroup>
+										    <tr>
+										        <td>结果1</td>
+										        <td>值1</td>
+										    </tr>
+										    <tr>
+										        <td>结果2</td>
+										        <td>值2</td>
+										    </tr>
+										    <tr>
+										        <td>结果3</td>
+										        <td>值3</td>
+										    </tr>
+										</table>
 								    </div>
 									<!--div class="layui-form-item">
 								        <label class="layui-form-label">单选框</label>
@@ -236,125 +253,9 @@
 				    
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item" style="height:747px;padding-top:20px;">
-					                <div id="main3" style="width: 100%;height:100%;"></div>
-									<script type="text/javascript">
-								        // 基于准备好的dom，初始化echarts实例
-								        var myChart3 = echarts.init(document.getElementById('main3'), 'macarons');
-								
-								        option = {
-							        	    title : {
-							        	        text: '洪水过程',
-							        	        subtext: '宁都站',
-							        	        x: 'center',
-							        	        align: 'right'
-							        	    },
-							        	    grid: {
-							        	        bottom: 80
-							        	    },
-							        	    toolbox: {
-							        	        feature: {
-							        	            dataZoom: {
-							        	                yAxisIndex: 'none'
-							        	            },
-							        	            restore: {},
-							        	            saveAsImage: {}
-							        	        }
-							        	    },
-							        	    tooltip : {
-							        	        trigger: 'axis',
-							        	        axisPointer: {
-							        	            type: 'cross',
-							        	            animation: false,
-							        	            label: {
-							        	                backgroundColor: '#505765'
-							        	            }
-							        	        }
-							        	    },
-							        	    legend: {
-							        	        data:['预报水位','降雨量'],
-							        	        x: 'left'
-							        	    },
-							        	    dataZoom: [
-							        	        {
-							        	            show: false,
-							        	            realtime: true,
-							        	          //  start: 65,
-							        	           // end: 85
-							        	        },
-							        	        {
-							        	            type: 'inside',
-							        	            realtime: true,
-							        	           start: 65,
-							        	          end: 85
-							        	        }
-							        	    ],
-							        	    xAxis : [
-							        	        {
-							        	            type : 'category',
-							        	            boundaryGap : true,
-							        	            axisLine: {onZero: false},
-							        	            data : [
-							        	                '2009/6/12 2:00', '2009/6/12 3:00', '2009/6/12 4:00', '2009/6/12 5:00', '2009/6/12 6:00', '2009/6/12 7:00', '2009/6/12 8:00', '2009/6/12 9:00', '2009/6/12 10:00', '2009/6/12 11:00', '2009/6/12 12:00', '2009/6/12 13:00', '2009/6/12 14:00', '2009/6/12 15:00', '2009/6/12 16:00', '2009/6/12 17:00', '2009/6/12 18:00', '2009/6/12 19:00', '2009/6/12 20:00', '2009/6/12 21:00', '2009/6/12 22:00', '2009/6/12 23:00'
-							        	               
-							        	            ].map(function (str) {
-							        	                return str.replace(' ', '\n')
-							        	            })
-							        	        }
-							        	    ],
-							        	    yAxis: [
-							        	        {
-							        	            name: '预报水位(m)',
-							        	            type: 'value',
-							        	            max: 500
-							        	        },
-							        	        {
-							        	            name: '降雨量(mm)',
-							        	            nameLocation: 'start',
-							        	            max: 5,
-							        	            type: 'value',
-							        	            inverse: true
-							        	        }
-							        	    ],
-							        	    series: [
-							        	        {
-							        	            name:'预报水位',
-							        	            type:'line',
-							        	            animation: false,
-							        	           
-							        	             smooth: true,
-							        	       lineStyle: {
-							        	                normal: {
-							        	                    width: 3,
-							        	                    shadowColor: 'rgba(0,0,0,0.4)',
-							        	                    shadowBlur: 10,
-							        	                    shadowOffsetY: 10
-							        	                }
-							        	            },
-							        	           
-							        	            data:[
-							        	                0.41,0.41,2.41,4.42,0.42,0.42,0.42,5.42,10.42,10.42,10.42,22.42,30.43,50.43,100.43,100.43,100.43,90.43,30.44,0.44,0.44,0.44
-							        	            ]
-							        	        },
-							        	        {
-							        	            name:'降雨量',
-							        	            type:'bar',
-							        	               barWidth: '40%',
-							        	            yAxisIndex:1,
-							        	            animation: false,
-							        	           
-							        	           
-							        	           
-							        	            data: [
-							        	                0.571,0.814,1.153,0.774,0.202,0.086,0.075,0.071,0.032,0.019,0.003,0.004,0.004,0.004,0.004,0.004,0.004,0.007,0.072,0.153,0.256,0.306
-							        	            ]
-							        	        }
-							        	    ]
-							        	};
-								
-								        // 使用刚指定的配置项和数据显示图表。
-								        myChart3.setOption(option);
-								    </script>
+					            <div class="layui-colla-item">
+					             	<iframe id="iframe7" width="100%" frameborder="0" scrolling="no"></iframe>   
+					            </div>
 				            </div>
 				        </div>
 				    </div>
@@ -365,27 +266,7 @@
     </div>
 </div>
 
-<!-- pay -->
-<div class="my-pay-box none">
-    <div><img src="./frame/static/image/zfb.png" alt="支付宝"><p>支付宝</p></div>
-    <div><img src="./frame/static/image/wx.png" alt="微信"><p>微信</p></div>
-</div>
-
-<!-- 右键菜单 -->
-<div class="my-dblclick-box none">
-    <table class="layui-tab dblclick-tab">
-        <tr class="card-refresh">
-            <td><i class="layui-icon">&#x1002;</i>刷新当前标签</td>
-        </tr>
-        <tr class="card-close">
-            <td><i class="layui-icon">&#x1006;</i>关闭当前标签</td>
-        </tr>
-        <tr class="card-close-all">
-            <td><i class="layui-icon">&#x1006;</i>关闭所有标签</td>
-        </tr>
-    </table>
-</div>
-
+<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
 <script type="text/javascript">
 	layui.config({
 	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
@@ -415,41 +296,21 @@
             type: 'datetime'
         });
 
-        // 基于准备好的dom，初始化echarts实例
-        var myChart = echarts.init(document.getElementById('main-line'));
 
-        // 使用刚指定的配置项和数据显示图表。
-        myChart.setOption({
-            title: {
-                text: '示例'
-            },
-            tooltip: {},
-            legend: {
-                data: ['销量']
-            },
-            xAxis: {
-                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-            },
-            yAxis: {},
-            series: [{
-                name: '销量',
-                type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
-            }]
+        
+
+        $(document).ready(function(){
+        	var contentHeight = $(window).height() - 60 - 22;
+           	var viewHeight = contentHeight;
+           	$(".layui-colla-item").css("height", viewHeight);
+        	
+           	$('#iframe7').attr('src', '<c:url value="/cms/iframe/7"></c:url>');
+           	
+        	$(".layui-collapse").fadeIn();
         });
-
-        // 打开选项卡
-        $('.my-nav-btn').on('click', function(){
-            if($(this).attr('data-href')){
-                //vipTab.add('','标题','路径');
-                vipTab.add($(this),'<i class="layui-icon">'+$(this).find("button").html()+'</i>'+$(this).find('p:last-child').html(),$(this).attr('data-href'));
-            }
-        });
-
-        // you code ...
-
-
     });
+    
+    
 </script>
 </body>
 </html>
