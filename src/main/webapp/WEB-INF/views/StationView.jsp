@@ -13,7 +13,17 @@
     <!-- header -->
     <%@ include file="common/HeaderCommon.jsp" %>
     <!-- side -->
-    <%@ include file="common/SideCommon.jsp" %>
+	<div class="layui-side-scroll">
+        <!-- 左侧主菜单添加选项卡监听 -->
+        <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
+        	<li class="layui-nav-item">
+                <a href="<c:url value="/cms/station/1"></c:url>" class="<c:if test="${station == 1}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表1</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="<c:url value="/cms/station/2"></c:url>" class="<c:if test="${station == 2}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表2</a>
+            </li>
+        </ul>
+    </div>
     <!-- body -->
     <div class="layui-body my-body my-body-left">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
@@ -24,72 +34,52 @@
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
                     <div class="layui-row layui-col-space10 my-index-main" style="padding:10px;">
-                    	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-					        <div class="layui-collapse">
-					            <div class="layui-colla-item">
-					            	<iframe id="iframe1" width="100%" frameborder="0" scrolling="no"></iframe>
-					            </div>
-					        </div>
-					    </div>
-					    
-					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-					        <div class="layui-collapse">
-					        	<div class="layui-colla-item">
-							    	<iframe id="iframe2" width="100%" frameborder="0" scrolling="no"></iframe>
-								</div>
-					        </div>
-					    </div>
-					    
-						<div class="layui-col-xs12 layui-col-sm6 layui-col-md2">
-					        <div class="layui-collapse">
-					            <div class="layui-colla-item">
-				                    <iframe id="iframe3" width="100%" frameborder="0" scrolling="no"></iframe>
-					            </div>
-					        </div>
-					    </div>
-					    
-					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-					        <div class="layui-collapse">
-					            <div class="layui-colla-item">
-					                <iframe id="iframe4" width="100%" frameborder="0" scrolling="no"></iframe>
-					            </div>
-					        </div>
-					    </div>
-					    
-					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md8">
-					        <div class="layui-collapse">
-					            <div class="layui-colla-item">
-					                <iframe id="iframe5" width="100%" frameborder="0" scrolling="no"></iframe>
-					            </div>
-					        </div>
-					    </div>
-					    
+                    		
+	                    	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+						        <div class="layui-collapse">
+						            <div class="layui-colla-item">
+						            	<iframe id="iframe1" width="100%" frameborder="0" scrolling="no"></iframe>
+						            </div>
+						        </div>
+						    </div>
+						    
+						    <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+						        <div class="layui-collapse">
+						        	<div class="layui-colla-item">
+								    	<iframe id="iframe2" width="100%" frameborder="0" scrolling="no"></iframe>
+									</div>
+						        </div>
+						    </div>
+						    
+							<div class="layui-col-xs12 layui-col-sm6 layui-col-md2">
+						        <div class="layui-collapse">
+						            <div class="layui-colla-item">
+					                    <iframe id="iframe3" width="100%" frameborder="0" scrolling="no"></iframe>
+						            </div>
+						        </div>
+						    </div>
+						    
+						    <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
+						        <div class="layui-collapse">
+						            <div class="layui-colla-item">
+						                <iframe id="iframe4" width="100%" frameborder="0" scrolling="no"></iframe>
+						            </div>
+						        </div>
+						    </div>
+						    
+						    <div class="layui-col-xs12 layui-col-sm6 layui-col-md8">
+						        <div class="layui-collapse">
+						            <div class="layui-colla-item">
+						                <iframe id="iframe5" width="100%" frameborder="0" scrolling="no"></iframe>
+						            </div>
+						        </div>
+						    </div>
+
 					</div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<!-- pay -->
-<div class="my-pay-box none">
-    <div><img src="./frame/static/image/zfb.png" alt="支付宝"><p>支付宝</p></div>
-    <div><img src="./frame/static/image/wx.png" alt="微信"><p>微信</p></div>
-</div>
-
-<!-- 右键菜单 -->
-<div class="my-dblclick-box none">
-    <table class="layui-tab dblclick-tab">
-        <tr class="card-refresh">
-            <td><i class="layui-icon">&#x1002;</i>刷新当前标签</td>
-        </tr>
-        <tr class="card-close">
-            <td><i class="layui-icon">&#x1006;</i>关闭当前标签</td>
-        </tr>
-        <tr class="card-close-all">
-            <td><i class="layui-icon">&#x1006;</i>关闭所有标签</td>
-        </tr>
-    </table>
 </div>
 
 <script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
