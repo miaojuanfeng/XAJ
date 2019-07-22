@@ -84,7 +84,7 @@ body{
 	border:1px solid #ccc;
 	display:none;
 }
-.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected{
+.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title{
 	color: #fff;
 	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
@@ -107,16 +107,23 @@ body{
 	padding-right:0;
 }
 .calc-content .layui-form-item{
-	padding: 0 15px;
+	padding: 0 10px;
 	margin-bottom:0;
+	margin-top:10px;
 }
 .calc-content .layui-form-item .xaj-col-button{
 	text-align:center;
 }
 .calc-content .layui-field-title{
-	color: #1E9FFF;
 	margin-top: 10px;
 	margin-bottom: 0;
+}
+.calc-content .layui-calc-title{
+	color: #fff;
+	padding: 8px 0;
+	text-align:center;
+	font-size:16px;
+	margin-top:10px;
 }
 .calc-content .layui-field-title legend{
 	text-align: center;
@@ -124,9 +131,17 @@ body{
 .calc-content .layui-form-label{
 	padding-left:0;
 	padding-right:0;
-	text-align:left;
 	float:none;
 	width:100%;
+}
+.calc-content .layui-form-label span{
+	margin-right:15px;
+}
+.calc-content .layui-form-label b{
+	text-align:center;
+	width:100%;
+	display:block;
+	font-weight:normal;
 }
 /*
 .calc-content .xaj-input-block{

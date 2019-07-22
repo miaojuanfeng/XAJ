@@ -23,25 +23,28 @@
             <div class="layui-tab-content calc-content">
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
-                    <div class="layui-row layui-col-space10 my-index-main calc-view" style="padding:10px;">
+                    <div class="layui-row layui-col-space10 my-index-main calc-view" style="padding:10px">
 	                    <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
 					            <form class="layui-form" action="">
-					            	<fieldset class="layui-elem-field layui-field-title">
-									    <legend>基本设置</legend>
-									</fieldset>
+					            	<div class="layui-form-item">
+										<div class="layui-calc-title">
+										    <span>基本设置</span>
+										</div>
+									</div>
 						            <div class="layui-form-item">
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-							            	<label class="layui-form-label">站类</label>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+							            	<label class="layui-form-label"><span>预报站</span></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
 							            	<select name="quiz1">
 								                <option value="站类1">站类1</option>
 								                <option value="站类2">站类2</option>
 								                <option value="站类3">站类3</option>
 								            </select>
 								        </div>
-								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-								        	<label class="layui-form-label">站名</label>
+								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
 							            	<select name="quiz1">
 								                <option value="站名1">站名1</option>
 								                <option value="站名2">站名2</option>
@@ -50,8 +53,10 @@
 								        </div>
 								    </div>
 								    <div class="layui-form-item">
-							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
-							            	<label class="layui-form-label">预报方案</label>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+							            	<label class="layui-form-label"><span>预报方案</span></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
 							            	<select name="quiz1">
 								                <option value="方案1">方案1</option>
 								                <option value="方案2">方案2</option>
@@ -60,25 +65,37 @@
 								        </div>
 								    </div>
 								    <div class="layui-form-item">
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-						               		<label class="layui-form-label">洪水预报时间</label>
+						               	<div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+						               		<label class="layui-form-label"><span>预报时间</span></label>
+						               	</div>
+						               	<div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
 							                <input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-							            	<label class="layui-form-label">前期影响时间</label>
+							        </div>
+							        <div class="layui-form-item">
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+							            	<label class="layui-form-label"><span>影响时间</span></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
 							            	<input type="text" name="endTime" id="endTime" lay-verify="date" autocomplete="off" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-							            	<label class="layui-form-label">预报天数</label>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+							            	<label class="layui-form-label"><span>预报天数</span></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
 							            	<select name="quiz1">
 								                <option value="3">3天</option>
 								                <option value="5">5天</option>
 								            </select>
 								        </div>
-								        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
-								        	<label class="layui-form-label">实测雨量</label>
+								   	</div>
+								    <div class="layui-form-item">
+								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
+								        	<label class="layui-form-label"><span>预报雨量</span></label>
+								        </div>
+								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
 							            	<select name="quiz1">
 								                <option value="实测雨量">实测雨量</option>
 								                <option value="欧洲台">欧洲台</option>
@@ -86,34 +103,48 @@
 								            </select>
 								        </div>
 								    </div>
-								    <fieldset class="layui-elem-field layui-field-title">
-									    <legend>参数调整</legend>
-									</fieldset>
+								    <div class="layui-form-item">
+										<div class="layui-calc-title">
+										    <span>参数调整</span>
+										</div>
+									</div>
 									<div class="layui-form-item">
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-						               		<label class="layui-form-label">SM</label>
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+						               		<label class="layui-form-label"><b>SM</b></label>
+						               	</div>
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="startTime" class="layui-input">
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-							            	<label class="layui-form-label">CI</label>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+							            	<label class="layui-form-label"><b>CI</b></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-							            	<label class="layui-form-label">CS</label>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+							            	<label class="layui-form-label"><b>CS</b></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>
 								    <div class="layui-form-item">
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-						               		<label class="layui-form-label">LAG</label>
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+						               		<label class="layui-form-label"><b>LAG</b></label>
+						               	</div>
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="startTime" class="layui-input">
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-							            	<label class="layui-form-label">XX</label>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+							            	<label class="layui-form-label"><b>XX</b></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4">
-							            	<label class="layui-form-label">XX</label>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
+							            	<label class="layui-form-label"><b>XX</b></label>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>
@@ -167,10 +198,7 @@
 										    </tbody>
 										</table>
 								    </div-->
-								    <fieldset class="layui-elem-field layui-field-title">
-									    <legend>操作</legend>
-									</fieldset>
-									<div class="layui-form-item" style="margin-top:10px;">
+									<div class="layui-form-item" style="margin-top:15px;">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
 							                <button class="layui-btn layui-btn-danger layui-btn-radius">重置参数</button>
 							            </div>
@@ -181,9 +209,11 @@
 							                <button class="layui-btn layui-btn-warm layui-btn-radius">保存入库</button>
 							            </div>
 								    </div>
-								    <fieldset class="layui-elem-field layui-field-title">
-									    <legend>结果</legend>
-									</fieldset>
+								    <div class="layui-form-item" style="margin-top:25px;">
+									    <div class="layui-calc-title">
+										    <span>预报结果</span>
+										</div>
+									</div>
 								    <div class="layui-form-item">
 								        <table class="layui-table">
 								        	<colgroup>
@@ -191,19 +221,24 @@
 										        <col width="50">
 										    </colgroup>
 										    <tr>
-										        <td>结果1</td>
-										        <td>值1</td>
+										        <td>洪峰时间：</td>
+										        <td>2019-08-20 10:20</td>
 										    </tr>
 										    <tr>
-										        <td>结果2</td>
-										        <td>值2</td>
+										        <td>洪峰水位：</td>
+										        <td>132米</td>
 										    </tr>
 										    <tr>
-										        <td>结果3</td>
-										        <td>值3</td>
+										        <td>洪峰流量：</td>
+										        <td>123立方米/秒</td>
 										    </tr>
 										</table>
 								    </div>
+								    <div class="layui-form-item">
+								    	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 xaj-col-button">
+							                <button class="layui-btn layui-btn-normal layui-btn-radius">导出预报单</button>
+							            </div>
+							        </div>
 									<!--div class="layui-form-item">
 								        <label class="layui-form-label">单选框</label>
 								        <div class="layui-input-block">
