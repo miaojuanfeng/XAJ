@@ -84,7 +84,7 @@ body{
 	border:1px solid #ccc;
 	display:none;
 }
-.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title{
+.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title, #div-nav a{
 	color: #fff;
 	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
@@ -158,6 +158,28 @@ body{
 }*/
 .layui-nav * {
     font-size: 16px;
+}
+#div-nav a{
+	position:relative;
+	line-height:38px;
+	display:block;
+	float:left;
+	padding:0 20px;
+	color:#fff;
+	margin-right:30px;
+}
+#div-nav a:before{
+    position:absolute;
+    content:"";
+    width:0;
+    height:0;
+    border:19px solid transparent;
+    border-left-color:#26d0ce;
+    top:0;
+    right:-38px
+}
+#div-nav a:last-child:before{
+    border:none;
 }
 
 @media screen and (max-width: 1023px){

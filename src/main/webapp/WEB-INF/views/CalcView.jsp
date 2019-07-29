@@ -289,7 +289,22 @@
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					             	<iframe id="iframe7" width="100%" frameborder="0" scrolling="no"></iframe>   
+						            <div id="div-nav" style="height:58px;border-bottom:1px solid #eee;">
+									    <div style="padding:10px;">
+											<a href="javascript:;">
+    											<span>asdsaa</span>
+    										</a>
+    										<a href="javascript:;">
+    											<span>xcvxcv</span>
+    										</a>
+    										<a href="javascript:;">
+    											<span>675675</span>
+    										</a>
+										</div>
+									</div>
+									<div id="div-iframe">
+					             		<iframe id="iframe7" width="100%" frameborder="0" scrolling="no"></iframe>
+					             	</div>
 					            </div>
 				            </div>
 				        </div>
@@ -338,6 +353,7 @@
         	var contentHeight = $(window).height() - 60 - 22;
            	var viewHeight = contentHeight;
            	$(".layui-colla-item").css("height", viewHeight);
+           	$("#div-iframe").css("height", viewHeight-59);
         	
            	$('#iframe7').attr('src', '<c:url value="/cms/iframe/7"></c:url>');
            	
