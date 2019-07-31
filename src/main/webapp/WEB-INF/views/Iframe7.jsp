@@ -35,10 +35,10 @@
    	            }
    	        }
    	    },
-   	    /*legend: {
-   	        data:['预报水位','降雨量'],
+   	    legend: {
+   	        data:['实测水位','预报水位','降雨量'],
    	        x: 'left'
-   	    },*/
+   	    },
    	    dataZoom: [
    	        {
    	            show: false,
@@ -82,13 +82,20 @@
    	    ],
    	    series: [
    	        {
-   	            name:'预报水位',
+   	            name:'实测水位',
    	            type:'line',
    	            animation: false,
    	           
    	             smooth: true,
-   	       lineStyle: {
+   	        itemStyle:{
+   	                                    normal:{
+   	                                         color:'#26d0ce',
+   	                                        
+   	                                    }
+   	                                },
+   	            lineStyle: {
    	                normal: {
+   	                    color:'#26d0ce',
    	                    width: 3,
    	                    shadowColor: 'rgba(0,0,0,0.4)',
    	                    shadowBlur: 10,
@@ -97,12 +104,66 @@
    	            },
    	           
    	            data:[
-   	                0.41,0.41,2.41,4.42,0.42,0.42,0.42,5.42,10.42,10.42,10.42,22.42,30.43,50.43,100.43,100.43,100.43,90.43,30.44,0.44,0.44,0.44
+   	                0.41,0.41,2.41,4.42,0.42,0.42,0.42,5.42,10.42,10.42,10.42,22.42,30.43,50.43,100.43,100.43
    	            ]
+   	        },
+   	        {
+   	            name:'预报水位',
+   	            type:'line',
+   	            animation: false,
+   	           
+   	             smooth: true,
+   	        itemStyle:{
+   	                                    normal:{
+   	                                         color:'#FF3E96',
+   	                                        
+   	                                    }
+   	                                },
+   	            lineStyle: {
+   	                normal: {
+   	                    color:'#FF3E96',
+   	                    width: 3,
+   	                    shadowColor: 'rgba(0,0,0,0.4)',
+   	                    shadowBlur: 10,
+   	                    shadowOffsetY: 10
+   	                }
+   	            },
+   	           
+   	            data:[
+   	                0.81,0.81,2.81,5.42,1.42,1.42,1.42,8.42,12.42,12.42,12.42,27.42,36.43,56.43,120.43,120.43,120.43,96.43,30.44,0.44,0.44,0.44
+   	            ],
+   	            markLine: {
+   	               itemStyle: {
+   	                   normal: { lineStyle: { color:'#CD2626' },
+   	                   label: { show: true , position:'middle' }
+   	                   }
+   	               },
+   	                data: [
+   	                   
+   	                    {
+   	                        name: '警戒水位',
+   	                        yAxis: 300
+   	                    }
+   	                    ]
+   	            },
+
+   	             markPoint: {
+   	                 	 symbolSize: 80,
+   	                data: [
+   	                    {type: 'max', name: '最大值'}
+   	                   
+   	                ]
+   	            }
    	        },
    	        {
    	            name:'降雨量',
    	            type:'bar',
+   	            itemStyle:{
+   	                                    normal:{
+   	                                         color:'#7EC0EE',
+   	                                        
+   	                                    }
+   	                                },
    	               barWidth: '40%',
    	            yAxisIndex:1,
    	            animation: false,

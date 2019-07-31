@@ -13,6 +13,7 @@
         <ul class="layui-nav" lay-filter="side-top-left">
         	<li class="layui-nav-item"><a href="<c:url value="/cms/station/1"></c:url>"><i class="layui-icon">&#xe621;</i>首页</a></li>
             <li class="layui-nav-item"><a href="<c:url value="/cms/calc/index"></c:url>"><i class="layui-icon">&#xe621;</i>按钮中心</a></li>
+            <li class="layui-nav-item"><a href="<c:url value="/cms/plan/index"></c:url>"><i class="layui-icon">&#xe621;</i>预报方案</a></li>
             <li class="layui-nav-item"><a href="javascript:;"><i class="layui-icon">&#xe621;</i>个人中心</a></li>
             <li class="layui-nav-item"><a href="<c:url value="/cms/step/index"></c:url>"><i class="layui-icon">&#xe621;</i>数据分步计算</a></li>
             <!-- li class="layui-nav-item">
@@ -39,7 +40,137 @@
             	<div id="time-week">${date}</div>
             </li>
             <li class="layui-nav-item">
-			    <div id="notify"><a href="">预警消息<span class="layui-badge">9</span></a></div>
+			    <div id="notify" style="position:relative">
+			    	<a href="">预警消息<span class="layui-badge">9</span></a>
+			    	<div id="notify-list">
+			    		<ul>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div class="title">链活2.0后台管理系统</div>
+			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
+			    					<span class="type">预警</span>
+			    					<span class="time">2019-07-31 10:23:23</span>
+			    					<div class="clear"></div>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div class="title">链活2.0后台管理系统</div>
+			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
+			    					<span class="type">预警</span>
+			    					<span class="time">2019-07-31 10:23:23</span>
+			    					<div class="clear"></div>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div class="title">链活2.0后台管理系统</div>
+			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
+			    					<span class="type">预警</span>
+			    					<span class="time">2019-07-31 10:23:23</span>
+			    					<div class="clear"></div>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div class="title">链活2.0后台管理系统</div>
+			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
+			    					<span class="type">预警</span>
+			    					<span class="time">2019-07-31 10:23:23</span>
+			    					<div class="clear"></div>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div class="title">链活2.0后台管理系统</div>
+			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
+			    					<span class="type">预警</span>
+			    					<span class="time">2019-07-31 10:23:23</span>
+			    					<div class="clear"></div>
+			    				</a>
+			    			</li>
+			    		</ul>
+			    	</div>
+			    	<script type="text/javascript" src="<c:url value="/assets/static/js/jquery.min.js"></c:url>"></script>
+			    	<script>
+			    	$(document).ready(function(){
+			    		$("#notify").hover(
+		    				function(){
+		    					$("#notify-list").stop().fadeIn().show();
+				    		},
+				    		function(){
+				    			$("#notify-list").stop().fadeOut().hide();
+				    		}
+				    	);
+			    	});
+			    	</script>
+			    	<style>
+			    	.clear{
+			    		float:none;
+			    		clear:both;
+			    	}
+			    	#notify #notify-list{
+			    		width:300px;
+			    		background:#fff;
+			    		position:absolute;
+			    		margin-left:-150px;
+			    		margin-top:-8px;
+			    		left:52px;
+			    		border:1px solid #ccc;
+			    		/*border-radius: 15px;*/
+			    		display:none;
+			    		
+			    		-moz-box-shadow:0px 0px 5px #ccc;
+						-webkit-box-shadow:0px 0px 5px #ccc;
+						box-shadow:0px 0px 5px #ccc;
+			    	}
+			    	#notify #notify-list:before{
+			    		position:absolute;
+					    content:"";
+					    width:0;
+					    height:0;
+					    border:10px solid transparent;
+					    border-bottom-color:#ccc;
+					    top:-20px;
+					    left:140px;
+			    	}
+			    	#notify #notify-list:after{
+			    		position:absolute;
+					    content:"";
+					    width:0;
+					    height:0;
+					    border:10px solid transparent;
+					    border-bottom-color:#fff;
+					    top:-19px;
+					    left:140px;
+			    	}
+			    	#notify #notify-list ul li{
+			    		border-bottom:1px solid #eee;
+			    		
+			    	}
+			    	#notify #notify-list ul a{
+			    		color: #747474;
+			    		line-height: 22px;
+			    		padding: 0;
+			    		padding:8px 10px;
+			    	}
+			    	#notify #notify-list ul a:hover{
+			    		background:#eee;
+			    	}
+			    	#notify #notify-list ul a span{
+			    		font-size:12px;
+			    		display:block;
+			    	}
+			    	#notify #notify-list ul a span.type{
+			    		float:left;
+			    		color:#aaa;
+			    	}
+			    	#notify #notify-list ul a span.time{
+			    		float:right;
+			    		color:#aaa;
+			    	}
+			    	</style>
+			    </div>
 			</li>
             <li class="layui-nav-item">
                 <a class="name" href="javascript:;"><img src="<c:url value="/assets/static/image/code.jpg"></c:url>" alt="logo"><span>M.J.F</span></a>

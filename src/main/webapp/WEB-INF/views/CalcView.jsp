@@ -17,9 +17,6 @@
     <!-- body -->
     <div class="layui-body my-body">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
-            <!-- ul class="layui-tab-title">
-                <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
-            </ul -->
             <div class="layui-tab-content calc-content">
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
@@ -360,7 +357,6 @@
         	$(".layui-collapse").fadeIn();
         });
     });
-    
     
 </script>
 </body>

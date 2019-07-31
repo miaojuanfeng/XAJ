@@ -113,6 +113,7 @@ body{
 }
 .calc-content .layui-form-item .xaj-col-button{
 	text-align:center;
+	margin-top:10px;
 }
 .calc-content .layui-field-title{
 	margin-top: 10px;
