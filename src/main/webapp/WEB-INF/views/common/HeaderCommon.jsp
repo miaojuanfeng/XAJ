@@ -46,47 +46,102 @@
 			    		<ul>
 			    			<li>
 			    				<a href="javascript:;">
-			    					<div class="title">链活2.0后台管理系统</div>
-			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
-			    					<span class="type">预警</span>
-			    					<span class="time">2019-07-31 10:23:23</span>
-			    					<div class="clear"></div>
+			    					<div>
+			    						<div class="title">已达加报水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位200米，已达加报水位</span>
 			    				</a>
 			    			</li>
 			    			<li>
 			    				<a href="javascript:;">
-			    					<div class="title">链活2.0后台管理系统</div>
-			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
-			    					<span class="type">预警</span>
-			    					<span class="time">2019-07-31 10:23:23</span>
-			    					<div class="clear"></div>
+			    					<div>
+			    						<div class="title">已达警戒水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位300米，已达警戒水位</span>
 			    				</a>
 			    			</li>
 			    			<li>
 			    				<a href="javascript:;">
-			    					<div class="title">链活2.0后台管理系统</div>
-			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
-			    					<span class="type">预警</span>
-			    					<span class="time">2019-07-31 10:23:23</span>
-			    					<div class="clear"></div>
+			    					<div>
+			    						<div class="title">已达加报水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位200米，已达加报水位</span>
 			    				</a>
 			    			</li>
 			    			<li>
 			    				<a href="javascript:;">
-			    					<div class="title">链活2.0后台管理系统</div>
-			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
-			    					<span class="type">预警</span>
-			    					<span class="time">2019-07-31 10:23:23</span>
-			    					<div class="clear"></div>
+			    					<div>
+			    						<div class="title">已达警戒水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位300米，已达警戒水位</span>
 			    				</a>
 			    			</li>
 			    			<li>
 			    				<a href="javascript:;">
-			    					<div class="title">链活2.0后台管理系统</div>
-			    					<span class="desc">描述描述描述描述描述描述描述描述描述描述描述述</span>
-			    					<span class="type">预警</span>
-			    					<span class="time">2019-07-31 10:23:23</span>
-			    					<div class="clear"></div>
+			    					<div>
+			    						<div class="title">已达加报水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位200米，已达加报水位</span>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div>
+			    						<div class="title">已达警戒水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位300米，已达警戒水位</span>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div>
+			    						<div class="title">已达加报水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位200米，已达加报水位</span>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div>
+			    						<div class="title">已达警戒水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位300米，已达警戒水位</span>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div>
+			    						<div class="title">已达加报水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位200米，已达加报水位</span>
+			    				</a>
+			    			</li>
+			    			<li>
+			    				<a href="javascript:;">
+			    					<div>
+			    						<div class="title">已达警戒水位！</div>
+			    						<span class="time">2019-07-31 10:23:23</span>
+			    						<div class="clear"></div>
+			    					</div>
+			    					<span class="desc">宁都站即时水位300米，已达警戒水位</span>
 			    				</a>
 			    			</li>
 			    		</ul>
@@ -161,9 +216,10 @@
 			    		font-size:12px;
 			    		display:block;
 			    	}
-			    	#notify #notify-list ul a span.type{
+			    	#notify #notify-list ul a .title{
+			    		font-weight: bold;
+			    		color:#ff0000;
 			    		float:left;
-			    		color:#aaa;
 			    	}
 			    	#notify #notify-list ul a span.time{
 			    		float:right;

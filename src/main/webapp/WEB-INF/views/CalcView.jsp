@@ -313,7 +313,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
+<!-- script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script-->
 <script type="text/javascript">
 	layui.config({
 	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
@@ -323,11 +323,10 @@
 	    , vip_table: 'vip_table'
 	});
 	
-    layui.use(['element', 'form', 'table', 'layer', 'vip_tab', 'laydate'], function () {
+    layui.use(['element', 'form', 'table', 'layer', 'laydate'], function () {
         var form = layui.form
                 , table = layui.table
                 , layer = layui.layer
-                , vipTab = layui.vip_tab
                 , element = layui.element
                 , $ = layui.jquery
                 , laydate = layui.laydate;
