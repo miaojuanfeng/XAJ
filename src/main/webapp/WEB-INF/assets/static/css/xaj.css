@@ -84,7 +84,7 @@ body{
 	border:1px solid #ccc;
 	display:none;
 }
-.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title, #div-nav a{
+.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title, #div-nav a.selected{
 	color: #fff;
 	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
@@ -96,6 +96,12 @@ body{
 }
 .my-index-main .layui-colla-item{
 	overflow:hidden;
+}
+.calc-view button{
+	background: -webkit-linear-gradient(left, #229CB5, #24CACA); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #229CB5, #24CACA); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #229CB5, #24CACA); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #229CB5, #24CACA); /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈�鍚庯級 */
 }
 /*.calc-content .layui-table{
 	border-left: none;
@@ -168,6 +174,7 @@ body{
 	padding:0 20px;
 	color:#fff;
 	margin-right:30px;
+	background:#ccc;
 }
 #div-nav a:before{
     position:absolute;
@@ -175,9 +182,12 @@ body{
     width:0;
     height:0;
     border:19px solid transparent;
-    border-left-color:#26d0ce;
+    border-left-color:#ccc;
     top:0;
     right:-38px
+}
+#div-nav a.selected:before{
+	border-left-color:#26d0ce;
 }
 #div-nav a:last-child:before{
     border:none;

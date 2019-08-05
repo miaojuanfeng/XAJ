@@ -13,17 +13,7 @@
     <!-- header -->
     <%@ include file="common/HeaderCommon.jsp" %>
     <!-- side -->
-	<div class="layui-side-scroll">
-        <!-- 左侧主菜单添加选项卡监听 -->
-        <ul class="layui-nav layui-nav-tree" lay-filter="side-main">
-        	<li class="layui-nav-item">
-                <a href="<c:url value="/cms/station/1"></c:url>" class="<c:if test="${station == 1}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表1</a>
-            </li>
-            <li class="layui-nav-item">
-                <a href="<c:url value="/cms/station/2"></c:url>" class="<c:if test="${station == 2}">selected</c:if>"><i class="layui-icon">&#xe621;</i>用户列表2</a>
-            </li>
-        </ul>
-    </div>
+	<%@ include file="common/SideCommon.jsp" %>
     <!-- body -->
     <div class="layui-body my-body my-body-left">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
@@ -119,7 +109,7 @@
        	var viewHeight = contentHeight / 2;
        	$(".layui-colla-item").css("height", viewHeight);
     	
-    	$('#iframe1').attr('src', '<c:url value="/cms/iframe/1"></c:url>');
+    	$('#iframe1').attr('src', '<c:url value="/cms/iframe/1?station=${station}"></c:url>');
     	$('#iframe2').attr('src', '<c:url value="/cms/iframe/2"></c:url>');
     	$('#iframe3').attr('src', '<c:url value="/cms/iframe/3"></c:url>');
     	$('#iframe4').attr('src', '<c:url value="/cms/iframe/4"></c:url>');

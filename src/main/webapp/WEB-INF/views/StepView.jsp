@@ -15,9 +15,9 @@
     <!-- header -->
     <%@ include file="common/HeaderCommon.jsp" %>
     <!-- side -->
-    <%@ include file="common/SideCommon.jsp" %>
+    
     <!-- body -->
-    <div class="layui-body my-body my-body-left">
+    <div class="layui-body my-body">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
             <!-- ul class="layui-tab-title">
                 <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
@@ -512,5 +512,43 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
+<script type="text/javascript">
+	layui.config({
+	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
+	}).extend({                         // 模块别名
+	    vip_nav: 'vip_nav'
+	    , vip_tab: 'vip_tab'
+	    , vip_table: 'vip_table'
+	});
+
+	layui.use(['layer','vip_nav'], function () {
+
+    // 操作对象
+    var layer       = layui.layer
+        ,vipNav     = layui.vip_nav
+        ,$          = layui.jquery;
+
+    // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
+    vipNav.top_left('./json/nav_top_left.json','side-top-left',false);
+    // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
+    vipNav.main('./json/nav_main.json','side-main',true);
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    $(document).ready(function(){
+
+    });
+
+});
+</script>
 </body>
 </html>

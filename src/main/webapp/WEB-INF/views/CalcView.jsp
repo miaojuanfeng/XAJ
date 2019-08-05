@@ -196,13 +196,16 @@
 										</table>
 								    </div-->
 									<div class="layui-form-item" style="margin-top:15px;">
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
 							                <button class="layui-btn layui-btn-danger layui-btn-radius">重置参数</button>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
 							                <button class="layui-btn layui-btn-normal layui-btn-radius">开始预报</button>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
+							                <button class="layui-btn layui-btn-radius">&nbsp;&nbsp;下一步&nbsp;&nbsp;</button>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
 							                <button class="layui-btn layui-btn-warm layui-btn-radius">保存入库</button>
 							            </div>
 								    </div>
@@ -232,8 +235,11 @@
 										</table>
 								    </div>
 								    <div class="layui-form-item">
-								    	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12 xaj-col-button">
+								    	<div class="layui-col-xs12 layui-col-sm12 layui-col-md6 xaj-col-button">
 							                <button class="layui-btn layui-btn-normal layui-btn-radius">导出预报单</button>
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 xaj-col-button">
+							                <button class="layui-btn layui-btn-warm layui-btn-radius">导出模型参数</button>
 							            </div>
 							        </div>
 									<!--div class="layui-form-item">
@@ -291,7 +297,7 @@
 											<a href="javascript:;">
     											<span>asdsaa</span>
     										</a>
-    										<a href="javascript:;">
+    										<a class="selected" href="javascript:;">
     											<span>xcvxcv</span>
     										</a>
     										<a href="javascript:;">

@@ -1,7 +1,6 @@
 package gov.gz.hydrology.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +9,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import gov.gz.hydrology.constant.NumberConfig;
+import gov.gz.hydrology.utils.DateUtil;
 import gov.gz.hydrology.utils.StepCommonUtil;
 import gov.gz.hydrology.utils.StepFiveUtil;
 import gov.gz.hydrology.utils.StepFourUtil;
@@ -23,7 +23,7 @@ public class StepController {
 
 	@RequestMapping("index")
 	public String index(ModelMap map) {
-		map.put("date", new SimpleDateFormat("HH:mm   EEEE").format(new Date()));
+		map.put("date", DateUtil.getDate());
 		
 		map.put("para", getPara());
 		map.put("stepCommon", getStepCommon());

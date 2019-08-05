@@ -4,8 +4,6 @@
 <html lang="en">
 <head>
 	<%@ include file="common/LinkCommon.jsp" %>
-	<script type="text/javascript" src="<c:url value="/assets/echarts/echarts.min.js"></c:url>"></script>
-    <script type="text/javascript" src="<c:url value="/assets/echarts/macarons.js"></c:url>"></script>
     <title>链活后台管理系统</title>
 </head>
 <body>
@@ -129,5 +127,44 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
+<script type="text/javascript">
+	layui.config({
+	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
+	}).extend({                         // 模块别名
+	    vip_nav: 'vip_nav'
+	    , vip_tab: 'vip_tab'
+	    , vip_table: 'vip_table'
+	});
+
+	layui.use(['layer','vip_nav'], function () {
+
+    // 操作对象
+    var layer       = layui.layer
+        ,vipNav     = layui.vip_nav
+        ,$          = layui.jquery;
+
+    // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
+    vipNav.top_left('./json/nav_top_left.json','side-top-left',false);
+    // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
+    vipNav.main('./json/nav_main.json','side-main',true);
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    $(document).ready(function(){
+
+    });
+
+});
+</script>
 </body>
 </html>

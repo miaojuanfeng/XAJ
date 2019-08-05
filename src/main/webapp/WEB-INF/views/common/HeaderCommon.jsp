@@ -12,9 +12,21 @@
         <!-- 顶部左侧添加选项卡监听 -->
         <ul class="layui-nav" lay-filter="side-top-left">
         	<li class="layui-nav-item"><a href="<c:url value="/cms/station/1"></c:url>"><i class="layui-icon">&#xe621;</i>首页</a></li>
-            <li class="layui-nav-item"><a href="<c:url value="/cms/calc/index"></c:url>"><i class="layui-icon">&#xe621;</i>按钮中心</a></li>
-            <li class="layui-nav-item"><a href="<c:url value="/cms/plan/index"></c:url>"><i class="layui-icon">&#xe621;</i>预报方案</a></li>
-            <li class="layui-nav-item"><a href="javascript:;"><i class="layui-icon">&#xe621;</i>个人中心</a></li>
+            <li class="layui-nav-item">
+            	<a href="javascript:;"><i class="layui-icon">&#xe621;</i>预报中心</a>
+            	<dl class="layui-nav-child">
+                    <dd><a href="<c:url value="/cms/calc/index"></c:url>"><i class="layui-icon">&#xe621;</i>新建预报</a></dd>
+                    <dd><a href="javascript:;"><i class="layui-icon">&#xe621;</i>预报成果</a></dd>
+                    <dd><a href="<c:url value="/cms/plan/index"></c:url>"><i class="layui-icon">&#xe621;</i>修改方案</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item">
+            	<a href="javascript:;"><i class="layui-icon">&#xe621;</i>个人中心</a>
+            	<dl class="layui-nav-child">
+                    <dd><a href="javascript:;"><i class="layui-icon">&#xe621;</i>我的账户</a></dd>
+                    <dd><a href="javascript:;"><i class="layui-icon">&#xe621;</i>我的预报站</a></dd>
+                </dl>
+            </li>
             <li class="layui-nav-item"><a href="<c:url value="/cms/step/index"></c:url>"><i class="layui-icon">&#xe621;</i>数据分步计算</a></li>
             <!-- li class="layui-nav-item">
                 <a href="javascript:;"><i class="layui-icon">&#xe621;</i>基础中心</a>
@@ -41,11 +53,11 @@
             </li>
             <li class="layui-nav-item">
 			    <div id="notify" style="position:relative">
-			    	<a href="">预警消息<span class="layui-badge">9</span></a>
+			    	<a href="javascript:;">预警消息<span class="layui-badge">9</span></a>
 			    	<div id="notify-list">
 			    		<ul>
 			    			<li>
-			    				<a href="javascript:;">
+			    				<a href="http://www.baidu.com">
 			    					<div>
 			    						<div class="title">已达加报水位！</div>
 			    						<span class="time">2019-07-31 10:23:23</span>
@@ -149,12 +161,13 @@
 			    	<script type="text/javascript" src="<c:url value="/assets/static/js/jquery.min.js"></c:url>"></script>
 			    	<script>
 			    	$(document).ready(function(){
-			    		$("#notify").hover(
+			    		$("#notify").click(
 		    				function(){
-		    					$("#notify-list").stop().fadeIn().show();
-				    		},
-				    		function(){
-				    			$("#notify-list").stop().fadeOut().hide();
+		    					if( $("#notify-list").is(":hidden") ){
+		    						$("#notify-list").stop().fadeIn().show();
+		    					}else{
+		    						$("#notify-list").stop().fadeIn().hide();
+		    					}
 				    		}
 				    	);
 			    	});

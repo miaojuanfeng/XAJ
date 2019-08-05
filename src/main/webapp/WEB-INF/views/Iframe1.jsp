@@ -15,8 +15,7 @@
 	color:#aaa;
 }
 </style>
-<div class="river">
+<div class="river" style="height:100%;background:url(<c:url value="/assets/images/${img}"></c:url>);background-position:center;">
 	<p class="title">汇流示意</p>
 	<p class="desc">宁都站</p>
-	<img src="<c:url value="/assets/static/image/rever.jpg"></c:url>" />
 </div>
