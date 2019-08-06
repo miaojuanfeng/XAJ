@@ -133,13 +133,13 @@
 							                <input type="text" name="startTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
-							            	<label class="layui-form-label"><b>XX</b></label>
+							            	<label class="layui-form-label"><b>C1</b></label>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
-							            	<label class="layui-form-label"><b>XX</b></label>
+							            	<label class="layui-form-label"><b>C2</b></label>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 							                <input type="text" name="endTime" class="layui-input">
@@ -197,16 +197,16 @@
 								    </div-->
 									<div class="layui-form-item" style="margin-top:15px;">
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
-							                <button class="layui-btn layui-btn-danger layui-btn-radius">重置参数</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">重置参数</button>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
-							                <button class="layui-btn layui-btn-normal layui-btn-radius">开始预报</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">开始预报</button>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
-							                <button class="layui-btn layui-btn-radius">&nbsp;&nbsp;下一步&nbsp;&nbsp;</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">&nbsp;&nbsp;下一步&nbsp;&nbsp;</button>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3 xaj-col-button">
-							                <button class="layui-btn layui-btn-warm layui-btn-radius">保存入库</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">保存入库</button>
 							            </div>
 								    </div>
 								    <div class="layui-form-item" style="margin-top:25px;">
@@ -236,10 +236,10 @@
 								    </div>
 								    <div class="layui-form-item">
 								    	<div class="layui-col-xs12 layui-col-sm12 layui-col-md6 xaj-col-button">
-							                <button class="layui-btn layui-btn-normal layui-btn-radius">导出预报单</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">&nbsp;&nbsp;导出预报单&nbsp;&nbsp;</button>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6 xaj-col-button">
-							                <button class="layui-btn layui-btn-warm layui-btn-radius">导出模型参数</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">导出模型参数</button>
 							            </div>
 							        </div>
 									<!--div class="layui-form-item">

@@ -75,6 +75,7 @@ body{
 }
 .layui-nav-tree .layui-nav-item a{
 	color: #747474;
+	text-align:center;
 }
 .layui-collapse{
 	background-color: #fff;
@@ -97,7 +98,8 @@ body{
 .my-index-main .layui-colla-item{
 	overflow:hidden;
 }
-.calc-view button{
+.calc-view button:hover{
+	color:#fff;
 	background: -webkit-linear-gradient(left, #229CB5, #24CACA); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #229CB5, #24CACA); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(right, #229CB5, #24CACA); /* Firefox 3.6 - 15 */
