@@ -28,6 +28,17 @@
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
+					            	<div class="layui-form-item">
+						               	<div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+						               		<label class="layui-form-label"><span>预报时间</span></label>
+						               	</div>
+						               	<div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
+							                <input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
+							            </div>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
+							                <button class="layui-btn layui-btn-normal layui-btn-radius">查询</button>
+							            </div>
+					            	</div>
 					            	<div style="margin:10px;">
 					            		<table class="layui-hide" id="table"></table>
 					            	</div>
@@ -70,10 +81,11 @@
         ,url:'<c:url value="/cms/result/data"></c:url>'
         ,height: 'full-100'
         ,cols: [[
-          {field:'id', width:80, title: 'ID', sort: true}
+          {field:'id', width:80, title: '序号', sort: true}
           ,{field:'name', width:280, title: '站名'}
           ,{field:'peakTime', width:280, title: '洪峰时间'}
           ,{field:'peakFlow', width:280, title: '洪峰流量'}
+          ,{field:'username', width:280, title: '预报员'}
           ,{field:'time', title: '预报时间'}
           ,{fixed:'right', title:'操作', width:150, toolbar: '#barDemo'}
         ]]
