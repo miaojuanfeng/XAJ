@@ -29,12 +29,12 @@
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
 					            	<div class="layui-form-item">
-						               	<div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
-						               		<label class="layui-form-label"><span>预报时间</span></label>
-						               	</div>
-						               	<div class="layui-col-xs12 layui-col-sm4 layui-col-md3">
-							                <input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
-							            </div>
+						               	<div class="layui-inline">
+									      	<label class="layui-form-label">多规则验证</label>
+											<div class="layui-input-inline">
+											  	<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
+											</div>
+									    </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
 							                <button class="layui-btn layui-btn-normal layui-btn-radius">查询</button>
 							            </div>

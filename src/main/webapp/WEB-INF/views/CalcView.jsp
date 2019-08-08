@@ -34,14 +34,14 @@
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
 							            	<label class="layui-form-label"><span>预报站</span></label>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
 							            	<select name="quiz1">
 								                <option value="站类1">站类1</option>
 								                <option value="站类2">站类2</option>
 								                <option value="站类3">站类3</option>
 								            </select>
 								        </div>
-								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
+								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
 							            	<select name="quiz1">
 								                <option value="站名1">站名1</option>
 								                <option value="站名2">站名2</option>
