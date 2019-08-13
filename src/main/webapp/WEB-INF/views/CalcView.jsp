@@ -34,27 +34,27 @@
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
 							            	<label class="layui-form-label"><span>预报站</span></label>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
-							            	<select name="quiz1">
+							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
+							            	<select name="quiz1" lay-verify="required" lay-search="">
 								                <option value="站类1">站类1</option>
 								                <option value="站类2">站类2</option>
 								                <option value="站类3">站类3</option>
 								            </select>
 								        </div>
-								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
-							            	<select name="quiz1">
-								                <option value="站名1">站名1</option>
-								                <option value="站名2">站名2</option>
-								                <option value="站名3">站名3</option>
-								            </select>
-								        </div>
+								        <div class="layui-col-xs12 layui-col-sm12 layui-col-md5">
+											<select name="modules" lay-verify="required" lay-search="">
+												<option value="站类1">站类1</option>
+												<option value="站类2">站类2</option>
+												<option value="站类3">站类3</option>
+											</select>
+										</div>
 								    </div>
 								    <div class="layui-form-item">
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md2">
 							            	<label class="layui-form-label"><span>预报方案</span></label>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md10">
-							            	<select name="quiz1">
+							            	<select name="quiz1" lay-verify="required" lay-search="">
 								                <option value="方案1">方案1</option>
 								                <option value="方案2">方案2</option>
 								                <option value="方案3">方案3</option>
@@ -203,7 +203,7 @@
 							                <button class="layui-btn layui-btn-primary layui-btn-radius">开始预报</button>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">&nbsp;&nbsp;下一步&nbsp;&nbsp;</button>
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">导出参数</button>
 							            </div>
 								    </div>
 								    <div class="layui-form-item" style="margin-top:25px;">
@@ -232,14 +232,11 @@
 										</table>
 								    </div>
 								    <div class="layui-form-item">
-								    	<div class="layui-col-xs12 layui-col-sm12 layui-col-md4 xaj-col-button">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">&nbsp;&nbsp;导出预报单&nbsp;&nbsp;</button>
+								    	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6 xaj-col-button">
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">导出预报单</button>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">保存入库</button>
-							            </div>
-							            <div class="layui-col-xs12 layui-col-sm12 layui-col-md4 xaj-col-button">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">导出模型参数</button>
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md6 xaj-col-button">
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">&nbsp;&nbsp;保存入库&nbsp;&nbsp;</button>
 							            </div>
 							        </div>
 									<!--div class="layui-form-item">
@@ -292,7 +289,7 @@
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-						            <div id="div-nav" style="height:58px;border-bottom:1px solid #eee;">
+						            <!-- div id="div-nav" style="height:58px;border-bottom:1px solid #eee;">
 									    <div style="padding:10px;">
 											<a href="javascript:;">
     											<span>asdsaa</span>
@@ -304,7 +301,7 @@
     											<span>675675</span>
     										</a>
 										</div>
-									</div>
+									</div -->
 									<div id="div-iframe">
 					             		<iframe id="iframe7" width="100%" frameborder="0" scrolling="no"></iframe>
 					             	</div>
@@ -355,7 +352,8 @@
         	var contentHeight = $(window).height() - 60 - 22;
            	var viewHeight = contentHeight;
            	$(".layui-colla-item").css("height", viewHeight);
-           	$("#div-iframe").css("height", viewHeight-59);
+           	$("#div-iframe").css("height", viewHeight);
+           	//$("#div-iframe").css("height", viewHeight-59);
         	
            	$('#iframe7').attr('src', '<c:url value="/cms/iframe/7"></c:url>');
            	

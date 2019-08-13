@@ -23,8 +23,8 @@
             <li class="layui-nav-item">
             	<a href="javascript:;">个人中心</a>
             	<dl class="layui-nav-child">
-                    <dd><a href="javascript:;">我的账户</a></dd>
-                    <dd><a href="javascript:;">我的预报站</a></dd>
+                    <dd><a href="<c:url value="/cms/user/info"></c:url>">我的账户</a></dd>
+                    <dd><a href="<c:url value="/cms/user/setting"></c:url>">我的预报站</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item"><a href="<c:url value="/cms/step/index"></c:url>">数据分步计算</a></li>

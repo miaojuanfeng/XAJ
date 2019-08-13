@@ -28,17 +28,29 @@
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div class="layui-form-item">
-						               	<div class="layui-inline">
-									      	<label class="layui-form-label">多规则验证</label>
-											<div class="layui-input-inline">
-											  	<input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input">
-											</div>
-									    </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md4 xaj-col-button">
-							                <button class="layui-btn layui-btn-normal layui-btn-radius">查询</button>
-							            </div>
+					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
+						               	历史预报成果
 					            	</div>
+					            	<div class="layui-form-item" style="margin-bottom:10px;">
+					            		<form class="layui-form">
+							               	<div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">开始时间</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
+												</div>
+										    </div>
+										    <div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">结束时间</label>
+												<div class="layui-input-inline" style="margin-right:20px">
+												  	<input type="text" name="endTime" id="endTime" lay-verify="date" autocomplete="off" class="layui-input">
+												</div>
+										    </div>
+										    <div class="layui-inline">
+								                <button class="layui-btn layui-btn-normal layui-btn-radius">查询</button>
+								            </div>
+								    	</form>
+						            </div>
+					            	
 					            	<div style="margin:10px;">
 					            		<table class="layui-hide" id="table"></table>
 					            	</div>
@@ -58,7 +70,7 @@
   <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
 </script>
 
-<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
+<!-- script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script-->
 <script type="text/javascript">
 	layui.config({
 	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
@@ -68,18 +80,30 @@
 	    , vip_table: 'vip_table'
 	});
 
-	layui.use(['layer','vip_nav', 'table'], function () {
+	layui.use(['layer','vip_nav', 'table', 'laydate'], function () {
 
     // 操作对象
     var layer       = layui.layer
         ,vipNav     = layui.vip_nav
         ,table		= layui.table
-        ,$          = layui.jquery;
+        ,$          = layui.jquery
+        , laydate 	= layui.laydate;
+    
+  	//日期
+    laydate.render({
+        elem: '#startTime',
+        type: 'datetime'
+    });
+  	//日期
+    laydate.render({
+        elem: '#endTime',
+        type: 'datetime'
+    });
 
     table.render({
         elem: '#table'
         ,url:'<c:url value="/cms/result/data"></c:url>'
-        ,height: 'full-100'
+        ,height: 'full-198'
         ,cols: [[
           {field:'id', width:80, title: '序号', sort: true}
           ,{field:'name', width:280, title: '站名'}
@@ -126,12 +150,6 @@
     	var contentHeight = $(window).height() - 60 - 22;
        	var viewHeight = contentHeight;
        	$(".layui-colla-item").css("height", viewHeight);
-    	
-    	$('#iframe1').attr('src', '<c:url value="/cms/iframe/1?station=${station}"></c:url>');
-    	$('#iframe2').attr('src', '<c:url value="/cms/iframe/2"></c:url>');
-    	$('#iframe3').attr('src', '<c:url value="/cms/iframe/3"></c:url>');
-    	$('#iframe4').attr('src', '<c:url value="/cms/iframe/4"></c:url>');
-    	$('#iframe5').attr('src', '<c:url value="/cms/iframe/5"></c:url>');
     	
     	$(".layui-collapse").fadeIn();
     });
