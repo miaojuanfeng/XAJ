@@ -34,7 +34,7 @@ public class ResultController {
 			t.put("name", "宁都站");
 			t.put("peakTime", "2019-08-20 20:12:22");
 			t.put("peakFlow", "128立方米/秒");
-			t.put("username", "缪隽峰");
+			t.put("username", "陈济天");
 			t.put("time", "2019-08-19 20:12:22");
 			temp.add(t);
 		}

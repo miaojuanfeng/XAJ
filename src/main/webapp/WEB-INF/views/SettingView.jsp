@@ -17,7 +17,7 @@
     <!-- body -->
     <div class="layui-body my-body">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
-            <div class="layui-tab-content calc-content">
+            <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
                     <div class="layui-row layui-col-space10 my-index-main calc-view" style="padding:10px;margin-top:100px">
@@ -53,9 +53,56 @@
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div class="layui-form-item" style="text-align:center;font-size:20px;">
+					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
 						               	选择关注的预报站
 					            	</div>
+					            	<div class="layui-form-item" style="margin-bottom:10px;">
+					            		<form class="layui-form">
+					            			<div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">站码</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">站类1</option>
+										                <option value="站类2">站类2</option>
+										                <option value="站类3">站类3</option>
+										            </select>
+												</div>
+										    </div>
+										    <div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">站名</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">梁培东</option>
+										                <option value="站类2">陈济天</option>
+										                <option value="站类3">缪隽峰</option>
+										            </select>
+												</div>
+										    </div>
+							               	<div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">站点类型</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">梁培东</option>
+										                <option value="站类2">陈济天</option>
+										                <option value="站类3">缪隽峰</option>
+										            </select>
+												</div>
+										    </div>
+										    <div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">行政区</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">梁培东</option>
+										                <option value="站类2">陈济天</option>
+										                <option value="站类3">缪隽峰</option>
+										            </select>
+												</div>
+										    </div>
+										    <div class="layui-inline">
+								                <button class="layui-btn layui-btn-primary layui-btn-radius">查询</button>
+								            </div>
+								    	</form>
+						            </div>
 						            <div style="margin:10px;">
 					            		<table class="layui-hide" id="table"></table>
 					            	</div>
@@ -103,14 +150,15 @@
         table.render({
             elem: '#table'
             ,url:'<c:url value="/cms/user/setting"></c:url>'
-            ,height: 'full-245'
+            ,height: 'full-303'
             ,method:'post'
             ,cols: [[
               {type:'checkbox'}
-              ,{field:'id', width:80, title: '序号', sort: true}
-              ,{field:'code', width:280, title: '站码'}
-              ,{field:'name', width:280, title: '站名'}
-              ,{field:'type', width:280, title: '站点类型'}
+              ,{field:'id', width:80, title: '序号', sort: true, align: 'center'}
+              ,{field:'code', width:280, title: '站码', align: 'center'}
+              ,{field:'name', width:280, title: '站名', align: 'center'}
+              ,{field:'type', width:280, title: '站点类型', align: 'center'}
+              ,{field:'area', title: '行政区', align: 'center'}
             ]]
             ,page: true
        });

@@ -33,6 +33,26 @@
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">
 					            		<form class="layui-form">
+					            			<div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">站名</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">站类1</option>
+										                <option value="站类2">站类2</option>
+										                <option value="站类3">站类3</option>
+										            </select>
+												</div>
+										    </div>
+										    <div class="layui-inline">
+										      	<label class="layui-form-label" style="width:60px">预报员</label>
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+										                <option value="站类1">梁培东</option>
+										                <option value="站类2">陈济天</option>
+										                <option value="站类3">缪隽峰</option>
+										            </select>
+												</div>
+										    </div>
 							               	<div class="layui-inline">
 										      	<label class="layui-form-label" style="width:60px">开始时间</label>
 												<div class="layui-input-inline" style="margin-right:0">
@@ -46,7 +66,7 @@
 												</div>
 										    </div>
 										    <div class="layui-inline">
-								                <button class="layui-btn layui-btn-normal layui-btn-radius">查询</button>
+								                <button class="layui-btn layui-btn-primary layui-btn-radius">查询</button>
 								            </div>
 								    	</form>
 						            </div>
@@ -66,8 +86,8 @@
 </div>
 
 <script type="text/html" id="barDemo">
-  <a class="layui-btn layui-btn-normal layui-btn-sm" lay-event="edit">查看</a>
-  <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">删除</a>
+  <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="edit">查看</a>
+  <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="del">删除</a>
 </script>
 
 <!-- script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script-->
@@ -105,13 +125,13 @@
         ,url:'<c:url value="/cms/result/data"></c:url>'
         ,height: 'full-198'
         ,cols: [[
-          {field:'id', width:80, title: '序号', sort: true}
-          ,{field:'name', width:280, title: '站名'}
-          ,{field:'peakTime', width:280, title: '洪峰时间'}
-          ,{field:'peakFlow', width:280, title: '洪峰流量'}
-          ,{field:'username', width:280, title: '预报员'}
-          ,{field:'time', title: '预报时间'}
-          ,{fixed:'right', title:'操作', width:150, toolbar: '#barDemo'}
+          {field:'id', width:80, title: '序号', sort: true, align: 'center'}
+          ,{field:'name', width:280, title: '站名', align: 'center'}
+          ,{field:'peakTime', width:280, title: '洪峰时间', align: 'center'}
+          ,{field:'peakFlow', width:280, title: '洪峰流量', align: 'center'}
+          ,{field:'username', width:280, title: '预报员', align: 'center'}
+          ,{field:'time', title: '预报时间', align: 'center'}
+          ,{fixed:'right', title:'操作', width:150, toolbar: '#barDemo', align: 'center'}
         ]]
         ,page: true
    });

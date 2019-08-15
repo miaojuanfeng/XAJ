@@ -17,7 +17,7 @@
             	<dl class="layui-nav-child">
                     <dd><a href="<c:url value="/cms/calc/index"></c:url>">新建预报</a></dd>
                     <dd><a href="<c:url value="/cms/result/1"></c:url>">预报成果</a></dd>
-                    <dd><a href="<c:url value="/cms/plan/index"></c:url>">修改方案</a></dd>
+                    <dd><a href="<c:url value="/cms/plan/index"></c:url>">预报方案</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item">

@@ -6,7 +6,7 @@
 	<%@ include file="common/LinkCommon.jsp" %>
     <title>链活后台管理系统</title>
 </head>
-<body>
+<body style="background:url(<c:url value="/assets/static/image/bg.jpg"></c:url>);">
 
 <!-- layout admin -->
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
@@ -70,8 +70,8 @@
 							            	<div style="margin-top:20px;">
 							            		<input type="password" name="startTime" class="layui-input" placeholder="确认新密码">
 							            	</div>
-							            	<div style="margin-top:20px;text-align:right;">
-								                <button class="layui-btn layui-btn-normal">确定</button>
+							            	<div style="margin-top:20px;text-align:center;">
+								                <button class="layui-btn layui-btn-primary">确定</button>
 								            </div>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm4 layui-col-md4" style="height:1px;">

@@ -39,6 +39,7 @@ public class UserController {
 			t.put("code", "AABB");
 			t.put("name", "宁都站");
 			t.put("type", "水库水文站");
+			t.put("area", "赣州章贡");
 			temp.add(t);
 		}
 		retval.put("code", 0);

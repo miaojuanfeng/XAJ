@@ -17,6 +17,8 @@ public class IframeController {
 				map.put("img", "1.png");
 			}else if( station == 2 ) {
 				map.put("img", "2.png");
+			}else if( station == 3 ) {
+				map.put("img", "3.png");
 			}
 		}
 		return "Iframe"+id;
