@@ -45,6 +45,9 @@
 											  <div class="layui-progress-bar layui-bg-blue" lay-percent="5 / 10"></div>
 											</div>
 										</div>
+										<div class="layui-form-item" style="padding-top:30px;text-align:center;">
+							                <button class="layui-btn layui-btn-primary layui-btn-radius">上传头像</button>
+							            </div>
 									</form>
 					            </div>
 					        </div>

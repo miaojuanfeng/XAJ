@@ -109,19 +109,13 @@
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
 						               		<label class="layui-form-label"><b>SM</b></label>
 						               	</div>
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md5">
 							                <input type="text" name="startTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
 							            	<label class="layui-form-label"><b>CI</b></label>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-							                <input type="text" name="endTime" class="layui-input">
-							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
-							            	<label class="layui-form-label"><b>CS</b></label>
-							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md5">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>
@@ -129,19 +123,13 @@
 						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
 						               		<label class="layui-form-label"><b>LAG</b></label>
 						               	</div>
-						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+						               	<div class="layui-col-xs12 layui-col-sm6 layui-col-md5">
 							                <input type="text" name="startTime" class="layui-input">
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
-							            	<label class="layui-form-label"><b>C1</b></label>
+							            	<label class="layui-form-label"><b>CS</b></label>
 							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-							                <input type="text" name="endTime" class="layui-input">
-							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md1">
-							            	<label class="layui-form-label"><b>C2</b></label>
-							            </div>
-							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
+							            <div class="layui-col-xs12 layui-col-sm6 layui-col-md5">
 							                <input type="text" name="endTime" class="layui-input">
 							            </div>
 								    </div>

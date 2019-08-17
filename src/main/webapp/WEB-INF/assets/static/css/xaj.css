@@ -85,7 +85,7 @@ body{
 	border:1px solid #ccc;
 	display:none;
 }
-.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title, #div-nav a.selected{
+.layui-layout-admin .my-header, .layui-nav-tree .layui-nav-item a:hover, .layui-nav-tree .layui-nav-item a.selected, .calc-content .layui-calc-title, #div-nav a.selected, .layui-progress .layui-bg-blue{
 	color: #fff;
 	background: -webkit-linear-gradient(left, #1a2980, #26d0ce); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #1a2980, #26d0ce); /* Opera 11.1 - 12.0 */
