@@ -33,14 +33,14 @@
             </div>
         </div -->
         <div class="layui-input-inline login-btn">
-            <button type="submit" class="layui-btn">登录</button>
+            <a type="submit" class="layui-btn">登录</a>
         </div>
         <hr/>
         <!--<div class="layui-input-inline">
-            <button type="button" class="layui-btn layui-btn-primary">QQ登录</button>
+            <a type="button" class="layui-btn layui-btn-primary">QQ登录</a>
         </div>
         <div class="layui-input-inline">
-            <button type="button" class="layui-btn layui-btn-normal">微信登录</button>
+            <a type="button" class="layui-btn layui-btn-normal">微信登录</a>
         </div>-->
         <p>
         	<a href="javascript:;" class="fl">链活后台管理系统</a><a href="javascript:;" class="fr">V2.0.0</a>

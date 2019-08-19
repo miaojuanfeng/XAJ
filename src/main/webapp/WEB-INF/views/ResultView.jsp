@@ -32,41 +32,14 @@
 						               	历史预报成果
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">
-					            		<form class="layui-form">
-					            			<div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">站名</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<select name="quiz1" lay-verify="required" lay-search="">
-										                <option value="站类1">站类1</option>
-										                <option value="站类2">站类2</option>
-										                <option value="站类3">站类3</option>
-										            </select>
+					            		<form class="layui-form" style="float:right">
+							               	<div class="layui-inline" style="width:330px;">
+												<div class="layui-input-inline" style="margin-right:20px;width:320px;">
+												  	<input type="text" name="time" id="time" autocomplete="off" class="layui-input" placeholder=" - ">
 												</div>
 										    </div>
 										    <div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">预报员</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<select name="quiz1" lay-verify="required" lay-search="">
-										                <option value="站类1">梁培东</option>
-										                <option value="站类2">陈济天</option>
-										                <option value="站类3">缪隽峰</option>
-										            </select>
-												</div>
-										    </div>
-							               	<div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">开始时间</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<input type="text" name="startTime" id="startTime" lay-verify="date" autocomplete="off" class="layui-input">
-												</div>
-										    </div>
-										    <div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">结束时间</label>
-												<div class="layui-input-inline" style="margin-right:20px">
-												  	<input type="text" name="endTime" id="endTime" lay-verify="date" autocomplete="off" class="layui-input">
-												</div>
-										    </div>
-										    <div class="layui-inline">
-								                <button class="layui-btn layui-btn-primary layui-btn-radius">查询</button>
+								                <a class="layui-btn layui-btn-primary layui-btn-radius">查询</a>
 								            </div>
 								    	</form>
 						            </div>
@@ -109,16 +82,12 @@
         ,$          = layui.jquery
         , laydate 	= layui.laydate;
     
-  	//日期
+  	//日期时间
     laydate.render({
-        elem: '#startTime',
-        type: 'datetime'
-    });
-  	//日期
-    laydate.render({
-        elem: '#endTime',
-        type: 'datetime'
-    });
+	    elem: '#time'
+	    ,type: 'datetime'
+	    ,range: true
+	});
 
     table.render({
         elem: '#table'

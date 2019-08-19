@@ -13,195 +13,52 @@
     <!-- header -->
     <%@ include file="common/HeaderCommon.jsp" %>
     <!-- side -->
-
+	<%@ include file="common/SideCommon.jsp" %>
     <!-- body -->
-    <div class="layui-body my-body">
+    <div class="layui-body my-body my-body-left">
         <div class="layui-tab my-tab" lay-filter="card" lay-allowClose="true">
-            <div class="">
+            <!-- ul class="layui-tab-title">
+                <li class="layui-this" lay-id="1"><span><i class="layui-icon">&#xe638;</i>欢迎页</span></li>
+            </ul -->
+            <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
                     <!-- iframe id="iframe" src="<c:url value="/cms/welcome"></c:url>" frameborder="0"></iframe -->
-                    <div class="layui-row layui-col-space10 my-index-main" style="padding:10px">
+                    <div class="layui-row layui-col-space10 my-index-main" style="padding:10px;">
+                    		
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<form class="layui-form" style="margin:10px;">
-										<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-										    <legend>方案信息</legend>
-										</fieldset>
-										<div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">预报站 </label>
-									            <div class="layui-input-block">
-									            	<div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
-										            	<select name="quiz1">
-											                <option value="站名1">站名1</option>
-											                <option value="站名2">站名2</option>
-											                <option value="站名3">站名3</option>
-											            </select>
-											        </div>
-											        <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
-										            	<select name="quiz1">
-											                <option value="站类1">站类1</option>
-											                <option value="站类2">站类2</option>
-											                <option value="站类3">站类3</option>
-											            </select>
-											        </div>
-									            </div>
-									        </div>
-									    </div>
-									    <div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">方案名称 </label>
-									            <div class="layui-input-block">
-									                <select name="quiz1">
-										                <option value="站名1">站名1</option>
-										                <option value="站名2">站名2</option>
-										                <option value="站名3">站名3</option>
+					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
+						               	现有方案
+					            	</div>
+					            	<div class="layui-form-item" style="margin-bottom:10px;">
+					            		<form class="layui-form" style="float:right">
+							               	<div class="layui-inline">
+												<div class="layui-input-inline" style="margin-right:0">
+												  	<select name="quiz1" lay-verify="required" lay-search="">
+												  		<option value="">全部模型</option>
+										                <option value="新安江模型">新安江模型</option>
+										                <option value="api模型"> api模型</option>
+										                <option value="单位线模型">缪隽峰</option>
 										            </select>
-									            </div>
-									        </div>
-									    </div>
-									    <div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">预报模型 </label>
-									            <div class="layui-input-block">
-									                <select name="quiz1">
-										                <option value="站名1">站名1</option>
-										                <option value="站名2">站名2</option>
-										                <option value="站名3">站名3</option>
-										            </select>
-									            </div>
-									        </div>
-									    </div>
-								
-										<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-										    <legend>模型参数</legend>
-										</fieldset>
-										<div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">PE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.PE}" >
-										            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">Ek = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.Ek}" >
-										            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">IM = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.IM}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">XE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.XE}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									   	</div>
-									   	<div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">KE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KE}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">DT = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">DT = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">DT = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									    </div>
-									    
-									    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-										    <legend>演进参数</legend>
-										</fieldset>
-										<div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">KE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.PE}" >
-										            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">XE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.Ek}" >
-										            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">DT = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.IM}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									    </div>
-									    
-									    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-										    <legend>雨量站</legend>
-										</fieldset>
-									    <div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">KE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.PE}" >
-										            <div class="layui-form-mid layui-word-aux">PE = P - Ek</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">XE = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.Ek}" >
-										            <div class="layui-form-mid layui-word-aux">Ek = K * E</div>
-									            </div>
-									        </div>
-									        <div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-									            <label class="layui-form-label">DT = </label>
-									            <div class="layui-input-block">
-									                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.IM}" >
-										            <div class="layui-form-mid layui-word-aux">请填写6到12位密码</div>
-									            </div>
-									        </div>
-									    </div>
-									    
-										<div class="layui-form-item">
-											<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
-												<label class="layui-form-label"></label>
-									            <button class="layui-btn layui-btn-normal layui-btn-radius">保存入库</button>
-									        </div>
-									    </div>
-									</form>
-								</div>
-							</div>
-						</div>
+												</div>
+										    </div>
+										    <div class="layui-inline">
+								                <a class="layui-btn layui-btn-primary layui-btn-radius">查询方案</a>
+								            </div>
+								            <div class="layui-inline">
+								                <a href="<c:url value="/cms/plan/insert"></c:url>" class="layui-btn layui-btn-primary layui-btn-radius">新建方案</a>
+								            </div>
+								    	</form>
+						            </div>
+					            	
+					            	<div style="margin:10px;">
+					            		<table class="layui-hide" id="table"></table>
+					            	</div>
+					            </div>
+					        </div>
+					    </div>
+					    
 					</div>
                 </div>
             </div>
@@ -209,7 +66,12 @@
     </div>
 </div>
 
-<script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script>
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="edit">查看</a>
+  <a class="layui-btn layui-btn-primary layui-btn-sm" lay-event="del">删除</a>
+</script>
+
+<!-- script type="text/javascript" src="<c:url value="/assets/static/js/vip_comm.js"></c:url>"></script-->
 <script type="text/javascript">
 	layui.config({
 	    base: '<c:url value="/assets/static/js/"></c:url>'   // 模块目录
@@ -219,19 +81,51 @@
 	    , vip_table: 'vip_table'
 	});
 
-	layui.use(['form','layer','vip_nav'], function () {
+	layui.use(['layer','vip_nav', 'table', 'laydate'], function () {
 
     // 操作对象
-    var form 		= layui.form
-    	,layer      = layui.layer
+    var layer       = layui.layer
         ,vipNav     = layui.vip_nav
-        ,$          = layui.jquery;
+        ,table		= layui.table
+        ,$          = layui.jquery
+        , laydate 	= layui.laydate;
 
-    // 顶部左侧菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-    vipNav.top_left('./json/nav_top_left.json','side-top-left',false);
-    // 主体菜单生成 [请求地址,过滤ID,是否展开,携带参数]
-    vipNav.main('./json/nav_main.json','side-main',true);
+    table.render({
+        elem: '#table'
+        ,url:'<c:url value="/cms/plan/data"></c:url>'
+        ,height: 'full-198'
+        ,cols: [[
+          {field:'id', width:80, title: '序号', sort: true, align: 'center'}
+          ,{field:'name', width:280, title: '站名', align: 'center'}
+          ,{field:'planName', width:280, title: '方案名', align: 'center'}
+          ,{field:'planModel', width:280, title: '预报模型', align: 'center'}
+          ,{field:'username', width:280, title: '构建人', align: 'center'}
+          ,{field:'time', title: '构建时间', align: 'center'}
+          ,{fixed:'right', title:'操作', width:150, toolbar: '#barDemo', align: 'center'}
+        ]]
+        ,page: true
+   });
 
+    table.on('tool(table)', function(obj){
+        var data = obj.data;
+        //console.log(obj)
+        if(obj.event === 'del'){
+          layer.confirm('真的删除行么', function(index){
+            obj.del();
+            layer.close(index);
+          });
+        } else if(obj.event === 'edit'){
+          layer.prompt({
+            formType: 2
+            ,value: data.email
+          }, function(value, index){
+            obj.update({
+              email: value
+            });
+            layer.close(index);
+          });
+        }
+      });
 
     
     

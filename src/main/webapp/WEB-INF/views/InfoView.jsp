@@ -46,7 +46,7 @@
 											</div>
 										</div>
 										<div class="layui-form-item" style="padding-top:30px;text-align:center;">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">上传头像</button>
+							                <a class="layui-btn layui-btn-primary layui-btn-radius">上传头像</a>
 							            </div>
 									</form>
 					            </div>
@@ -56,7 +56,7 @@
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div style="margin-top:50px;">
+					            	<div id="user-info-box" style="margin-top:100px;">
 						            	<div class="layui-col-xs12 layui-col-sm4 layui-col-md4" style="height:1px;">
 							            	
 							            </div>
@@ -74,7 +74,7 @@
 							            		<input type="password" name="startTime" class="layui-input" placeholder="确认新密码">
 							            	</div>
 							            	<div style="margin-top:20px;text-align:center;">
-								                <button class="layui-btn layui-btn-primary">确定</button>
+								                <a class="layui-btn layui-btn-primary">确定</a>
 								            </div>
 							            </div>
 							            <div class="layui-col-xs12 layui-col-sm4 layui-col-md4" style="height:1px;">
@@ -127,7 +127,7 @@
         $(document).ready(function(){
         	var contentHeight = $(window).height() - 60 - 22;
            	var viewHeight = contentHeight;
-           	$(".layui-colla-item").css("height", viewHeight-105);
+           	$(".layui-colla-item").css("height", viewHeight-105-105);
            	
         	$(".layui-collapse").fadeIn();
         });

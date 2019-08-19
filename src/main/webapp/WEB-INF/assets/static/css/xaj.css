@@ -1,25 +1,6 @@
 body{
 	background-color:#f5f5f5;
 }
-/*.xaj-progress-wrapper{
-	padding-top:11px;
-	padding-bottom:11px;
-}
-.xaj-progress-wrapper .layui-form-item {
-	margin-top:13px;
-	padding-right:20px;
-}
-.xaj-progress-wrapper .layui-form-label{
-	padding-top:2px;
-	padding-bottom:2px;
-}
-.xaj-progress-wrapper .layui-progress{
-	top:9px;
-}
-.xaj-progress-wrapper .layui-input-block{
-	min-height:24px;
-}*/
-
 .space{
 	padding-left:20px;
 }
@@ -98,17 +79,13 @@ body{
 .my-index-main .layui-colla-item{
 	overflow:hidden;
 }
-.layui-table .layui-btn:hover, button:hover{
+.layui-table .layui-btn:hover, a.layui-btn:hover{
 	color:#fff !important;
 	background: -webkit-linear-gradient(left, #229CB5, #24CACA); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(right, #229CB5, #24CACA); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(right, #229CB5, #24CACA); /* Firefox 3.6 - 15 */
     background: linear-gradient(to right, #229CB5, #24CACA); /* 鏍囧噯鐨勮娉曪紙蹇呴』鏀惧湪鏈�鍚庯級 */
 }
-/*.calc-content .layui-table{
-	border-left: none;
-    border-right: none;
-}*/
 .calc-content .layui-form-radio{
 	margin-top:0;
 	margin-right:0;

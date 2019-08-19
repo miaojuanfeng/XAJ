@@ -6,7 +6,7 @@
 	<%@ include file="common/LinkCommon.jsp" %>
     <title>链活后台管理系统</title>
 </head>
-<body>
+<body style="background:url(<c:url value="/assets/static/image/bg.jpg"></c:url>);">
 
 <!-- layout admin -->
 <div class="layui-layout layui-layout-admin"> <!-- 添加skin-1类可手动修改主题为纯白，添加skin-2类可手动修改主题为蓝白 -->
@@ -46,7 +46,7 @@
 											</div>
 										</div>
 										<div class="layui-form-item" style="padding-top:30px;text-align:center;">
-							                <button class="layui-btn layui-btn-primary layui-btn-radius">上传头像</button>
+							                <a class="layui-btn layui-btn-primary layui-btn-radius">上传头像</a>
 							            </div>
 									</form>
 					            </div>
@@ -60,31 +60,11 @@
 						               	选择关注的预报站
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">
-					            		<form class="layui-form">
-					            			<div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">站码</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<select name="quiz1" lay-verify="required" lay-search="">
-										                <option value="站类1">站类1</option>
-										                <option value="站类2">站类2</option>
-										                <option value="站类3">站类3</option>
-										            </select>
-												</div>
-										    </div>
+					            		<form class="layui-form" style="float:right">
 										    <div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">站名</label>
 												<div class="layui-input-inline" style="margin-right:0">
 												  	<select name="quiz1" lay-verify="required" lay-search="">
-										                <option value="站类1">梁培东</option>
-										                <option value="站类2">陈济天</option>
-										                <option value="站类3">缪隽峰</option>
-										            </select>
-												</div>
-										    </div>
-							               	<div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">站点类型</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<select name="quiz1" lay-verify="required" lay-search="">
+												  		<option value="">全部行政区</option>
 										                <option value="站类1">梁培东</option>
 										                <option value="站类2">陈济天</option>
 										                <option value="站类3">缪隽峰</option>
@@ -92,17 +72,7 @@
 												</div>
 										    </div>
 										    <div class="layui-inline">
-										      	<label class="layui-form-label" style="width:60px">行政区</label>
-												<div class="layui-input-inline" style="margin-right:0">
-												  	<select name="quiz1" lay-verify="required" lay-search="">
-										                <option value="站类1">梁培东</option>
-										                <option value="站类2">陈济天</option>
-										                <option value="站类3">缪隽峰</option>
-										            </select>
-												</div>
-										    </div>
-										    <div class="layui-inline">
-								                <button class="layui-btn layui-btn-primary layui-btn-radius">查询</button>
+								                <a class="layui-btn layui-btn-primary layui-btn-radius">查询</a>
 								            </div>
 								    	</form>
 						            </div>
@@ -153,7 +123,7 @@
         table.render({
             elem: '#table'
             ,url:'<c:url value="/cms/user/setting"></c:url>'
-            ,height: 'full-303'
+            ,height: 'full-408'
             ,method:'post'
             ,cols: [[
               {type:'checkbox'}
@@ -191,7 +161,7 @@
         $(document).ready(function(){
         	var contentHeight = $(window).height() - 60 - 22;
            	var viewHeight = contentHeight;
-           	$(".layui-colla-item").css("height", viewHeight-105);
+           	$(".layui-colla-item").css("height", viewHeight-105-105);
            	
         	$(".layui-collapse").fadeIn();
         });
