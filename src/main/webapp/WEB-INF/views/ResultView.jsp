@@ -28,14 +28,14 @@
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
+					            	<div class="layui-form-item" style="text-align:center;font-size:24px;margin-top:5px;font-style:italic;">
 						               	历史预报成果
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">
 					            		<form class="layui-form" style="float:right">
 							               	<div class="layui-inline" style="width:330px;">
 												<div class="layui-input-inline" style="margin-right:20px;width:320px;">
-												  	<input type="text" name="time" id="time" autocomplete="off" class="layui-input" placeholder=" - ">
+												  	<input type="text" name="time" id="time" autocomplete="off" class="layui-input" placeholder="预报时间">
 												</div>
 										    </div>
 										    <div class="layui-inline">

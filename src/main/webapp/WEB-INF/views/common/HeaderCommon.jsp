@@ -13,7 +13,7 @@
         <ul class="layui-nav" lay-filter="side-top-left">
         	<li class="layui-nav-item"><a href="<c:url value="/cms/station/1"></c:url>">首页</a></li>
             <li class="layui-nav-item">
-            	<a href="javascript:;">预报中心</a>
+            	<a href="javascript:;" class="selected">预报中心</a>
             	<dl class="layui-nav-child">
                     <dd><a href="<c:url value="/cms/calc/index"></c:url>">新建预报</a></dd>
                     <dd><a href="<c:url value="/cms/result/1"></c:url>">预报成果</a></dd>
@@ -242,7 +242,7 @@
 			    </div>
 			</li>
             <li class="layui-nav-item">
-                <a class="name" href="javascript:;"><img src="<c:url value="/assets/static/image/code.jpg"></c:url>" alt="logo"><span>M.J.F</span></a>
+                <a class="name" href="javascript:;"><img src="<c:url value="/assets/static/image/code.jpg"></c:url>" alt="logo"><span>预报新手 - M.J.F</span></a>
                 <dl class="layui-nav-child">
                     <!-- dd><a href="javascript:;" href-url="demo/login.html"><i class="layui-icon">&#xe621;</i>登录页</a></dd>
                     <dd><a href="javascript:;" href-url="demo/map.html"><i class="layui-icon">&#xe621;</i>图表</a></dd-->

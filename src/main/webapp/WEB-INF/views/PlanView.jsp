@@ -28,7 +28,7 @@
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
+					            	<div class="layui-form-item" style="text-align:center;font-size:24px;margin-top:5px;font-style:italic;">
 						               	现有方案
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">

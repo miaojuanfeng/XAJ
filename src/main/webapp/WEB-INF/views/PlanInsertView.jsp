@@ -35,6 +35,9 @@
     										<a step="3" href="javascript:;">
     											<span>3.演进参数</span>
     										</a>
+    										<a step="4" href="javascript:;">
+    											<span>4.预览</span>
+    										</a>
 										</div>
 									</div>
 					            	<form class="layui-form" style="margin:10px;">
@@ -67,11 +70,7 @@
 												<div class="layui-col-xs12 layui-col-sm6 layui-col-md3">
 										            <label class="layui-form-label">方案名称 </label>
 										            <div class="layui-input-block">
-										                <select name="quiz1">
-											                <option value="站名1">站名1</option>
-											                <option value="站名2">站名2</option>
-											                <option value="站名3">站名3</option>
-											            </select>
+										                <input type="text" name="planName" id="planName" lay-verify="date" autocomplete="off" class="layui-input">
 										            </div>
 										        </div>
 										    </div>
@@ -217,10 +216,254 @@
 								            	</div>
 								            	<div class="layui-col-xs12 layui-col-sm6 layui-col-md2">
 											        <div style="margin-left:80px;position:absolute;">
-											        	<a class="layui-btn layui-btn-primary layui-btn-radius">完成</a>
+											        	<a class="layui-btn layui-btn-primary layui-btn-radius">下一步</a>
 											        </div>
 										        </div>
 										    </div>
+									    </div>
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    
+									    <div id="step4" class="box-step" style="display:none;">
+											<div class="layui-col-xs12 layui-col-sm12 layui-col-md3">
+												<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border:none;">
+												    <legend>预览方案</legend>
+												</fieldset>
+												<div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">
+											            <label class="layui-form-label">预报站 </label>
+											            <div class="layui-input-block">
+											            	<div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+												            	<select name="quiz1">
+													                <option value="站名1">站名1</option>
+													                <option value="站名2">站名2</option>
+													                <option value="站名3">站名3</option>
+													            </select>
+													        </div>
+													        <div class="layui-col-xs12 layui-col-sm12 layui-col-md6">
+												            	<select name="quiz1">
+													                <option value="站类1">站类1</option>
+													                <option value="站类2">站类2</option>
+													                <option value="站类3">站类3</option>
+													            </select>
+													        </div>
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">
+											            <label class="layui-form-label">方案名称 </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="planName" id="planName" lay-verify="date" autocomplete="off" class="layui-input">
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">
+											            <label class="layui-form-label">预报模型 </label>
+											            <div class="layui-input-block">
+											                <select name="quiz1">
+												                <option value="站名1">站名1</option>
+												                <option value="站名2">站名2</option>
+												                <option value="站名3">站名3</option>
+												            </select>
+											            </div>
+											        </div>
+											    </div>
+											</div>
+											<div class="layui-col-xs12 layui-col-sm12 layui-col-md4">
+												<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border:none;">
+												    <legend>新安江模型参数</legend>
+												</fieldset>
+												<div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">E = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.PE}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">WM = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${stepCommon.Ek}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">WUM = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.IM}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">WLM = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.XE}" >
+											            </div>
+											        </div>
+											   	</div>
+											   	<div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">K = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KE}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">C = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">B = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">IM = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">SM = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KE}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">EX = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">KI = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">KG = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">CI = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.KE}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">CG = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">CS = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											        <div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
+											            <label class="layui-form-label">LAG = </label>
+											            <div class="layui-input-block">
+											                <input type="text" name="number" lay-verify="required|number" autocomplete="off" class="layui-input" value="${para.DT}" >
+											            </div>
+											        </div>
+											    </div>
+											    <div class="layui-form-item">
+											    	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6" style="height:1px;">
+											    	
+											    	</div>
+											    	<div class="layui-col-xs12 layui-col-sm6 layui-col-md6" style="text-align:center;padding-top:50px;">
+											        	<a class="layui-btn layui-btn-primary layui-btn-radius">保存</a>
+											        </div>
+											    </div>
+											</div>
+											<div class="layui-col-xs12 layui-col-sm12 layui-col-md5" style="padding-left:50px;">
+												<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border:none;">
+												    <legend style="margin-left:0;padding-left:0;">河道演进参数</legend>
+												</fieldset>
+												<div class="layui-form-item">
+													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">
+										            		<table class="layui-table" style="margin:0;">
+															    <colgroup>
+															      <col width="150">
+															      <col width="150">
+															      <col width="150">
+															      <col width="150">
+															    </colgroup>
+															    <thead>
+															      <tr>
+															        <th>输入站</th>
+															        <th>KE</th>
+															        <th>XE</th>
+															        <th>DT</th>
+															      </tr> 
+															    </thead>
+															    <tbody>
+															      <tr>
+															        <td>贤心</td>
+															        <td>汉族</td>
+															        <td>1989-10-14</td>
+															        <td>人生似修行</td>
+															      </tr>
+															      <tr>
+															        <td>张爱玲</td>
+															        <td>汉族</td>
+															        <td>1920-09-30</td>
+															        <td>于千万人</td>
+															      </tr>
+															      <tr>
+															        <td>Helen Keller</td>
+															        <td>拉丁美裔</td>
+															        <td>1880-06-27</td>
+															        <td> Life </td>
+															      </tr>
+															      <tr>
+															        <td>岳飞</td>
+															        <td>汉族</td>
+															        <td>1103-北</td>
+															        <td>教科书</td>
+															      </tr>
+															      <tr>
+															        <td>孟子</td>
+															        <td>华夏族（汉族）</td>
+															        <td>公元前-372年</td>
+															        <td>猿强，则 </td>
+															      </tr>
+																</tbody>
+															</table>
+									            	</div>
+											    </div>
+											</div>
 									    </div>
 									</form>
 								</div>

@@ -56,7 +56,7 @@
 					    <div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 					        <div class="layui-collapse">
 					            <div class="layui-colla-item">
-					            	<div class="layui-form-item" style="text-align:center;font-size:20px;margin-top:10px;">
+					            	<div class="layui-form-item" style="text-align:center;font-size:24px;margin-top:5px;font-style:italic;">
 						               	选择关注的预报站
 					            	</div>
 					            	<div class="layui-form-item" style="margin-bottom:10px;">

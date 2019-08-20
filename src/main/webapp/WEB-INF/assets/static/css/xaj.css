@@ -27,6 +27,9 @@ body{
 	width:250px;
 	float:left;
 }
+.my-header .layui-nav .layui-nav-item a.selected{
+	text-decoration:underline;
+}
 .my-body{
 	overflow-y:auto;
 }
