@@ -17,6 +17,16 @@ public class UserController {
 		return "LoginView";
 	}
 	
+	@RequestMapping("register")
+	public String register() {
+		return "RegisterView";
+	}
+	
+	@RequestMapping("init")
+	public String init() {
+		return "InitView";
+	}
+	
 	@RequestMapping("info")
 	public String info() {
 		return "InfoView";

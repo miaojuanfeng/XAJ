@@ -15,7 +15,7 @@
 <body style="background:url(<c:url value="/assets/static/image/login_bg.jpg"></c:url>);background-size:cover;">
 
 <div class="login-main">
-    <header class="layui-elip" style="font-weight:300;">登录</header>
+    <header class="layui-elip" style="font-weight:300;">注册</header>
     <p><c:if test="${reason != null}">${reason}</c:if></p>
     <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post">
         <div class="layui-input-inline">
@@ -25,6 +25,10 @@
         <div class="layui-input-inline">
         	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_p.png"></c:url>);background-size:cover;"></span>
             <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-input-inline">
+        	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_p.png"></c:url>);background-size:cover;"></span>
+            <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input">
         </div>
         <!-- div class="layui-input-inline">
         	<div class="layui-col-xs8">
@@ -36,11 +40,11 @@
         </div -->
 	    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 	        <div class="layui-input-inline">
-	            <a type="submit" class="layui-btn layui-btn-normal" style="width:100%;">登录</a>
+	            <a type="submit" class="layui-btn layui-btn-normal" style="width:100%;">下一步</a>
 	        </div>
 	    </div>
 	    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
-	        <p style="margin-bottom:15px;text-align:center;">没有账号？<a style="text-decoration:underline" href="<c:url value="/cms/user/register"></c:url>">立即注册</a></p>
+	        <p style="margin-bottom:15px;text-align:center;">已有账号？<a style="text-decoration:underline" href="<c:url value="/cms/user/login"></c:url>">立即登录</a></p>
 	    </div>
         <hr/>
         <!--<div class="layui-input-inline">

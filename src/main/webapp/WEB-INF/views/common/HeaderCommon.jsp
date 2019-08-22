@@ -11,9 +11,9 @@
 
         <!-- 顶部左侧添加选项卡监听 -->
         <ul class="layui-nav" lay-filter="side-top-left">
-        	<li class="layui-nav-item"><a href="<c:url value="/cms/station/1"></c:url>">首页</a></li>
+        	<li class="layui-nav-item"><a href="<c:url value="/cms/station/1"></c:url>"><span class="title">首页</span></a></li>
             <li class="layui-nav-item">
-            	<a href="javascript:;" class="selected">预报中心</a>
+            	<a href="javascript:;" class="selected"><span class="title">预报中心</span></a>
             	<dl class="layui-nav-child">
                     <dd><a href="<c:url value="/cms/calc/index"></c:url>">新建预报</a></dd>
                     <dd><a href="<c:url value="/cms/result/1"></c:url>">预报成果</a></dd>
@@ -21,13 +21,13 @@
                 </dl>
             </li>
             <li class="layui-nav-item">
-            	<a href="javascript:;">个人中心</a>
+            	<a href="javascript:;"><span class="title">个人中心</span></a>
             	<dl class="layui-nav-child">
                     <dd><a href="<c:url value="/cms/user/info"></c:url>">我的账户</a></dd>
                     <dd><a href="<c:url value="/cms/user/setting"></c:url>">我的预报站</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="<c:url value="/cms/step/index"></c:url>">数据分步计算</a></li>
+            <li class="layui-nav-item"><a href="<c:url value="/cms/step/index"></c:url>"><span class="title">数据分步计算</span></a></li>
             <!-- li class="layui-nav-item">
                 <a href="javascript:;"><i class="layui-icon">&#xe621;</i>基础中心</a>
                 <dl class="layui-nav-child">

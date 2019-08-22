@@ -4,7 +4,10 @@ body{
 .space{
 	padding-left:20px;
 }
-
+.clear{
+	clear:both;
+	float:none !important;
+}
 .layui-tab{
     height: auto !important;
 }
@@ -28,7 +31,11 @@ body{
 	float:left;
 }
 .my-header .layui-nav .layui-nav-item a.selected{
-	text-decoration:underline;
+	color:#fff;
+}
+.my-header .layui-nav .layui-nav-item a:hover .title, .my-header .layui-nav .layui-nav-item a.selected .title{
+	border-bottom: 2px solid #fff;
+	padding-bottom:10px;
 }
 .my-body{
 	overflow-y:auto;
