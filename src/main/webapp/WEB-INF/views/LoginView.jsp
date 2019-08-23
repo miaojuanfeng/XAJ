@@ -20,7 +20,7 @@
     <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post">
         <div class="layui-input-inline">
         	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_u.png"></c:url>);background-size:cover;"></span>
-            <input style="width:312px;border:none;" type="text" name="username" required lay-verify="required" placeholder="账号" autocomplete="off" class="layui-input">
+            <input style="width:312px;border:none;" type="text" name="username" required lay-verify="required" placeholder="手机号" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-input-inline">
         	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_p.png"></c:url>);background-size:cover;"></span>
@@ -36,7 +36,7 @@
         </div -->
 	    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 	        <div class="layui-input-inline">
-	            <a type="submit" class="layui-btn layui-btn-normal" style="width:100%;">登录</a>
+	            <a type="submit" class="layui-btn layui-btn-normal" style="width:100%;background-color:#1E9F95;">登录</a>
 	        </div>
 	    </div>
 	    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">

@@ -33,7 +33,7 @@ body{
 .my-header .layui-nav .layui-nav-item a.selected{
 	color:#fff;
 }
-.my-header .layui-nav .layui-nav-item a:hover .title, .my-header .layui-nav .layui-nav-item a.selected .title{
+.my-header .layui-nav .layui-nav-item a:hover .tname, .my-header .layui-nav .layui-nav-item a.selected .tname{
 	border-bottom: 2px solid #fff;
 	padding-bottom:10px;
 }

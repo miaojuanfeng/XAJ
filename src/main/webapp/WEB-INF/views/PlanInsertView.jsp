@@ -211,11 +211,58 @@
 											<div class="layui-form-item">
 												<div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
 													<div style="margin:10px 50px;">
-									            		<table class="layui-hide" id="table"></table>
+									            		<table class="layui-table" style="margin:0;">
+														    <colgroup>
+														      <col width="150">
+														      <col width="150">
+														      <col width="150">
+														      <col width="150">
+														    </colgroup>
+														    <thead>
+														      <tr>
+														        <th>输入站</th>
+														        <th>KE</th>
+														        <th>XE</th>
+														        <th>DT</th>
+														      </tr> 
+														    </thead>
+														    <tbody>
+														      <tr>
+														        <td>贤心</td>
+														        <td>汉族</td>
+														        <td>1989-10-14</td>
+														        <td>人生似修行</td>
+														      </tr>
+														      <tr>
+														        <td>张爱玲</td>
+														        <td>汉族</td>
+														        <td>1920-09-30</td>
+														        <td>于千万人</td>
+														      </tr>
+														      <tr>
+														        <td>Helen Keller</td>
+														        <td>拉丁美裔</td>
+														        <td>1880-06-27</td>
+														        <td> Life </td>
+														      </tr>
+														      <tr>
+														        <td>岳飞</td>
+														        <td>汉族</td>
+														        <td>1103-北</td>
+														        <td>教科书</td>
+														      </tr>
+														      <tr>
+														        <td>孟子</td>
+														        <td>华夏族（汉族）</td>
+														        <td>公元前-372年</td>
+														        <td>猿强，则 </td>
+														      </tr>
+															</tbody>
+														</table>
 									            	</div>
 								            	</div>
 								            	<div class="layui-col-xs12 layui-col-sm6 layui-col-md2">
-											        <div style="margin-left:80px;position:absolute;">
+											        <div style="margin-left:35px;margin-top:210px;">
 											        	<a class="layui-btn layui-btn-primary layui-btn-radius">下一步</a>
 											        </div>
 										        </div>
@@ -413,54 +460,54 @@
 												</fieldset>
 												<div class="layui-form-item">
 													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">
-										            		<table class="layui-table" style="margin:0;">
-															    <colgroup>
-															      <col width="150">
-															      <col width="150">
-															      <col width="150">
-															      <col width="150">
-															    </colgroup>
-															    <thead>
-															      <tr>
-															        <th>输入站</th>
-															        <th>KE</th>
-															        <th>XE</th>
-															        <th>DT</th>
-															      </tr> 
-															    </thead>
-															    <tbody>
-															      <tr>
-															        <td>贤心</td>
-															        <td>汉族</td>
-															        <td>1989-10-14</td>
-															        <td>人生似修行</td>
-															      </tr>
-															      <tr>
-															        <td>张爱玲</td>
-															        <td>汉族</td>
-															        <td>1920-09-30</td>
-															        <td>于千万人</td>
-															      </tr>
-															      <tr>
-															        <td>Helen Keller</td>
-															        <td>拉丁美裔</td>
-															        <td>1880-06-27</td>
-															        <td> Life </td>
-															      </tr>
-															      <tr>
-															        <td>岳飞</td>
-															        <td>汉族</td>
-															        <td>1103-北</td>
-															        <td>教科书</td>
-															      </tr>
-															      <tr>
-															        <td>孟子</td>
-															        <td>华夏族（汉族）</td>
-															        <td>公元前-372年</td>
-															        <td>猿强，则 </td>
-															      </tr>
-																</tbody>
-															</table>
+									            		<table class="layui-table" style="margin:0;">
+														    <colgroup>
+														      <col width="150">
+														      <col width="150">
+														      <col width="150">
+														      <col width="150">
+														    </colgroup>
+														    <thead>
+														      <tr>
+														        <th>输入站</th>
+														        <th>KE</th>
+														        <th>XE</th>
+														        <th>DT</th>
+														      </tr> 
+														    </thead>
+														    <tbody>
+														      <tr>
+														        <td>贤心</td>
+														        <td>汉族</td>
+														        <td>1989-10-14</td>
+														        <td>人生似修行</td>
+														      </tr>
+														      <tr>
+														        <td>张爱玲</td>
+														        <td>汉族</td>
+														        <td>1920-09-30</td>
+														        <td>于千万人</td>
+														      </tr>
+														      <tr>
+														        <td>Helen Keller</td>
+														        <td>拉丁美裔</td>
+														        <td>1880-06-27</td>
+														        <td> Life </td>
+														      </tr>
+														      <tr>
+														        <td>岳飞</td>
+														        <td>汉族</td>
+														        <td>1103-北</td>
+														        <td>教科书</td>
+														      </tr>
+														      <tr>
+														        <td>孟子</td>
+														        <td>华夏族（汉族）</td>
+														        <td>公元前-372年</td>
+														        <td>猿强，则 </td>
+														      </tr>
+															</tbody>
+														</table>
 									            	</div>
 											    </div>
 											</div>

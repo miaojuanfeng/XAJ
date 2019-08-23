@@ -15,16 +15,16 @@
 </head>
 <body style="background:url(<c:url value="/assets/static/image/login_bg.jpg"></c:url>);background-size:cover;">
 
-<div class="login-main">
-    <header class="layui-elip" style="font-weight:300;">注册</header>
+<div class="login-main" style="width:550px;">
+    <header class="layui-elip" style="font-weight:300;">自定义</header>
     <p><c:if test="${reason != null}">${reason}</c:if></p>
-    <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post" style="background-color:#fff;padding:20px;">
+    <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post" style="background-color:#fff;padding:50px 80px;color:#1E9F95;">
         <div class="layui-input-inline">
-        	<p style="text-align:center;font-size:16px;">选择你关注的预报站，自定义你的主页！</p>
+        	<p style="text-align:center;font-size:18px;">选择你关注的预报站，自定义你的主页！</p>
         </div>
         <div class="layui-input-inline">
         	<ul class="station-init">
-        		<li><a class="station-a selected" href="javascript:;">宁都</a></li>
+        		<li><a class="station-a" href="javascript:;">宁都</a></li>
         		<li><a class="station-a" href="javascript:;">汾坑</a></li>
         		<li><a class="station-a" href="javascript:;">石城</a></li>
         		<li class="clear"></li>
@@ -47,6 +47,7 @@
         			display:block;
         			border:1px solid #ccc;
         			border-radius:50%;
+        			color:#1E9F95;
         		}
         		.station-init li a.selected{
         			background-color:#1E9FFF;
@@ -70,7 +71,12 @@
         </div>
         <div class="layui-input-inline">
 		    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
-		    	<p style="text-align:center;"><a href="javascript:;" style="text-decoration:underline;">开始我的预报之旅!</a></p>
+		    	<p style="text-align:center;">
+		    		<a class="start-a" href="javascript:;" style="font-size:18px;color:#1E9F95;text-decoration:underline;">
+		    			开启我的预报之旅!
+		    			<span style="margin-left:20px;display:inline-block;width:20px;height:15px;background:url(<c:url value="/assets/static/image/arrow.png"></c:url>);background-size:cover;"></span>
+		    		</a>
+		    	</p>
 		    </div>
 	    </div>
     </form>
