@@ -209,7 +209,7 @@
 											    <legend>河道演进参数</legend>
 											</fieldset>
 											<div class="layui-form-item">
-												<div class="layui-col-xs12 layui-col-sm6 layui-col-md9">
+												<div class="layui-col-xs12 layui-col-sm6 layui-col-md6">
 													<div style="margin:10px 50px;">
 									            		<table class="layui-table" style="margin:0;">
 														    <colgroup>
@@ -229,33 +229,33 @@
 														    <tbody>
 														      <tr>
 														        <td>贤心</td>
-														        <td>汉族</td>
-														        <td>1989-10-14</td>
-														        <td>人生似修行</td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>张爱玲</td>
-														        <td>汉族</td>
-														        <td>1920-09-30</td>
-														        <td>于千万人</td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>Helen Keller</td>
-														        <td>拉丁美裔</td>
-														        <td>1880-06-27</td>
-														        <td> Life </td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>岳飞</td>
-														        <td>汉族</td>
-														        <td>1103-北</td>
-														        <td>教科书</td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>孟子</td>
-														        <td>华夏族（汉族）</td>
-														        <td>公元前-372年</td>
-														        <td>猿强，则 </td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 															</tbody>
 														</table>
@@ -478,33 +478,33 @@
 														    <tbody>
 														      <tr>
 														        <td>贤心</td>
-														        <td>汉族</td>
-														        <td>1989-10-14</td>
-														        <td>人生似修行</td>
+														       <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>张爱玲</td>
-														        <td>汉族</td>
-														        <td>1920-09-30</td>
-														        <td>于千万人</td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>Helen Keller</td>
-														        <td>拉丁美裔</td>
-														        <td>1880-06-27</td>
-														        <td> Life </td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>岳飞</td>
-														        <td>汉族</td>
-														        <td>1103-北</td>
-														        <td>教科书</td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 														      <tr>
 														        <td>孟子</td>
-														        <td>华夏族（汉族）</td>
-														        <td>公元前-372年</td>
-														        <td>猿强，则 </td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
+														        <td style="padding:0;"><input style="border:0;" type="text" name="number" autocomplete="off" class="layui-input" value="${para.DT}" placeholder="请输入" ></td>
 														      </tr>
 															</tbody>
 														</table>

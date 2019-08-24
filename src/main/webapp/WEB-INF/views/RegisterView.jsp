@@ -15,7 +15,7 @@
 <body style="background:url(<c:url value="/assets/static/image/login_bg.jpg"></c:url>);background-size:cover;">
 
 <div class="login-main">
-    <header class="layui-elip" style="font-weight:300;">注册</header>
+    <header class="layui-elip" style="font-weight:bold;color:#1E9F95;margin-top:100px;">用户注册</header>
     <p><c:if test="${reason != null}">${reason}</c:if></p>
     <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post">
         <div class="layui-input-inline">
@@ -24,11 +24,11 @@
         </div>
         <div class="layui-input-inline">
         	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_p.png"></c:url>);background-size:cover;"></span>
-            <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
+            <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input">
         </div>
         <div class="layui-input-inline">
         	<span style="width:38px;height:38px;display:block;float:left;background:url(<c:url value="/assets/static/image/login_p.png"></c:url>);background-size:cover;"></span>
-            <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input">
+            <input style="width:312px;border:none;" type="password" name="password" required lay-verify="required" placeholder="确认密码" autocomplete="off" class="layui-input">
         </div>
         <!-- div class="layui-input-inline">
         	<div class="layui-col-xs8">
@@ -54,7 +54,7 @@
             <a type="button" class="layui-btn layui-btn-normal">微信登录</a>
         </div>-->
         <p>
-        	<a href="javascript:;" class="fl">链活后台管理系统</a><a href="javascript:;" class="fr">V2.0.0</a>
+        	<span href="javascript:;" class="fl">赣州洪水预报系统</span><span href="javascript:;" class="fr">青年版</span>
         </p>
     </form>
 </div>

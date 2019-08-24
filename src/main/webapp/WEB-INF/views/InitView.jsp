@@ -15,12 +15,10 @@
 </head>
 <body style="background:url(<c:url value="/assets/static/image/login_bg.jpg"></c:url>);background-size:cover;">
 
-<div class="login-main" style="width:550px;">
-    <header class="layui-elip" style="font-weight:300;">自定义</header>
-    <p><c:if test="${reason != null}">${reason}</c:if></p>
-    <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post" style="background-color:#fff;padding:50px 80px;color:#1E9F95;">
+<div class="login-main" style="width:70%;">
+    <form class="layui-form" action="<c:url value="/cms/login"></c:url>" method="post" style="background-color:#fff;padding:50px 80px;color:#1E9F95;display:none;">
         <div class="layui-input-inline">
-        	<p style="text-align:center;font-size:18px;">选择你关注的预报站，自定义你的主页！</p>
+        	<p style="text-align:center;font-size:38px;margin:60px 0 50px 0;">选择你关注的预报站，自定义你的主页！</p>
         </div>
         <div class="layui-input-inline">
         	<ul class="station-init">
@@ -31,8 +29,7 @@
         	</ul>
         	<style>
         		.station-init{
-        			margin:40px 0;
-        			
+        			margin:40px 20px;
         		}
         		.station-init li{
         			float:left;
@@ -40,14 +37,15 @@
         			text-align:center;
         		}
         		.station-init li a{
-        			width:70px;
-        			height:70px;
-        			line-height:70px;
+        			width:200px;
+        			height:200px;
+        			line-height:200px;
         			margin:auto;
         			display:block;
         			border:1px solid #ccc;
         			border-radius:50%;
         			color:#1E9F95;
+        			font-size:38px;
         		}
         		.station-init li a.selected{
         			background-color:#1E9FFF;
@@ -71,10 +69,10 @@
         </div>
         <div class="layui-input-inline">
 		    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
-		    	<p style="text-align:center;">
-		    		<a class="start-a" href="javascript:;" style="font-size:18px;color:#1E9F95;text-decoration:underline;">
+		    	<p style="text-align:center;margin:50px;">
+		    		<a class="start-a" href="javascript:;" style="font-size:38px;color:#1E9F95;">
 		    			开启我的预报之旅!
-		    			<span style="margin-left:20px;display:inline-block;width:20px;height:15px;background:url(<c:url value="/assets/static/image/arrow.png"></c:url>);background-size:cover;"></span>
+		    			<span style="margin-left:20px;display:inline-block;width:50px;height:35px;background:url(<c:url value="/assets/static/image/arrow.png"></c:url>);background-size:cover;"></span>
 		    		</a>
 		    	</p>
 		    </div>
@@ -94,6 +92,13 @@
         // you code ...
 
 
+        $(document).ready(function(){
+        	var contentHeight = $(window).height();
+        	var boxHeight = $(".layui-form").height()+100;
+            console.log(contentHeight);
+            console.log(boxHeight);
+            $(".layui-form").css("marginTop", (contentHeight-boxHeight)/2).fadeIn();
+        });
     });
 </script>
 </body>
