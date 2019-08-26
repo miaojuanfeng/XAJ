@@ -95,11 +95,11 @@
         ,url:'<c:url value="/cms/plan/data"></c:url>'
         ,height: 'full-198'
         ,cols: [[
-          {field:'id', width:80, title: '序号', sort: true, align: 'center'}
-          ,{field:'name', width:280, title: '站名', align: 'center'}
-          ,{field:'planName', width:280, title: '方案名', align: 'center'}
-          ,{field:'planModel', width:280, title: '预报模型', align: 'center'}
-          ,{field:'username', width:280, title: '构建人', align: 'center'}
+          {field:'id', width:'10%', title: '序号', sort: true, align: 'center'}
+          ,{field:'name', width:'15%', title: '站名', align: 'center'}
+          ,{field:'planName', width:'15%', title: '方案名', align: 'center'}
+          ,{field:'planModel', width:'15%', title: '预报模型', align: 'center'}
+          ,{field:'username', width:'15%', title: '构建人', align: 'center'}
           ,{field:'time', title: '构建时间', align: 'center'}
           ,{fixed:'right', title:'操作', width:150, toolbar: '#barDemo', align: 'center'}
         ]]

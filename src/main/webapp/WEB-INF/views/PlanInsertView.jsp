@@ -23,7 +23,7 @@
                     <div class="layui-row layui-col-space10 my-index-main" style="padding:10px">
                     	<div class="layui-col-xs12 layui-col-sm12 layui-col-md12">
 					        <div class="layui-collapse">
-					            <div class="layui-colla-item">
+					            <div class="layui-colla-item" style="overflow-y:auto">
 					            	<div id="div-nav" style="height:58px;border-bottom:1px solid #eee;">
 									    <div style="padding:10px;">
 											<a step="1" class="selected" href="javascript:;">
@@ -285,7 +285,7 @@
 									    <div id="step4" class="box-step" style="display:none;">
 											<div class="layui-col-xs12 layui-col-sm12 layui-col-md3">
 												<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;border:none;">
-												    <legend>预览方案</legend>
+												    <legend>基本信息</legend>
 												</fieldset>
 												<div class="layui-form-item">
 													<div class="layui-col-xs12 layui-col-sm6 layui-col-md12">

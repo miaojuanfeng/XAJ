@@ -29,11 +29,11 @@
 									    <div class="layui-form-item" style="padding-top:80px;text-align:center;font-size:22px;">
 						            		猪猪啊猪猪
 									    </div>
-									    <div class="layui-form-item" style="padding-top:30px;font-size:22px;padding-left:120px;">
+									    <div class="layui-form-item" style="padding-top:30px;font-size:22px;text-align:center;">
 						            		<span style="width:100px;">当前等级：</span>
 						            		<span>预报新手</span>
 									    </div>
-									    <div class="layui-form-item" style="font-size:22px;padding-left:120px;">
+									    <div class="layui-form-item" style="font-size:22px;text-align:center;">
 						            		<span style="width:100px;">关注测站：</span>
 						            		<span>宁都、汾坑</span>
 									    </div>

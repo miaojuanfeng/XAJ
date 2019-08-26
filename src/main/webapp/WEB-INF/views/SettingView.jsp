@@ -29,18 +29,18 @@
 									    <div class="layui-form-item" style="padding-top:80px;text-align:center;font-size:22px;">
 						            		猪猪啊猪猪
 									    </div>
-									    <div class="layui-form-item" style="padding-top:30px;font-size:22px;padding-left:120px;">
+									    <div class="layui-form-item" style="padding-top:20px;font-size:22px;text-align:center;">
 						            		<span style="width:100px;">当前等级：</span>
 						            		<span>预报新手</span>
 									    </div>
-									    <div class="layui-form-item" style="font-size:22px;padding-left:120px;">
+									    <div class="layui-form-item" style="font-size:22px;text-align:center;">
 						            		<span style="width:100px;">关注测站：</span>
-						            		<span>宁都、汾坑</span>
+						            		<span>宁都、汾坑、汾坑</span>
 									    </div>
-									    <div class="layui-form-item" style="padding-top:30px;text-align:center;font-size:22px;">
+									    <div class="layui-form-item" style="padding-top:20px;text-align:center;font-size:22px;">
 						            		预报次数
 									    </div>
-									    <div class="layui-form-item" style="padding:30px 80px 0 80px;text-align:center;font-size:22px;">
+									    <div class="layui-form-item" style="padding:20px 80px 0 80px;text-align:center;font-size:22px;">
 										    <div class="layui-progress layui-progress-big" lay-showpercent="true">
 											  <div class="layui-progress-bar layui-bg-blue" lay-percent="5 / 10"></div>
 											</div>
@@ -127,10 +127,10 @@
             ,method:'post'
             ,cols: [[
               {type:'checkbox'}
-              ,{field:'id', width:80, title: '序号', sort: true, align: 'center'}
-              ,{field:'code', width:280, title: '站码', align: 'center'}
-              ,{field:'name', width:280, title: '站名', align: 'center'}
-              ,{field:'type', width:280, title: '站点类型', align: 'center'}
+              ,{field:'id', width:'10%', title: '序号', sort: true, align: 'center'}
+              ,{field:'code', width:'22%', title: '站码', align: 'center'}
+              ,{field:'name', width:'22%', title: '站名', align: 'center'}
+              ,{field:'type', width:'22%', title: '站点类型', align: 'center'}
               ,{field:'area', title: '行政区', align: 'center'}
             ]]
             ,page: true

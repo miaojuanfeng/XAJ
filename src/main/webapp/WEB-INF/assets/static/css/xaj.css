@@ -15,7 +15,7 @@ body{
 	width:248px;
 }
 .layui-side-scroll{
-	width:248px;
+	width:10%;
 	top:70px;
 	-moz-box-shadow:0px 0px 5px #ccc;
 	-webkit-box-shadow:0px 0px 5px #ccc;
@@ -52,7 +52,8 @@ body{
 	margin-left:10px;
 }
 .my-body-left {
-    left: 250px;
+    left: 10%;
+    margin-left:2px;
 }
 .my-side{
 	-moz-box-shadow:2px 2px 5px #ccc; 
