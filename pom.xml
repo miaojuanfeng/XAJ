@@ -20,7 +20,7 @@
         <!-- jstl包版本 -->
         <jstl.version>1.2</jstl.version>
         <!-- mysql-connector版本号 -->
-        <mysql-connector.version>5.1.29</mysql-connector.version>
+        <mysql-connector.version>8.0.16</mysql-connector.version>
         <!-- hibernate.version版本号 -->
         <hibernate.version>5.1.0.Final</hibernate.version>
     </properties>
